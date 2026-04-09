@@ -1,0 +1,23 @@
+{
+  "name": "calculadora_de_intereses",
+  "version": "1.0.0",
+  "description": "Calculadora de intereses, creada con html, sass y JavaScript puro",
+  "license": "ISC",
+  "author": "David Pérez",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build":"rollup --watch --config",
+    "sass:watch":"sass --watch scss/index.scss css/styles.css"
+  },
+  "devDependencies": {
+    "rollup": "^4.60.1",
+    "sass": "^1.99.0"
+  },
+  "dependencies": {
+    "aos": "^2.3.4",
+    "bootstrap": "^5.3.8",
+    "bootstrap-icons": "^1.13.1"
+  }
+}
