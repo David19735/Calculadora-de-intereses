@@ -1,9 +1,21 @@
+:root{
+    --bg:white;
+    --text_color:rgba(0, 0, 0, 0.89);
+}
+
+.dark{
+    --bg:black;
+    --text_color:white;
+}
+
+
 .body{
     box-sizing: border-box;
     padding: 0;
     margin: 0;
     width: 100%;
     min-height: 100vh;
-    background-color: rgba(0, 0, 0, 0.89);
+    background-color: var(--bg);
     overflow-x: hidden;
+
 }

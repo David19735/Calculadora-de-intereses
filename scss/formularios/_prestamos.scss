@@ -1,0 +1,12 @@
+.prestamos{
+     min-height: 70vh;
+    width: 100%;
+    background: rgb(27, 26, 26);
+    border-radius: 7px;
+    display: none;
+
+
+    &.active{
+        display: flex;
+    }
+}

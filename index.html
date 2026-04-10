@@ -14,37 +14,56 @@
 
     <title>Calculadora de Intereses</title>
 </head>
-<body class="body">
+<body class="body dark">
 
-    
-     <div class="header">
-        <div class="header__content">
-            <header class="header__nav">
+<!--Contenido principal, header e imagen flotante-->
 
-                <div class="nav__presentacion">
-                    <i class="bi bi-calculator" id="presentacion__icono"></i>
-                    <h1 class="presentacion__titulo">Calculadora de intereses</h1>
+        <div class="header">
+            <div class="header__content">
+                <header class="header__nav">
+
+                    <div class="nav__presentacion">
+                        <i class="bi bi-calculator" id="presentacion__icono"></i>
+                        <h1 class="presentacion__titulo">Calculadora de intereses</h1>
+                    </div>
+
+                    <div class="nav__iconos">
+                        <i class="bi bi-info-lg" id="icono_header2"></i>
+                        <i class="bi bi-moon-stars-fill" id="icono_header1"></i>
+                    </div>
+                </header>
+
+                <div class="principal">
+                    <div class="principal__contenido">
+                        <h2>Calculadora de intereses</h2>
+                        <p>Calcula tus intereses tanto simples como compuestos, genera tu PPNGI según tus gastos y pagos, tomando en cuenta el día de cada uno de los movimientos, para así, predecir cuál será tu pago en tu próxima fecha de corte. También verifica todos tus préstamos bancarios, tanto el capital amortizado, como tus intereses que pagaras en el plazo que hayas elegido.</p>
+                    </div>
+
+                    <div class="principal__imagen">
+                        <img src="public/imagenes/Calculator-amico.png" alt="calculadora">
+                    </div>
                 </div>
-
-                <div class="nav__iconos">
-                    <i class="bi bi-info-lg" id="icono_header2"></i>
-                    <i class="bi bi-moon-stars-fill" id="icono_header1"></i>
-                </div>
-            </header>
-
-            <div class="principal">
-                <div class="principal__contenido">
-                    <h2>Calculadora de intereses</h2>
-                    <p>Calcula tus intereses tanto simples como compuestos, genera tu PPNGI según tus gastos y pagos, tomando en cuenta el día de cada uno de los movimientos, para así, predecir cuál será tu pago en tu próxima fecha de corte. También verifica todos tus préstamos bancarios, tanto el capital amortizado, como tus intereses que pagaras en el plazo que hayas elegido.</p>
-                </div>
-
-                <div class="principal__imagen">
-                    <img src="public/imagenes/Calculator-amico.png" alt="calculadora">
-                </div>
+            
             </div>
-        
         </div>
-     </div>
+
+  <!--Enlaces para cambio de pantalla-->
+  
+    <div class="enlaces">
+        <a href="" class="enlace active" id="simples">Intereses Simples</a>
+        <a href="" class="enlace" id="compuestos">Intereses compuestos</a>
+        <a href="" class="enlace" id="ppngi">PPNGI con intereses</a>
+        <a href="" class="enlace" id="prestamos">Préstamos con intereses</a>
+    </div>
+
+  <!--Contenedor de los formularios-->
+    
+    <div class="contenedor__formularios">
+        <div class="simples contenedor_form active"><h1>Intereses Simples</h1></div>
+        <div class="compuestos contenedor_form"><h1>Intereses Compuestos</h1></div>
+        <div class="ppngi contenedor_form"><h1>Pago para no generar Intereses</h1></div>
+        <div class="prestamos contenedor_form"><h1>Prestamos</h1></div>
+    </div>
 
     
 </body>

@@ -1,0 +1,31 @@
+.enlaces{
+
+    width: 85%;
+    margin: 2rem auto;
+    height: 7vh;
+    border-radius: 8px;
+    background: rgb(19, 18, 18);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+
+    a{
+        width: 25%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        text-decoration: none;
+        font-weight: 700;
+        letter-spacing: 1px;
+        height: 8vh;
+        cursor: pointer;
+        border-radius: 7px;
+        transition: all ease 0.3s;
+
+        &.active{
+            background: rgb(29, 28, 28);
+        }
+    }
+}
