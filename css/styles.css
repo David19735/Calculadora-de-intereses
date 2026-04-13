@@ -107,7 +107,7 @@
   margin: 1rem auto;
   display: flex;
 }
-@media (max-width: 900px) {
+@media (max-width: 980px) {
   .header .header__content .principal {
     flex-direction: column;
   }
@@ -143,7 +143,7 @@
     font-size: 0.9rem;
   }
 }
-@media (max-width: 900px) {
+@media (max-width: 980px) {
   .header .header__content .principal .principal__contenido {
     width: 100%;
   }
@@ -155,7 +155,7 @@
   justify-content: center;
   align-items: center;
 }
-@media (max-width: 900px) {
+@media (max-width: 980px) {
   .header .header__content .principal .principal__imagen {
     width: 100%;
   }
@@ -179,16 +179,24 @@
 .enlaces {
   width: 85%;
   margin: 2rem auto;
-  height: 7vh;
+  min-height: 7vh;
   border-radius: 8px;
   background: rgb(19, 18, 18);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   border: none;
 }
+@media (max-width: 997px) {
+  .enlaces {
+    width: 95%;
+  }
+}
+@media (max-width: 997px) {
+  .enlaces {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 .enlaces a {
-  width: 25%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -201,16 +209,31 @@
   border-radius: 7px;
   transition: all ease 0.3s;
 }
+@media (max-width: 900px) {
+  .enlaces a {
+    font-size: 0.8rem;
+  }
+}
+@media (max-width: 450px) {
+  .enlaces a {
+    font-size: 0.6rem;
+  }
+}
 .enlaces a.active {
   background: rgb(29, 28, 28);
 }
 
 .contenedor__formularios {
-  width: 95%;
+  width: 80%;
   margin: 1rem auto;
   min-height: 70vh;
   background: rgb(27, 26, 26);
   border-radius: 7px;
+}
+@media (max-width: 980px) {
+  .contenedor__formularios {
+    width: 95%;
+  }
 }
 
 .simples {
@@ -218,10 +241,280 @@
   width: 100%;
   background: rgb(27, 26, 26);
   border-radius: 7px;
+  color: white;
+  flex-direction: column;
+  gap: 2rem;
   display: none;
+  padding: 1rem;
 }
 .simples.active {
   display: flex;
+}
+.simples .simples__1 {
+  width: 100%;
+  min-height: 50vh;
+  display: flex;
+  gap: 1rem;
+}
+@media (max-width: 980px) {
+  .simples .simples__1 {
+    flex-direction: column;
+  }
+}
+.simples .simples__1 .simples1__formulario {
+  width: 35%;
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+@media (max-width: 980px) {
+  .simples .simples__1 .simples1__formulario {
+    width: 100%;
+  }
+}
+.simples .simples__1 .simples1__formulario h2 {
+  margin: 0;
+}
+.simples .simples__1 .simples1__formulario p {
+  margin: 0;
+}
+.simples .simples__1 .simples1__formulario .simples1__formulario--input_grande {
+  width: 100%;
+  min-height: 8vh;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  position: relative;
+}
+.simples .simples__1 .simples1__formulario .simples1__formulario--input_grande label {
+  color: rgba(255, 255, 255, 0.747);
+  font-size: 0.9rem;
+}
+.simples .simples__1 .simples1__formulario .simples1__formulario--input_grande input {
+  background: rgb(56, 53, 53);
+  border: none;
+  height: 5vh;
+  outline: none;
+  color: white;
+  padding: 0 2.5rem;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+}
+.simples .simples__1 .simples1__formulario .simples1__formulario--input_grande i {
+  position: absolute;
+  top: 2rem;
+  font-size: 1.35rem;
+  left: 0.4rem;
+}
+.simples .simples__1 .simples1__formulario .simples1__formulario--input_grande p {
+  font-size: 0.7rem;
+  color: red;
+  margin: 0;
+  display: none;
+}
+.simples .simples__1 .simples1__formulario .simples1__formulario--input_grande p.active {
+  display: flex;
+}
+.simples .simples__1 .simples1__formulario .simples1__formulario--input_chico {
+  width: 100%;
+  min-height: 8vh;
+  display: flex;
+  gap: 0.5rem;
+  display: flex;
+}
+.simples .simples__1 .simples1__formulario .simples1__formulario--input_chico .simples1__formulario--input_chico--1 {
+  width: 50%;
+  min-height: 8vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.simples .simples__1 .simples1__formulario .simples1__formulario--input_chico .simples1__formulario--input_chico--1 label {
+  color: rgba(255, 255, 255, 0.747);
+  font-size: 0.9rem;
+}
+.simples .simples__1 .simples1__formulario .simples1__formulario--input_chico .simples1__formulario--input_chico--1 input {
+  background: rgb(56, 53, 53);
+  border: none;
+  height: 5vh;
+  outline: none;
+  color: white;
+  padding: 0 2.5rem;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+}
+.simples .simples__1 .simples1__formulario .simples1__formulario--input_chico .simples1__formulario--input_chico--1 i {
+  position: absolute;
+  top: 1.5rem;
+  font-size: 1.35rem;
+  left: 0.4rem;
+}
+.simples .simples__1 .simples1__formulario .simples1__formulario--input_chico .simples1__formulario--input_chico--1 p {
+  font-size: 0.7rem;
+  color: red;
+  margin: 0;
+  display: none;
+}
+.simples .simples__1 .simples1__formulario .simples1__formulario--input_chico .simples1__formulario--input_chico--1 p.active {
+  display: flex;
+}
+.simples .simples__1 .simples1__formulario .simples1__formulario--input_chico .simples1__formulario--input_chico--2 {
+  width: 48%;
+  min-height: 8vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.simples .simples__1 .simples1__formulario .simples1__formulario--input_chico .simples1__formulario--input_chico--2 label {
+  color: rgba(255, 255, 255, 0.747);
+  font-size: 0.9rem;
+}
+.simples .simples__1 .simples1__formulario .simples1__formulario--input_chico .simples1__formulario--input_chico--2 input {
+  background: rgb(56, 53, 53);
+  border: none;
+  height: 5vh;
+  outline: none;
+  color: white;
+  padding: 0 2.5rem;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+}
+.simples .simples__1 .simples1__formulario .simples1__formulario--input_chico .simples1__formulario--input_chico--2 i {
+  position: absolute;
+  top: 1.5rem;
+  font-size: 1.35rem;
+  left: 0.4rem;
+}
+.simples .simples__1 .simples1__formulario .simples1__formulario--input_chico .simples1__formulario--input_chico--2 p {
+  font-size: 0.7rem;
+  color: red;
+  margin: 0;
+  display: none;
+}
+.simples .simples__1 .simples1__formulario .simples1__formulario--input_chico .simples1__formulario--input_chico--2 p.active {
+  display: flex;
+}
+.simples .simples__1 .simples1__formulario button {
+  min-height: 8vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  background: rgb(41, 39, 39);
+  border: none;
+  color: white;
+  font-weight: 800;
+  border-radius: 8px;
+}
+.simples .simples__1 .simples1__graficas {
+  width: 65%;
+  min-height: 50vh;
+}
+@media (max-width: 980px) {
+  .simples .simples__1 .simples1__graficas {
+    width: 100%;
+  }
+}
+.simples .simples__2 {
+  width: 100%;
+  min-height: 50vh;
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+}
+@media (max-width: 980px) {
+  .simples .simples__2 {
+    flex-direction: column;
+  }
+}
+.simples .simples__2 .simples__2--tabla {
+  width: 60%;
+  min-height: 40vh;
+}
+@media (max-width: 980px) {
+  .simples .simples__2 .simples__2--tabla {
+    width: 100%;
+  }
+}
+.simples .simples__2 .simples__2--tabla .simples__2--tabla__datos {
+  min-height: 40vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+.simples .simples__2 .simples__2--tabla .simples__2--tabla__datos .simples__2--tabla__datos--contenedor {
+  width: 100%;
+  min-height: 7vh;
+  background: rgb(51, 48, 48);
+  border-radius: 5px;
+  display: flex;
+}
+.simples .simples__2 .simples__2--tabla .simples__2--tabla__datos .simples__2--tabla__datos--contenedor p {
+  width: 25%;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  font-weight: 700;
+  padding-left: 1rem;
+}
+@media (max-width: 1050px) {
+  .simples .simples__2 .simples__2--tabla .simples__2--tabla__datos .simples__2--tabla__datos--contenedor p {
+    font-size: 0.8rem;
+  }
+}
+@media (max-width: 680px) {
+  .simples .simples__2 .simples__2--tabla .simples__2--tabla__datos .simples__2--tabla__datos--contenedor p {
+    font-size: 0.5rem;
+  }
+}
+.simples .simples__2 .simples__2--tabla .simples__2--tabla__titulo {
+  min-height: 5vh;
+  display: flex;
+  gap: 0.5rem;
+}
+.simples .simples__2 .simples__2--tabla .simples__2--tabla__titulo p {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.493);
+  width: 25%;
+  font-size: 0.8rem;
+  display: flex;
+}
+@media (max-width: 1050px) {
+  .simples .simples__2 .simples__2--tabla .simples__2--tabla__titulo p {
+    font-size: 0.8rem;
+  }
+}
+@media (max-width: 680px) {
+  .simples .simples__2 .simples__2--tabla .simples__2--tabla__titulo p {
+    font-size: 0.5rem;
+  }
+}
+.simples .simples__2 .simples__2--mensaje {
+  width: 40%;
+  min-height: 40vh;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+@media (max-width: 980px) {
+  .simples .simples__2 .simples__2--mensaje {
+    width: 100%;
+  }
+}
+.simples .simples__2 .simples__2--mensaje .simples__2--mensaje__1, .simples .simples__2 .simples__2--mensaje .simples__2--mensaje__2 {
+  width: 100%;
+  min-height: 20vh;
+  background: rgb(39, 37, 37);
+  border-radius: 7px;
+  padding: 1rem;
+}
+.simples .simples__2 .simples__2--mensaje .simples__2--mensaje__1 h2, .simples .simples__2 .simples__2--mensaje .simples__2--mensaje__2 h2 {
+  font-size: 1.1rem;
+}
+.simples .simples__2 .simples__2--mensaje .simples__2--mensaje__1 p, .simples .simples__2 .simples__2--mensaje .simples__2--mensaje__2 p {
+  font-size: 0.9rem;
 }
 
 .compuestos {

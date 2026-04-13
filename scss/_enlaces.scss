@@ -2,16 +2,22 @@
 
     width: 85%;
     margin: 2rem auto;
-    height: 7vh;
+    min-height: 7vh;
     border-radius: 8px;
     background: rgb(19, 18, 18);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
     border: none;
 
+    @media (max-width:997px) {
+        width: 95%;
+    }
+
+    @media (max-width:997px){
+        grid-template-columns: repeat(2,1fr);
+    }
+
     a{
-        width: 25%;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -23,6 +29,14 @@
         cursor: pointer;
         border-radius: 7px;
         transition: all ease 0.3s;
+
+        @media(max-width:900px){
+            font-size: 0.8rem;
+        }
+
+         @media(max-width:450px){
+            font-size: 0.6rem;
+        }
 
         &.active{
             background: rgb(29, 28, 28);

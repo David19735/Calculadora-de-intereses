@@ -10,6 +10,8 @@
      <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
     <link rel="stylesheet" href="./css/styles.css">
 
     <title>Calculadora de Intereses</title>
@@ -59,7 +61,72 @@
   <!--Contenedor de los formularios-->
     
     <div class="contenedor__formularios">
-        <div class="simples contenedor_form active"><h1>Intereses Simples</h1></div>
+        
+        <div class="simples contenedor_form active">
+            
+            <div class="simples__1">
+               
+                <form action="" class="simples1__formulario">
+                    <h2>Intereses simples</h2>
+                    <p>configura los parámetros de tu inversión</p>
+                    <div class="simples1__formulario--input_grande">
+                        <i class="bi bi-currency-dollar"></i>
+                        <label for="">Capital inicial (Principal)</label>
+                        <input type="text" id="simples_input-monto">
+                        <p class="simples__error1">Ingreso no correcto</p>
+                    </div>
+                    <div class="simples1__formulario--input_chico">
+                        <div class="simples1__formulario--input_chico--1">
+                            <i class="bi bi-percent"></i>
+                            <label for="">Tasa de interés (%)</label>
+                            <input type="text" id="simples_input-tasa">
+                            <p class="simples__error2">Tasa incorrecta</p>
+                        </div>    
+                        <div class="simples1__formulario--input_chico--2">
+                            <i class="bi bi-calendar-date"></i>
+                            <label for="">Periodo (Años)</label>
+                            <input type="text" id="simples_input-periodo">
+                            <p class="simples__error3">Periodo incorrecto</p>
+                        </div>
+                    </div>
+                    <button><i class="bi bi-calculator"></i> Calcular Ahora</button>
+               
+                </form>
+                <div class="simples1__graficas">
+                    <canvas id="miGrafica"></canvas>
+                </div>
+            </div>
+        
+            <div class="simples__2">
+                <div class="simples__2--tabla">
+                    
+                    <div class="simples__2--tabla__titulo">
+                            <p>Año</p>
+                            <p>Interés ganado ese año</p>
+                            <p>Interés acumulado</p>
+                            <p>Total (Monto)</p>
+                        </div>
+
+                <div class="simples__2--tabla__datos">
+
+                </div>
+
+                </div>
+
+                <div class="simples__2--mensaje">
+                    <div class="simples__2--mensaje__1">
+                        <h2> <i class="bi bi-info-circle-fill"></i> Interés simple</h2>
+                        <p>Los intereses simples se calculan con el monto inicial invertido, independientemente de los años transcurridos. Las ganancias por año serán las mismas, independientemente de los intereses o ganancias que hayas generado.</p>
+                    </div>
+                    <div class="simples__2--mensaje__2">
+                        <h2> <i class="bi bi-info-circle-fill"></i> Sobre la calculadora</h2>
+                        <p>La calculadora genera los intereses dependiendo de los datos que tu ingreses, no depende del banco ni de datos externos.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
         <div class="compuestos contenedor_form"><h1>Intereses Compuestos</h1></div>
         <div class="ppngi contenedor_form"><h1>Pago para no generar Intereses</h1></div>
         <div class="prestamos contenedor_form"><h1>Prestamos</h1></div>
