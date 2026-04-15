@@ -187,8 +187,23 @@
             }
 
             .compuestos1__formulario--input-frecuencia{
-                border: solid 1px red;
                 min-height: 7vh;
+
+                select{
+                    width: 100%;
+                    min-height: 7vh;
+                    background: rgb(56, 53, 53);
+                    color: white;
+                    border: none;
+                    font-size: 1.1rem;
+                    padding: 0.5rem;
+                    outline: none;
+
+                    option{
+                        font-weight: 600;
+                    }
+                }
+                
             }
 
             button{

@@ -52,15 +52,15 @@ contenedorEnlaces.addEventListener('click',(e)=>{
     }
 });
 
-const expresionMonto=/^\d+(\.\d{1,2})?$/;
-const expresionInteres=/^\d+(\.\d{1,2})?$/;
-const expresionPeriodo= /^(?:[1-9]|1\d|20)$/;
+const expresionMonto$1=/^\d+(\.\d{1,2})?$/;
+const expresionInteres$1=/^\d+(\.\d{1,2})?$/;
+const expresionPeriodo$1= /^(?:[1-9]|1\d|20)$/;
 
 //El formulario
-const formulario=document.querySelector('.simples1__formulario');
+const formulario$1=document.querySelector('.simples1__formulario');
 
 
-formulario.addEventListener('submit',(e)=>{
+formulario$1.addEventListener('submit',(e)=>{
 
     
     e.preventDefault();
@@ -70,19 +70,22 @@ formulario.addEventListener('submit',(e)=>{
     const inputInteres=document.getElementById('simples_input-tasa');
     const inputPeriodo=document.getElementById('simples_input-periodo');
 
+    //Mensajes de error
+
         document.querySelector('.simples__error1').classList.remove('active');
         document.querySelector('.simples__error2').classList.remove('active');
         document.querySelector('.simples__error3').classList.remove('active');
 
-        if(!expresionMonto.test(inputMonto.value)){
+
+        if(!expresionMonto$1.test(inputMonto.value)){
 
             document.querySelector('.simples__error1').classList.add('active');
         }
-        if(!expresionInteres.test(inputInteres.value)){
+        if(!expresionInteres$1.test(inputInteres.value)){
             
             document.querySelector('.simples__error2').classList.add('active');
         }
-        if(!expresionPeriodo.test(inputPeriodo.value)){
+        if(!expresionPeriodo$1.test(inputPeriodo.value)){
             
             document.querySelector('.simples__error3').classList.add('active');
             return
@@ -159,3 +162,45 @@ formulario.addEventListener('submit',(e)=>{
 
 
         });
+
+const expresionMonto=/^\d+(\.\d{1,2})?$/;
+const expresionInteres=/^\d+(\.\d{1,2})?$/;
+const expresionPeriodo= /^(?:[1-9]|1\d|20)$/;
+
+
+const formulario=document.querySelector('.compuestos__formulario');
+
+formulario.addEventListener('submit',(e)=>{
+
+    e.preventDefault();
+
+    const inputMonto=document.getElementById('compuestos_input-monto');
+    const inputInteres=document.getElementById('compuestos_input-tasa');
+    const inputPeriodo=document.getElementById('compuestos_input-periodo');
+
+    
+    //Mensajes de error
+        document.querySelector('.compuestos__error1').classList.remove('active');
+        document.querySelector('.compuestos__error2').classList.remove('active');
+        document.querySelector('.compuestos__error3').classList.remove('active');
+
+        if(!expresionMonto.test(inputMonto.value)){
+
+            document.querySelector('.compuestos__error1').classList.add('active');
+        }
+
+        if(!expresionInteres.test(inputInteres.value)){
+            
+            document.querySelector('.compuestos__error2').classList.add('active');
+        }
+
+        if(!expresionPeriodo.test(inputPeriodo.value)){
+            
+            document.querySelector('.compuestos__error3').classList.add('active');
+            return
+        }
+
+        
+
+
+});

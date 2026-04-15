@@ -16,9 +16,12 @@ formulario.addEventListener('submit',(e)=>{
     const inputInteres=document.getElementById('simples_input-tasa')
     const inputPeriodo=document.getElementById('simples_input-periodo')
 
+    //Mensajes de error
+
         document.querySelector('.simples__error1').classList.remove('active')
         document.querySelector('.simples__error2').classList.remove('active')
         document.querySelector('.simples__error3').classList.remove('active')
+
 
         if(!expresionMonto.test(inputMonto.value)){
 

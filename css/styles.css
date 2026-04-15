@@ -740,8 +740,20 @@
   display: flex;
 }
 .simples .simples__1 .simples1__formulario .compuestos1__formulario--input-frecuencia, .simples .simples__1 .compuestos__formulario .compuestos1__formulario--input-frecuencia, .simples .compuestos__1 .simples1__formulario .compuestos1__formulario--input-frecuencia, .simples .compuestos__1 .compuestos__formulario .compuestos1__formulario--input-frecuencia, .compuestos .simples__1 .simples1__formulario .compuestos1__formulario--input-frecuencia, .compuestos .simples__1 .compuestos__formulario .compuestos1__formulario--input-frecuencia, .compuestos .compuestos__1 .simples1__formulario .compuestos1__formulario--input-frecuencia, .compuestos .compuestos__1 .compuestos__formulario .compuestos1__formulario--input-frecuencia {
-  border: solid 1px red;
   min-height: 7vh;
+}
+.simples .simples__1 .simples1__formulario .compuestos1__formulario--input-frecuencia select, .simples .simples__1 .compuestos__formulario .compuestos1__formulario--input-frecuencia select, .simples .compuestos__1 .simples1__formulario .compuestos1__formulario--input-frecuencia select, .simples .compuestos__1 .compuestos__formulario .compuestos1__formulario--input-frecuencia select, .compuestos .simples__1 .simples1__formulario .compuestos1__formulario--input-frecuencia select, .compuestos .simples__1 .compuestos__formulario .compuestos1__formulario--input-frecuencia select, .compuestos .compuestos__1 .simples1__formulario .compuestos1__formulario--input-frecuencia select, .compuestos .compuestos__1 .compuestos__formulario .compuestos1__formulario--input-frecuencia select {
+  width: 100%;
+  min-height: 7vh;
+  background: rgb(56, 53, 53);
+  color: white;
+  border: none;
+  font-size: 1.1rem;
+  padding: 0.5rem;
+  outline: none;
+}
+.simples .simples__1 .simples1__formulario .compuestos1__formulario--input-frecuencia select option, .simples .simples__1 .compuestos__formulario .compuestos1__formulario--input-frecuencia select option, .simples .compuestos__1 .simples1__formulario .compuestos1__formulario--input-frecuencia select option, .simples .compuestos__1 .compuestos__formulario .compuestos1__formulario--input-frecuencia select option, .compuestos .simples__1 .simples1__formulario .compuestos1__formulario--input-frecuencia select option, .compuestos .simples__1 .compuestos__formulario .compuestos1__formulario--input-frecuencia select option, .compuestos .compuestos__1 .simples1__formulario .compuestos1__formulario--input-frecuencia select option, .compuestos .compuestos__1 .compuestos__formulario .compuestos1__formulario--input-frecuencia select option {
+  font-weight: 600;
 }
 .simples .simples__1 .simples1__formulario button, .simples .simples__1 .compuestos__formulario button, .simples .compuestos__1 .simples1__formulario button, .simples .compuestos__1 .compuestos__formulario button, .compuestos .simples__1 .simples1__formulario button, .compuestos .simples__1 .compuestos__formulario button, .compuestos .compuestos__1 .simples1__formulario button, .compuestos .compuestos__1 .compuestos__formulario button {
   min-height: 8vh;

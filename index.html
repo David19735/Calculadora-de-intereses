@@ -65,7 +65,7 @@
 
     <!--Contenedor formularios simples-->
 
-        <div class="simples contenedor_form">
+        <div class="simples contenedor_form active">
             
             <div class="simples__1">
                
@@ -134,7 +134,7 @@
         <!--Contenedor formularios compuestos-->
 
 
-         <div class="compuestos contenedor_form active">
+         <div class="compuestos contenedor_form">
             
             <div class="compuestos__1">
                
@@ -163,7 +163,13 @@
                     </div>
 
                     <div class="compuestos1__formulario--input-frecuencia">
-                        
+                <select id="frecuencia">
+                    <option value="1">Anual</option>
+                    <option value="2">Semestral</option>
+                    <option value="4">Trimestral</option>
+                    <option value="12">Mensual</option>
+                    <option value="365">Diaria</option>
+                </select>      
                     </div>
 
                     <button><i class="bi bi-calculator"></i> Calcular Ahora</button>
