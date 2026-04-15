@@ -62,7 +62,10 @@
     
     <div class="contenedor__formularios">
         
-        <div class="simples contenedor_form active">
+
+    <!--Contenedor formularios simples-->
+
+        <div class="simples contenedor_form">
             
             <div class="simples__1">
                
@@ -127,7 +130,82 @@
         </div>
 
 
-        <div class="compuestos contenedor_form"><h1>Intereses Compuestos</h1></div>
+
+        <!--Contenedor formularios compuestos-->
+
+
+         <div class="compuestos contenedor_form active">
+            
+            <div class="compuestos__1">
+               
+                <form action="" class="compuestos__formulario">
+                    <h2>Intereses compuestos</h2>
+                    <p>configura los parámetros de tu inversión</p>
+                    <div class="compuestos1__formulario--input_grande">
+                        <i class="bi bi-currency-dollar"></i>
+                        <label for="">Capital inicial (Principal)</label>
+                        <input type="text" id="compuestos_input-monto">
+                        <p class="compuestos__error1">Ingreso no correcto</p>
+                    </div>
+                    <div class="compuestos1__formulario--input_chico">
+                        <div class="compuestos1__formulario--input_chico--1">
+                            <i class="bi bi-percent"></i>
+                            <label for="">Tasa de interés (%)</label>
+                            <input type="text" id="compuestos_input-tasa">
+                            <p class="compuestos__error2">Tasa incorrecta</p>
+                        </div>    
+                        <div class="compuestos1__formulario--input_chico--2">
+                            <i class="bi bi-calendar-date"></i>
+                            <label for="">Periodo (Años)</label>
+                            <input type="text" id="compuestos_input-periodo">
+                            <p class="compuestos__error3">Periodo incorrecto</p>
+                        </div>
+                    </div>
+
+                    <div class="compuestos1__formulario--input-frecuencia">
+                        
+                    </div>
+
+                    <button><i class="bi bi-calculator"></i> Calcular Ahora</button>
+               
+                </form>
+                <div class="compuestos1__graficas">
+                    <canvas id="miGrafica"></canvas>
+                </div>
+            </div>
+        
+            <div class="compuestos__2">
+                <div class="compuestos__2--tabla">
+                    
+                    <div class="compuestos__2--tabla__titulo">
+                            <p>Año</p>
+                            <p>Interés ganado ese año</p>
+                            <p>Interés acumulado</p>
+                            <p>Total (Monto)</p>
+                        </div>
+
+                <div class="compuestos__2--tabla__datos">
+
+                </div>
+
+                </div>
+
+                <div class="compuestos__2--mensaje">
+                    <div class="compuestos__2--mensaje__1">
+                        <h2> <i class="bi bi-info-circle-fill"></i> Interés compuesto</h2>
+                        <p>Los intereses simples se calculan con el monto inicial invertido, independientemente de los años transcurridos. Las ganancias por año serán las mismas, independientemente de los intereses o ganancias que hayas generado.</p>
+                    </div>
+                    <div class="compuestos__2--mensaje__2">
+                        <h2> <i class="bi bi-info-circle-fill"></i> Sobre la calculadora</h2>
+                        <p>La calculadora genera los intereses dependiendo de los datos que tu ingreses, no depende del banco ni de datos externos.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
         <div class="ppngi contenedor_form"><h1>Pago para no generar Intereses</h1></div>
         <div class="prestamos contenedor_form"><h1>Prestamos</h1></div>
     </div>

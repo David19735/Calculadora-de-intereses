@@ -1,4 +1,4 @@
-.simples{
+.simples, .compuestos{
     min-height: 70vh;
     width: 100%;
     background: rgb(27, 26, 26);
@@ -14,7 +14,7 @@
     }
 
 
-    .simples__1{
+    .simples__1, .compuestos__1{
         width: 100%;
         min-height: 50vh;
         display: flex;
@@ -26,7 +26,7 @@
             flex-direction: column;
             }
 
-        .simples1__formulario{
+        .simples1__formulario, .compuestos__formulario{
             width: 35%;
             min-height: 50vh;
             display: flex;
@@ -44,7 +44,9 @@
                 margin: 0;
             }
 
-            .simples1__formulario--input_grande{
+            .simples1__formulario--input_grande,
+            .compuestos1__formulario--input_grande
+            {
                 width: 100%;
                 min-height: 8vh;
                 display: flex;
@@ -86,14 +88,18 @@
             }
             }
 
-            .simples1__formulario--input_chico{
+            .simples1__formulario--input_chico,
+            .compuestos1__formulario--input_chico
+            {
                 width: 100%;
                 min-height: 8vh;
                 display: flex;
                 gap: 0.5rem;
                 display: flex;
 
-            .simples1__formulario--input_chico--1{
+            .simples1__formulario--input_chico--1,
+            .compuestos1__formulario--input_chico--1
+            {
                     width: 50%;
                     min-height: 8vh;
                     display: flex;
@@ -135,7 +141,9 @@
 
                 }
 
-                .simples1__formulario--input_chico--2{
+                .simples1__formulario--input_chico--2,
+                .compuestos1__formulario--input_chico--2
+                {
                     width: 48%;
                     min-height: 8vh;
                     display: flex;
@@ -178,6 +186,11 @@
                 }
             }
 
+            .compuestos1__formulario--input-frecuencia{
+                border: solid 1px red;
+                min-height: 7vh;
+            }
+
             button{
                 min-height: 8vh;
                 display: flex;
@@ -192,7 +205,9 @@
             }
         }
 
-        .simples1__graficas{
+        .simples1__graficas,
+        .compuestos1__graficas
+        {
             width: 65%;
             min-height: 50vh;
             @media(max-width:980px){
@@ -201,7 +216,9 @@
         }
     }
 
-    .simples__2{
+    .simples__2,
+    .compuestos__2
+    {
         width: 100%;
         min-height: 50vh;
         display: flex;
@@ -212,7 +229,9 @@
             flex-direction: column;
         }
 
-        .simples__2--tabla{
+        .simples__2--tabla,
+        .compuestos__2--tabla
+        {
             width: 60%;
             min-height: 40vh;
 
@@ -221,14 +240,18 @@
         }
 
 
-            .simples__2--tabla__datos{
+            .simples__2--tabla__datos,
+            .compuestos__2--tabla__datos
+            {
                 min-height: 40vh;
                 width: 100%;
                 display: flex;
                 flex-direction: column;
                 gap: 0.7rem;
 
-                .simples__2--tabla__datos--contenedor{
+                .simples__2--tabla__datos--contenedor,
+                .compuestos__2--tabla__datos--contenedor
+                {
                     width: 100%;
                     min-height: 7vh;
                     background: rgb(51, 48, 48);
@@ -252,7 +275,9 @@
                 }
             }
 
-            .simples__2--tabla__titulo{
+            .simples__2--tabla__titulo,
+            .compuestos__2--tabla__titulo
+            {
                 min-height: 5vh;
                 display: flex;
                 gap: 0.5rem;
@@ -275,7 +300,9 @@
            
         }
 
-        .simples__2--mensaje{
+        .simples__2--mensaje,
+        .compuestos__2--mensaje
+        {
             width: 40%;
             min-height: 40vh;
             padding: 1rem;
@@ -287,7 +314,9 @@
             width: 100%;
                }
 
-        .simples__2--mensaje__1, .simples__2--mensaje__2{
+        .simples__2--mensaje__1, .simples__2--mensaje__2,
+        .compuestos__2--mensaje__1, .compuestos__2--mensaje__2
+        {
             width: 100%;
             min-height: 20vh;
             background: rgb(39, 37, 37);
