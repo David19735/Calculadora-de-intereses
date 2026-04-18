@@ -784,6 +784,14 @@
     width: 100%;
   }
 }
+.simples .simples__1 .simples1__graficas #miGrafica_compuestos,
+.simples .simples__1 .compuestos1__graficas #miGrafica_compuestos, .simples .compuestos__1 .simples1__graficas #miGrafica_compuestos,
+.simples .compuestos__1 .compuestos1__graficas #miGrafica_compuestos, .compuestos .simples__1 .simples1__graficas #miGrafica_compuestos,
+.compuestos .simples__1 .compuestos1__graficas #miGrafica_compuestos, .compuestos .compuestos__1 .simples1__graficas #miGrafica_compuestos,
+.compuestos .compuestos__1 .compuestos1__graficas #miGrafica_compuestos {
+  max-width: 100%;
+  max-height: 50vh;
+}
 .simples .simples__2,
 .simples .compuestos__2, .compuestos .simples__2,
 .compuestos .compuestos__2 {
