@@ -65,7 +65,7 @@
 
     <!--Contenedor formularios simples-->
 
-        <div class="simples contenedor_form active">
+        <div class="simples contenedor_form">
             
             <div class="simples__1">
                
@@ -214,7 +214,54 @@
 
 
         <div class="ppngi contenedor_form"><h1>Pago para no generar Intereses</h1></div>
-        <div class="prestamos contenedor_form"><h1>Prestamos</h1></div>
+
+
+        <div class="prestamos contenedor_form active">
+            
+            <div class="prestamos__contenedor1">
+                <form action="" class="prestamos__contenedor1--formulario">
+                    <h2>Tabla de amortización</h2>
+                    <p>Configura los parámetros de tu inversión</p>
+                    <div class="prestamos__contenedor1--formulario__contenedor_grande">
+                        <i class="bi bi-currency-dollar"></i>
+                        <label for="">Capital inicial (Principal)</label>
+                        <input type="text" id="prestamos_input-monto">
+                        <p class="prestamos__error1">Ingreso no correcto</p>
+                    </div>
+
+                    <div class="prestamos__contenedor1--formulario__contenedor_chico">
+                        <div class="prestamos__formulario--input_chico--1">
+                            <i class="bi bi-percent"></i>
+                            <label for="">Tasa de interés (%)</label>
+                            <input type="text" id="prestamos_input-tasa">
+                            <p class="prestamos__error2">Tasa incorrecta</p>
+                        </div>    
+                        <div class="prestamos__formulario--input_chico--2">
+                            <i class="bi bi-calendar-date"></i>
+                            <label for="">Periodo (Años)</label>
+                            <select name="" id="" class="prestamos_input-periodo">
+                                <option value="12">12 Meses</option>
+                                <option value="18">18 Meses</option>
+                                <option value="24">24 Meses</option>
+                                <option value="36">36 Meses</option> 
+                                <option value="48">48 Meses</option> 
+                            </select>
+                            <p class="prestamos__error3">Periodo incorrecto</p>
+                        </div>
+                    </div>
+                    <button>Generar</button>
+                </form>
+                <div class="prestamos__contenedor1--grafica">
+
+                </div>
+
+            </div>
+
+            <div class="prestamos__contenedor2">
+                 
+            </div>
+
+        </div>
     </div>
 
     

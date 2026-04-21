@@ -4,9 +4,195 @@
     background: rgb(27, 26, 26);
     border-radius: 7px;
     display: none;
-
+    color: white;
 
     &.active{
         display: flex;
+        flex-direction: column;
+    }
+
+    .prestamos__contenedor1{
+
+        width: 100%;
+        min-height: 50vh;
+        border: solid 1px red;
+        display: flex;
+
+        @media(max-width:980px){
+            flex-direction: column;
+        }
+
+        .prestamos__contenedor1--formulario{
+         width: 40%;    
+         min-height: 50vh;
+         border: solid 1px blue;
+         padding: 1rem;
+
+         .prestamos__contenedor1--formulario__contenedor_grande{
+            width: 100%;
+            min-height: 8vh;
+            margin: 1rem 0;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+
+            label{
+                color: rgba(255, 255, 255, 0.747);
+                font-size: 0.9rem;
+            }
+
+            input{
+                background: rgb(56, 53, 53);
+                border: none;
+                height: 6vh;
+                outline: none;
+                color: white;
+                padding: 0 2.5rem;
+                font-size: 1.2rem;
+                letter-spacing: 1px;
+            }
+            i{
+                position: absolute;
+                top: 1.5rem;
+                font-size: 1.35rem;
+                left: 0.4rem;
+            }
+            
+            p{
+                font-size: 0.7rem;
+                color: red;
+                margin: 0;
+                display: none;
+
+                &.active{
+                    display: flex;
+                }
+            }
+         }   
+
+         .prestamos__contenedor1--formulario__contenedor_chico{
+            width: 100%;
+            min-height: 8vh;
+            display: flex;
+            gap: 1rem;
+            margin: 1rem 0;
+
+            .prestamos__formulario--input_chico--1{
+                    width: 50%;
+                    min-height: 8vh;
+                    display: flex;
+                    flex-direction: column;
+                    position: relative;
+
+                    label{
+                color: rgba(255, 255, 255, 0.747);
+                font-size: 0.9rem;
+            }
+
+            input{
+                background: rgb(56, 53, 53);
+                border: none;
+                height: 5vh;
+                outline: none;
+                color: white;
+                padding: 0 2.5rem;
+                font-size: 1.2rem;
+                letter-spacing: 1px;
+            }
+            i{
+                position: absolute;
+                top: 1.5rem;
+                font-size: 1.35rem;
+                left: 0.4rem;
+            }
+            
+            p{
+                font-size: 0.7rem;
+                color: red;
+                margin: 0;
+                display: none;
+
+                &.active{
+                    display: flex;
+                }
+            }
+            }
+
+            .prestamos__formulario--input_chico--2{
+                    width: 48%;
+                    min-height: 8vh;
+                    display: flex;
+                    flex-direction: column;
+                    position: relative;
+
+                label{
+                color: rgba(255, 255, 255, 0.747);
+                font-size: 0.9rem;
+            }
+
+            select{
+                background: rgb(56, 53, 53);
+                border: none;
+                height: 5vh;
+                outline: none;
+                color: white;
+                padding: 0 2.5rem;
+                font-size: 1.2rem;
+                letter-spacing: 1px;
+            }
+            i{
+                position: absolute;
+                top: 1.5rem;
+                font-size: 1.35rem;
+                left: 0.4rem;
+            }
+            
+            p{
+                font-size: 0.7rem;
+                color: red;
+                margin: 0;
+                display: none;
+
+                &.active{
+                    display: flex;
+                }
+            }
+            }
+         }
+
+         button{
+                width: 100%;
+                min-height: 8vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 1rem;
+                background: rgb(41, 39, 39);
+                border: none;
+                color: white;
+                font-weight: 800;
+                border-radius: 8px;
+         }
+
+         @media(max-width:980px){
+            width: 100%;
+         }
+        }
+
+        .prestamos__contenedor1--grafica{
+         width: 60%;    
+         min-height: 50vh;
+         border: solid 1px green;
+
+         @media(max-width:980px){
+            width: 100%;
+         }
+        }
+    }
+
+    .prestamos__contenedor2{
+        width: 100%;
+        min-height: 50vh;
+        border: solid 1px red;
     }
 }
