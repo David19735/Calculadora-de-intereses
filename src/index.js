@@ -1,3 +1,4 @@
 import './enlaces.js'
 import './simples.js'
 import './compuestos.js'
+import './prestamos.js'

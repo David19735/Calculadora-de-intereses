@@ -193,6 +193,53 @@
     .prestamos__contenedor2{
         width: 100%;
         min-height: 50vh;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+
+        .prestamos__contenedor2--titulo{
+            width: 100%;
+            min-height: 8vh;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+
+            p{
+                font-size: 1.1rem;
+                font-weight: 700;
+                margin: 0;
+            }
+        }
+
+        .prestamos_tablas{
+
+            border: solid 1px red;
+            min-height: 20vh;
+            display: flex;
+            flex-direction: column;
+            gap: 0.7rem;
+
+            
+        .prestamos__contenedor2--tabla{
+            width: 100%;
+            min-height: 8vh;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            background: rgb(56, 53, 53);
+            p{
+                font-size: 1rem;
+                font-weight: 500;
+                margin: 0;
+            }
+        }
+        }
+
+    }
+
+    .prestamos__contenedor3{
+        width: 100%;
+        min-height: 50vh;
         border: solid 1px red;
     }
 }

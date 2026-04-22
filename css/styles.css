@@ -1376,6 +1376,45 @@
 .prestamos .prestamos__contenedor2 {
   width: 100%;
   min-height: 50vh;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+.prestamos .prestamos__contenedor2 .prestamos__contenedor2--titulo {
+  width: 100%;
+  min-height: 8vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.prestamos .prestamos__contenedor2 .prestamos__contenedor2--titulo p {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 0;
+}
+.prestamos .prestamos__contenedor2 .prestamos_tablas {
+  border: solid 1px red;
+  min-height: 20vh;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+.prestamos .prestamos__contenedor2 .prestamos_tablas .prestamos__contenedor2--tabla {
+  width: 100%;
+  min-height: 8vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background: rgb(56, 53, 53);
+}
+.prestamos .prestamos__contenedor2 .prestamos_tablas .prestamos__contenedor2--tabla p {
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 0;
+}
+.prestamos .prestamos__contenedor3 {
+  width: 100%;
+  min-height: 50vh;
   border: solid 1px red;
 }
 

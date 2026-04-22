@@ -216,6 +216,8 @@
         <div class="ppngi contenedor_form"><h1>Pago para no generar Intereses</h1></div>
 
 
+        <!--Contenedor préstamos-->
+
         <div class="prestamos contenedor_form active">
             
             <div class="prestamos__contenedor1">
@@ -239,7 +241,7 @@
                         <div class="prestamos__formulario--input_chico--2">
                             <i class="bi bi-calendar-date"></i>
                             <label for="">Periodo (Años)</label>
-                            <select name="" id="" class="prestamos_input-periodo">
+                            <select name="" id="prestamos_frecuencia" class="prestamos_input-periodo">
                                 <option value="12">12 Meses</option>
                                 <option value="18">18 Meses</option>
                                 <option value="24">24 Meses</option>
@@ -249,7 +251,7 @@
                             <p class="prestamos__error3">Periodo incorrecto</p>
                         </div>
                     </div>
-                    <button>Generar</button>
+                    <button type="submit">Generar</button>
                 </form>
                 <div class="prestamos__contenedor1--grafica">
 
@@ -258,7 +260,40 @@
             </div>
 
             <div class="prestamos__contenedor2">
-                 
+                <div class="prestamos__contenedor2--titulo">
+                    <p>Mes</p>
+                    <p>Intereses</p>
+                    <p>Capital</p>
+                    <p>Pago requerido</p>
+                    <p>IVA</p>
+                    <p>Pago + IVA</p>
+                    <p>Remanente</p>
+                </div>
+
+               <div class="prestamos_tablas">
+                 <div class="prestamos__contenedor2--tabla">
+                    <p>1</p>
+                    <p>$5,000</p>
+                    <p>$10,000</p>
+                    <p>$15,000</p>
+                    <p>$250</p>
+                    <p>$10,250</p>
+                    <p>$750,000</p>
+                </div>
+                <div class="prestamos__contenedor2--tabla">
+                    <p>1</p>
+                    <p>$5,000</p>
+                    <p>$10,000</p>
+                    <p>$15,000</p>
+                    <p>$250</p>
+                    <p>$10,250</p>
+                    <p>$750,000</p>
+                </div>
+               </div>
+            </div>
+
+            <div class="prestamos__contenedor3">
+
             </div>
 
         </div>
