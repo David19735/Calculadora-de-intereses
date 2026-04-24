@@ -1,0 +1,101 @@
+.encabezado{
+    width: 100%;
+    min-height: 15vh;
+    background: rgb(22, 22, 22);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    .encabezado__contenido{
+        width: 50%;
+        min-height: 15vh;
+        color: white;   
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 1rem;
+        p{
+            font-size: 0.7rem;
+            margin: 0;
+            font-family: sans-serif;
+
+            &:nth-child(2){
+                font-size: 0.9rem;
+                font-weight: 700;
+            }
+        }
+    }
+
+    .encabezado__redes{
+        width: 40%;
+        min-height: 15vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+
+        .redes__titulo{
+            width: 100%;
+            min-height: 5vh;
+            color: white;
+            display: flex;
+            align-items: flex-end;
+            h3{
+                font-size: 1rem;
+                margin: 0;
+                font-family: sans-serif;
+            }
+        }
+        .redes__iconos{
+            width: 100%;
+            min-height: 8vh;
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            align-items: center;
+
+            a{
+                background: #1877F2;
+                width: 2.2vw;
+                height: 5vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 5px;
+
+                &:nth-child(2){
+                     background: linear-gradient(
+                    45deg,
+                    #f58529,
+                    #dd2a7b,
+                    #8134af,
+                    #515bd4
+                );
+                }
+                &:nth-child(3){
+                    background: #FF0000;
+
+                }
+                &:nth-child(4){
+                    background: #2d333b;
+
+                }
+                &:nth-child(5){
+                background: #EA4335;
+                }
+                &:nth-child(6){
+                background: #000000;
+
+                }
+                transition: all ease 0.4s;
+                &:hover{
+                    transform: rotateY(360deg);
+                }
+            }
+            i{
+                color: white;
+            }
+        }
+    }
+}

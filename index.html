@@ -65,7 +65,7 @@
 
     <!--Contenedor formularios simples-->
 
-        <div class="simples contenedor_form">
+        <div class="simples contenedor_form active">
             
             <div class="simples__1">
                
@@ -218,7 +218,7 @@
 
         <!--Contenedor préstamos-->
 
-        <div class="prestamos contenedor_form active">
+        <div class="prestamos contenedor_form">
             
             <div class="prestamos__contenedor1">
                 <form action="" class="prestamos__contenedor1--formulario">
@@ -254,7 +254,9 @@
                     <button type="submit">Generar</button>
                 </form>
                 <div class="prestamos__contenedor1--grafica">
+                    <canvas id="miGrafica_prestamos">
 
+                    </canvas>
                 </div>
 
             </div>
@@ -271,24 +273,8 @@
                 </div>
 
                <div class="prestamos_tablas">
-                 <div class="prestamos__contenedor2--tabla">
-                    <p>1</p>
-                    <p>$5,000</p>
-                    <p>$10,000</p>
-                    <p>$15,000</p>
-                    <p>$250</p>
-                    <p>$10,250</p>
-                    <p>$750,000</p>
-                </div>
-                <div class="prestamos__contenedor2--tabla">
-                    <p>1</p>
-                    <p>$5,000</p>
-                    <p>$10,000</p>
-                    <p>$15,000</p>
-                    <p>$250</p>
-                    <p>$10,250</p>
-                    <p>$750,000</p>
-                </div>
+                 
+               
                </div>
             </div>
 
@@ -299,6 +285,28 @@
         </div>
     </div>
 
+    <!--footer-->
+
+    <footer class="encabezado">
+        <div class="encabezado__contenido">
+                <p>Esta herramienta es únicamente informativa. Los resultados mostrados son aproximaciones basadas en los datos ingresados y no constituyen asesoría financiera profesional. Antes de tomar cualquier decisión, se recomienda consultar directamente con una institución financiera, banco o asesor especializado.
+                </p>
+                <p>Desarrollado por David Pérez González.</p>
+        </div>
+        <div class="encabezado__redes">
+            <div class="redes__titulo">
+                <h3>Sígueme en mis redes sociales </h3>
+            </div>
+            <div class="redes__iconos">
+                <a href=""><i class="bi bi-facebook"></i></a>
+                <a href=""><i class="bi bi-instagram"></i></a>
+                <a href=""><i class="bi bi-youtube"></i></a>
+                <a href=""><i class="bi bi-github"></i></a>
+                <a href=""><i class="bi bi-envelope-arrow-down-fill"></i></a>
+                <a href=""><i class="bi bi-tiktok"></i></a>
+            </div>
+        </div>
+    </footer>
     
 </body>
 </html>
