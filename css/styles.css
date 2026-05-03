@@ -1194,12 +1194,229 @@
   width: 100%;
   background: rgb(27, 26, 26);
   border-radius: 7px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  /* =========================
+     TITULO
+  ========================== */
+}
+.ppngi .ppngi__titulo {
+  color: white;
+}
+.ppngi .ppngi__titulo h2 {
+  font-size: 1.5rem;
+}
+.ppngi {
+  /* =========================
+     FORMULARIO 1
+  ========================== */
+}
+.ppngi .ppngi__formulario {
+  display: none;
+  gap: 1.5rem;
+}
+.ppngi .ppngi__formulario.active {
+  display: flex;
+  flex-direction: column;
+}
+.ppngi .ppngi__fechas .fechas__titulo p {
+  color: #ccc;
+}
+.ppngi .ppngi__fechas .fechas__inputs {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+.ppngi .ppngi__fechas .fechas__inputs .input-group {
+  flex: 1;
+  min-width: 180px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  position: relative;
+}
+.ppngi .ppngi__fechas .fechas__inputs .input-group label {
+  color: #aaa;
+  font-size: 0.85rem;
+}
+.ppngi .ppngi__fechas .fechas__inputs .input-group input {
+  padding: 0.7rem;
+  border-radius: 8px;
+  border: 1px solid #444;
+  background: #1f1f1f;
+  color: white;
+  outline: none;
+}
+.ppngi .ppngi__fechas .fechas__inputs .input-group input[type=number] {
+  -moz-appearance: textfield;
+}
+.ppngi .ppngi__fechas .fechas__inputs .input-group input::-webkit-outer-spin-button,
+.ppngi .ppngi__fechas .fechas__inputs .input-group input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.ppngi .ppngi__fechas .fechas__inputs .input-group .error {
+  display: none;
+  font-size: 0.75rem;
+  color: #ef4444;
+}
+.ppngi .ppngi__fechas .fechas__inputs .input-group.active-error input {
+  border-color: #ef4444;
+}
+.ppngi .ppngi__fechas .fechas__inputs .input-group.active-error .error {
+  display: block;
+}
+.ppngi {
+  /* =========================
+     BOTONES
+  ========================== */
+}
+.ppngi .ppngi__boton {
+  width: 100%;
+  padding: 1rem;
+  background: #3b82f6;
+  border: none;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.ppngi .ppngi__boton-secundario {
+  width: 100%;
+  padding: 1rem;
+  background: #22c55e;
+  border: none;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.ppngi {
+  /* =========================
+     FORMULARIO 2
+  ========================== */
+}
+.ppngi .ppngi__movimientos {
   display: none;
 }
-.ppngi.active {
+.ppngi .ppngi__movimientos.active {
   display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.ppngi .ppngi__movimientos .movimientos__inputs {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.ppngi .ppngi__movimientos .movimientos__inputs .input-group {
+  flex: 1;
+  min-width: 180px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  position: relative;
+}
+.ppngi .ppngi__movimientos .movimientos__inputs .input-group label {
+  color: #aaa;
+  font-size: 0.85rem;
+}
+.ppngi .ppngi__movimientos .movimientos__inputs .input-group input {
+  padding: 0.7rem;
+  border-radius: 8px;
+  border: 1px solid #444;
+  background: #1f1f1f;
+  color: white;
+  outline: none;
+}
+.ppngi .ppngi__movimientos .movimientos__inputs .input-group .error {
+  display: none;
+  font-size: 0.75rem;
+  color: #ef4444;
+}
+.ppngi .ppngi__movimientos .movimientos__inputs .input-group.active-error input {
+  border-color: #ef4444;
+}
+.ppngi .ppngi__movimientos .movimientos__inputs .input-group.active-error .error {
+  display: block;
+}
+.ppngi {
+  /* =========================
+     LISTA DE MOVIMIENTOS
+  ========================== */
+}
+.ppngi .ppngi__lista {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+.ppngi .ppngi__lista .lista__titulo p {
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+.ppngi .ppngi__lista .lista__header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.8rem 1rem;
+  background: #111;
+  border-radius: 8px;
+  color: #999;
+  font-size: 0.85rem;
+}
+.ppngi .ppngi__lista .lista__body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.ppngi .ppngi__lista .item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.9rem 1rem;
+  border-radius: 8px;
+  background: #1f1f1f;
+  color: white;
+  transition: 0.2s ease;
+}
+.ppngi .ppngi__lista .item:hover {
+  background: #262626;
+}
+.ppngi .ppngi__lista .item span {
+  flex: 1;
+  font-size: 0.9rem;
+}
+.ppngi .ppngi__lista .item span:nth-child(2) {
+  text-align: center;
+  color: #d1d5db;
+}
+.ppngi .ppngi__lista .item span:nth-child(3) {
+  text-align: right;
+  font-weight: 600;
+  color: #22c55e;
 }
 
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 980px) {
+  .ppngi .fechas__inputs,
+  .ppngi .movimientos__inputs {
+    flex-direction: column;
+  }
+  .ppngi .ppngi__lista .lista__header {
+    display: none;
+  }
+  .ppngi .ppngi__lista .item {
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+  .ppngi .ppngi__lista .item span {
+    text-align: left !important;
+  }
+  .ppngi .ppngi__lista .item span:nth-child(3) {
+    color: #22c55e;
+  }
+}
 .prestamos {
   min-height: 70vh;
   width: 100%;

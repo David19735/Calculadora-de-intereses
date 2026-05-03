@@ -65,7 +65,7 @@
 
     <!--Contenedor formularios simples-->
 
-        <div class="simples contenedor_form active">
+        <div class="simples contenedor_form">
             
             <div class="simples__1">
                
@@ -211,9 +211,116 @@
         </div>
 
 
+    <!--Contenedor PPNGI-->
 
+     <div class="ppngi active">
 
-        <div class="ppngi contenedor_form"><h1>Pago para no generar Intereses</h1></div>
+    <div class="ppngi__titulo">
+        <h2>Calcula tus próximos intereses</h2>
+    </div>
+
+    <!-- Primer formulario -->
+    <form class="ppngi__formulario active" id="formFechas">
+
+        <div class="ppngi__fechas">
+
+            <div class="fechas__titulo">
+                <p>Selecciona tu periodo y tasa de interés anual.</p>
+            </div>
+
+            <div class="fechas__inputs">
+
+                <div class="input-group">
+                    <label>Fecha inicio</label>
+                    <input type="date" id="fechaInicio">
+                    <p class="error">Selecciona una fecha válida</p>
+                </div>
+
+                <div class="input-group">
+                    <label>Fecha fin</label>
+                    <input type="date" id="fechaFin">
+                    <p class="error">Selecciona una fecha válida</p>
+                </div>
+
+                <div class="input-group" id="tasa__inputs">
+                    <label>Tasa de interés anual (%)</label>
+                    <input type="number" id="tasaInteres" step="0.01" placeholder="Ej: 12.50">
+                    <p class="error">Ingresa máximo 2 decimales</p>
+                </div>
+
+                <div class="input-group" id="ppngi__inputs">
+                    <label>Último PPNG (%)</label>
+                    <input type="number" id="ultimoPpng" step="0.01" placeholder="Ej: 3.25">
+                    <p class="error">Ingresa un valor válido (máx 2 decimales)</p>
+                </div>
+
+            </div>
+        </div>
+
+        <button type="submit" class="ppngi__boton" id="btnContinuar">
+            Continuar
+        </button>
+
+    </form>
+
+    <!-- Segundo formulario -->
+    <form class="ppngi__movimientos" id="formMovimientos">
+
+        <div class="movimientos__inputs">
+
+            <div class="input-group" id="ppngi-fecha">
+                <label>Fecha</label>
+                <input type="date" id="movFecha">
+                <p class="error">Selecciona una fecha</p>
+            </div>
+
+            <div class="input-group" id="ppngi-concepto">
+                <label>Concepto</label>
+                <input type="text" id="movConcepto">
+                <p class="error">Escribe un concepto válido</p>
+            </div>
+
+            <div class="input-group" id="ppngi-monto">
+                <label>Monto</label>
+                <input type="number" id="movMonto" step="0.01">
+                <p class="error">Ingresa un monto válido</p>
+            </div>
+
+        </div>
+
+        <button type="submit" class="ppngi__boton-secundario">
+            Enviar
+        </button>
+
+    </form>
+
+    <!-- LISTA -->
+    <div class="ppngi__lista" id="listaMovimientos">
+
+        <div class="lista__titulo">
+            <p>Historial de movimientos</p>
+        </div>
+
+        <div class="lista__header">
+            <span>Fecha</span>
+            <span>Concepto</span>
+            <span>Monto</span>
+        </div>
+
+        <!-- EJEMPLO REAL -->
+        <div class="lista__body" id="listaBody">
+
+            <div class="item">
+                <span>2026-01-10</span>
+                <span>Compra supermercado</span>
+                <span>$ 450.00</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
 
 
         <!--Contenedor préstamos-->
