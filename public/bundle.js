@@ -517,11 +517,44 @@ new Chart(ctx, {
 });
 });
 
+const renderGasto=(concepto,monto,fecha)=>{
+
+
+      //El formato de la moneda
+    const formatoMoneda=new Intl.NumberFormat('es-MX',{
+                style:'currency',
+                currency:'MXN',
+                maximumFractionDigits:2,
+                minimumFractionDigits:2
+        });
+
+        let colorClass="";
+
+        if(monto<0){
+            colorClass="rojo";
+        }
+        else {
+            colorClass="verde";
+        }
+
+
+    const plantilla=`
+         <div class="item">
+                <span>${fecha}</span>
+                <span>${concepto}</span>
+                <span class="ppngi-monto ${colorClass}">${formatoMoneda.format(monto)}</span>
+        </div>
+    `;
+
+        document.getElementById('listaBody').innerHTML+=plantilla;
+
+};
+
+//Expresiones regulares
 const expresionTasa=/^(?:150(?:\.0{1,2})?|(?:[1-9]?\d)(?:\.\d{1,2})?)$/;
 const expresionPago=/^\d+(\.\d{1,2})?$/;
 const expresionConcepto=/^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]{3,50}$/;
-const expresionMonto=/^\d+(\.\d{1,2})?$/;
- 
+const expresionMonto = /^-?\d+(\.\d{1,2})?$/; 
 //Primer formulario
 const primerFormulario=document.getElementById('formFechas');
 
@@ -531,6 +564,8 @@ const tasaInput=document.getElementById('tasaInteres');
 const ppngiInput=document.getElementById('ultimoPpng');
 
 
+
+//Evento del primer formulario
 primerFormulario.addEventListener('submit',(e)=>{
 
     e.preventDefault();
@@ -542,6 +577,8 @@ primerFormulario.addEventListener('submit',(e)=>{
     //Primero quitamos las clases para los errores en caso de que no existan errores
     document.getElementById('tasa__inputs').classList.remove('active-error');
     document.getElementById('ppngi__inputs').classList.remove('active-error');
+    document.getElementById('fecha_inicio').classList.remove('active-error');
+    document.getElementById('fecha_fin').classList.remove('active-error');
 
     //Verificamos si tiene errores los datos que ingresa el cliente 
     if(!expresionTasa.test(tasaInput.value)){
@@ -553,23 +590,37 @@ primerFormulario.addEventListener('submit',(e)=>{
     }
 
     if(fecha1.value==='' || fecha2.value===''){
+
+        document.getElementById('fecha_inicio').classList.add('active-error');
+        document.getElementById('fecha_fin').classList.add('active-error');
         return
     }
 
     document.getElementById('formFechas').classList.remove('active');
     document.getElementById('formMovimientos').classList.add('active');  
+
+
+    new Date(fecha1.value);
+    new Date(fecha2.value);
+    parseFloat(tasaInput.value);
+    parseFloat(ppngiInput.value);
+
+
 });
 
 
+
+
+//Evento del segundo formulario
 const segundoFormulario=document.getElementById('formMovimientos');
 
 segundoFormulario.addEventListener('submit',(e)=>{
     e.preventDefault();
 
     //Sacamos los datos de los inputs
-    const inputConcepto=document.getElementById('movConcepto');
-    const inputMonto=document.getElementById('movMonto');
-    const inputfecha=document.getElementById('movFecha');
+    const inputConcepto=document.getElementById('movConcepto').value;
+    const inputMonto=document.getElementById('movMonto').value;
+    const inputfecha=document.getElementById('movFecha').value;
 
     //Quitando los errores
     document.getElementById('ppngi-concepto').classList.remove('active-error');
@@ -577,16 +628,22 @@ segundoFormulario.addEventListener('submit',(e)=>{
     document.getElementById('ppngi-fecha').classList.remove('active-error');
 
     //Errores
-    if(!expresionConcepto.test(inputConcepto.value)){
+    if(!expresionConcepto.test(inputConcepto)){
         document.getElementById('ppngi-concepto').classList.add('active-error');
     }
-    if(!expresionMonto.test(inputMonto.value)){
+    if(!expresionMonto.test(inputMonto)){
         document.getElementById('ppngi-monto').classList.add('active-error');
     }
-    if(inputfecha.value===""){
+    if(inputfecha===""){
         document.getElementById('ppngi-fecha').classList.add('active-error');
         return
     }
+    const monto=parseFloat(inputMonto);
 
-    
+        //Se inicia proceso para renderizar cada uno de los gastos
+        renderGasto(inputConcepto,monto,inputfecha);
+
+    document.getElementById('movFecha').value="";
+    document.getElementById('movConcepto').value="";
+    document.getElementById('movMonto').value="";
 });

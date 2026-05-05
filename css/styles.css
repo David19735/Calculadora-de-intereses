@@ -1394,6 +1394,12 @@
   font-weight: 600;
   color: #22c55e;
 }
+.ppngi .ppngi__lista .item span:nth-child(3).rojo {
+  color: #ef4444;
+}
+.ppngi .ppngi__lista .item span:nth-child(3).verde {
+  color: #22c55e;
+}
 
 /* =========================
    RESPONSIVE
