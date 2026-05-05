@@ -13,7 +13,13 @@ const tasaInput=document.getElementById('tasaInteres');
 //PPNGI
 const ppngiInput=document.getElementById('ultimoPpng');
 
+//Variables globales
+  let fechaArray=[];
 
+    let fechaInicio;
+    let fechaFin;
+    let tasa;
+    let ppngi;
 
 //Evento del primer formulario
 primerFormulario.addEventListener('submit',(e)=>{
@@ -50,14 +56,26 @@ primerFormulario.addEventListener('submit',(e)=>{
     document.getElementById('formMovimientos').classList.add('active');  
 
 
-    const fechaInicio= new Date(fecha1.value);
-    const fechaFin=new Date(fecha2.value);
-    const tasa=parseFloat(tasaInput.value);
-    const ppngi= parseFloat(ppngiInput.value);
+    fechaInicio= new Date(fecha1.value+"T00:00:00");
+    fechaFin=new Date(fecha2.value+"T00:00:00");
+    tasa=parseFloat(tasaInput.value);
+    ppngi= parseFloat(ppngiInput.value);
 
+    let fechaActual=new Date(fechaInicio);
+    fechaActual.setDate(fechaActual.getDate()+1);
 
+  
+
+    while(fechaActual<=fechaFin){
+        
+        fechaArray.push({
+            fecha:new Date(fechaActual),
+            saldo:ppngi
+        });
+        
+        fechaActual.setDate(fechaActual.getDate()+1)
+    }
 })
-
 
 
 
