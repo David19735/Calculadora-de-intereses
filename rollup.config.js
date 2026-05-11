@@ -1,7 +1,8 @@
-export default{
-    input:'src/index.js',
-    output:{
-        file:'public/bundle.js',
-        format:'cjs'
+export default {
+    input: 'src/index.js',
+    output: {
+        file: 'public/bundle.js',
+        format: 'iife',
+        name: 'App'
     }
 };
