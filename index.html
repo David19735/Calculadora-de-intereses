@@ -65,7 +65,7 @@
 
     <!--Contenedor formularios simples-->
 
-        <div class="simples contenedor_form">
+        <div class="simples contenedor_form active">
             
             <div class="simples__1">
                
@@ -213,7 +213,7 @@
 
     <!--Contenedor PPNGI-->
 
-     <div class="ppngi active">
+     <div class="ppngi contenedor_form">
 
     <div class="ppngi__titulo">
         <h2>Calcula tus próximos intereses</h2>
@@ -270,7 +270,7 @@
 
             <div class="input-group" id="ppngi-fecha">
                 <label>Fecha</label>
-                <input type="date" id="movFecha">
+                <input type="date" id="movFecha" min="" max="">
                 <p class="error">Selecciona una fecha</p>
             </div>
 
@@ -289,7 +289,7 @@
         </div>
 
         <button type="submit" class="ppngi__boton-secundario">
-            Enviar
+            Ingresar
         </button>
 
     </form>
@@ -307,10 +307,49 @@
             <span>Monto</span>
         </div>
 
-        <!-- EJEMPLO REAL -->
         <div class="lista__body" id="listaBody">
 
-           
+        </div>
+
+    </div>
+
+    <!-- BOTON CALCULAR -->
+    <div class="ppngi_calculoBtn" id="ppngi_calculo">
+        <button>Calcular</button>
+    </div>
+
+    <!-- RESULTADOS -->
+    <div class="ppngi__resultados">
+
+        <div class="resultado__card">
+            <p class="resultado__label">Interés generado</p>
+            <h3 id="interesGenerado">$0.00</h3>
+        </div>
+
+        <div class="resultado__card">
+            <p class="resultado__label">IVA</p>
+            <h3 id="ivaGenerado">$0.00</h3>
+        </div>
+
+        <div class="resultado__card total">
+            <p class="resultado__label">Total neto</p>
+            <h3 id="totalNeto">$0.00</h3>
+        </div>
+
+    </div>
+
+    <!-- GRAFICA -->
+    <div class="ppngi__grafica">
+
+        <div class="grafica__titulo">
+            <p>Comportamiento del saldo diario</p>
+        </div>
+
+        <div class="grafica__contenedor">
+
+            <!-- AQUI VA TU CHART -->
+            <canvas id="graficaSaldo"></canvas>
+
         </div>
 
     </div>
