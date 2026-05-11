@@ -8,8 +8,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "rollup --watch --config",
-    "sass:watch": "sass --watch scss/index.scss css/styles.css"
+    "dev": "rollup --watch --config",
+    "build":"rollup --config",
+    "sass:watch": "sass --watch scss/index.scss css/styles.css",
+    "sass:build": "sass scss/index.scss css/styles.css"
   },
   "devDependencies": {
     "rollup": "^4.60.1",
