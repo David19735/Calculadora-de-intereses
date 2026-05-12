@@ -1,0 +1,1782 @@
+:root {
+  --bg:white;
+  --text_color:rgba(0, 0, 0, 0.89);
+}
+
+.dark {
+  --bg:black;
+  --text_color:white;
+}
+
+.body {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--bg);
+  overflow-x: hidden;
+}
+
+.header {
+  min-height: 60vh;
+  width: 100%;
+}
+.header .header__content {
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+.header .header__content.header__content::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #662ba1;
+  background: linear-gradient(90deg, rgb(102, 43, 161) 0%, rgb(113, 150, 209) 96%);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 50%);
+  z-index: -1;
+}
+.header .header__content .header__nav {
+  width: 100%;
+  min-height: 10vh;
+  display: flex;
+  justify-content: space-between;
+}
+.header .header__content .header__nav .nav__presentacion {
+  width: 30%;
+  min-height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+@media (max-width: 638px) {
+  .header .header__content .header__nav .nav__presentacion {
+    width: 50%;
+  }
+}
+.header .header__content .header__nav .nav__presentacion #presentacion__icono {
+  font-size: 1.5rem;
+  background: rgba(182, 39, 139, 0.527);
+  padding: 0.4rem 0.6rem;
+  color: white;
+  border-radius: 5px;
+}
+.header .header__content .header__nav .nav__presentacion .presentacion__titulo {
+  font-size: 1.5rem;
+  font-family: sans-serif;
+  margin: 0;
+  font-weight: 500;
+  color: white;
+}
+@media (max-width: 638px) {
+  .header .header__content .header__nav .nav__presentacion .presentacion__titulo {
+    font-size: 0.8rem;
+    width: 100%;
+  }
+}
+.header .header__content .header__nav .nav__iconos {
+  width: 30%;
+  min-height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+@media (max-width: 638px) {
+  .header .header__content .header__nav .nav__iconos {
+    width: 50%;
+  }
+}
+.header .header__content .header__nav .nav__iconos #icono_header1,
+.header .header__content .header__nav .nav__iconos #icono_header2 {
+  border: solid 2px white;
+  border-radius: 5px;
+  padding: 0.6rem 0.8rem;
+  color: white;
+  cursor: pointer;
+}
+.header .header__content .header__nav .nav__iconos #icono_header1:hover,
+.header .header__content .header__nav .nav__iconos #icono_header2:hover {
+  transform: scale(1.05);
+}
+.header .header__content .principal {
+  width: 90%;
+  min-height: 55vh;
+  margin: 1rem auto;
+  display: flex;
+}
+@media (max-width: 980px) {
+  .header .header__content .principal {
+    flex-direction: column;
+  }
+}
+.header .header__content .principal .principal__contenido {
+  width: 50%;
+  min-height: 55vh;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  gap: 1rem;
+  font-family: sans-serif;
+}
+.header .header__content .principal .principal__contenido h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  align-self: flex-start;
+}
+@media (max-width: 638px) {
+  .header .header__content .principal .principal__contenido h2 {
+    font-size: 1.5rem;
+  }
+}
+.header .header__content .principal .principal__contenido p {
+  font-size: 1.2rem;
+  font-family: serif;
+}
+@media (max-width: 638px) {
+  .header .header__content .principal .principal__contenido p {
+    font-size: 0.9rem;
+  }
+}
+@media (max-width: 980px) {
+  .header .header__content .principal .principal__contenido {
+    width: 100%;
+  }
+}
+.header .header__content .principal .principal__imagen {
+  width: 50%;
+  min-height: 55vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 980px) {
+  .header .header__content .principal .principal__imagen {
+    width: 100%;
+  }
+}
+.header .header__content .principal .principal__imagen img {
+  max-height: 55vh;
+  animation: flotar 3s ease-in-out infinite;
+}
+@keyframes flotar {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-40px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.enlaces {
+  width: 85%;
+  margin: 2rem auto;
+  min-height: 7vh;
+  border-radius: 8px;
+  background: rgb(19, 18, 18);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border: none;
+}
+@media (max-width: 997px) {
+  .enlaces {
+    width: 95%;
+  }
+}
+@media (max-width: 997px) {
+  .enlaces {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.enlaces a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: 1px;
+  height: 8vh;
+  cursor: pointer;
+  border-radius: 7px;
+  transition: all ease 0.3s;
+}
+@media (max-width: 900px) {
+  .enlaces a {
+    font-size: 0.8rem;
+  }
+}
+@media (max-width: 450px) {
+  .enlaces a {
+    font-size: 0.6rem;
+  }
+}
+.enlaces a.active {
+  background: rgb(29, 28, 28);
+}
+
+.contenedor__formularios {
+  width: 80%;
+  margin: 1rem auto;
+  min-height: 70vh;
+  background: rgb(27, 26, 26);
+  border-radius: 7px;
+}
+@media (max-width: 980px) {
+  .contenedor__formularios {
+    width: 95%;
+  }
+}
+
+.simples, .compuestos {
+  min-height: 70vh;
+  width: 100%;
+  background: rgb(27, 26, 26);
+  border-radius: 7px;
+  color: white;
+  flex-direction: column;
+  gap: 2rem;
+  display: none;
+  padding: 1rem;
+}
+.simples.active, .compuestos.active {
+  display: flex;
+}
+.simples .simples__1, .simples .compuestos__1, .compuestos .simples__1, .compuestos .compuestos__1 {
+  width: 100%;
+  min-height: 50vh;
+  display: flex;
+  gap: 1rem;
+}
+@media (max-width: 980px) {
+  .simples .simples__1, .simples .compuestos__1, .compuestos .simples__1, .compuestos .compuestos__1 {
+    flex-direction: column;
+  }
+}
+.simples .simples__1 .simples1__formulario, .simples .simples__1 .compuestos__formulario, .simples .compuestos__1 .simples1__formulario, .simples .compuestos__1 .compuestos__formulario, .compuestos .simples__1 .simples1__formulario, .compuestos .simples__1 .compuestos__formulario, .compuestos .compuestos__1 .simples1__formulario, .compuestos .compuestos__1 .compuestos__formulario {
+  width: 35%;
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+@media (max-width: 980px) {
+  .simples .simples__1 .simples1__formulario, .simples .simples__1 .compuestos__formulario, .simples .compuestos__1 .simples1__formulario, .simples .compuestos__1 .compuestos__formulario, .compuestos .simples__1 .simples1__formulario, .compuestos .simples__1 .compuestos__formulario, .compuestos .compuestos__1 .simples1__formulario, .compuestos .compuestos__1 .compuestos__formulario {
+    width: 100%;
+  }
+}
+.simples .simples__1 .simples1__formulario h2, .simples .simples__1 .compuestos__formulario h2, .simples .compuestos__1 .simples1__formulario h2, .simples .compuestos__1 .compuestos__formulario h2, .compuestos .simples__1 .simples1__formulario h2, .compuestos .simples__1 .compuestos__formulario h2, .compuestos .compuestos__1 .simples1__formulario h2, .compuestos .compuestos__1 .compuestos__formulario h2 {
+  margin: 0;
+}
+.simples .simples__1 .simples1__formulario p, .simples .simples__1 .compuestos__formulario p, .simples .compuestos__1 .simples1__formulario p, .simples .compuestos__1 .compuestos__formulario p, .compuestos .simples__1 .simples1__formulario p, .compuestos .simples__1 .compuestos__formulario p, .compuestos .compuestos__1 .simples1__formulario p, .compuestos .compuestos__1 .compuestos__formulario p {
+  margin: 0;
+}
+.simples .simples__1 .simples1__formulario .simples1__formulario--input_grande,
+.simples .simples__1 .simples1__formulario .compuestos1__formulario--input_grande, .simples .simples__1 .compuestos__formulario .simples1__formulario--input_grande,
+.simples .simples__1 .compuestos__formulario .compuestos1__formulario--input_grande, .simples .compuestos__1 .simples1__formulario .simples1__formulario--input_grande,
+.simples .compuestos__1 .simples1__formulario .compuestos1__formulario--input_grande, .simples .compuestos__1 .compuestos__formulario .simples1__formulario--input_grande,
+.simples .compuestos__1 .compuestos__formulario .compuestos1__formulario--input_grande, .compuestos .simples__1 .simples1__formulario .simples1__formulario--input_grande,
+.compuestos .simples__1 .simples1__formulario .compuestos1__formulario--input_grande, .compuestos .simples__1 .compuestos__formulario .simples1__formulario--input_grande,
+.compuestos .simples__1 .compuestos__formulario .compuestos1__formulario--input_grande, .compuestos .compuestos__1 .simples1__formulario .simples1__formulario--input_grande,
+.compuestos .compuestos__1 .simples1__formulario .compuestos1__formulario--input_grande, .compuestos .compuestos__1 .compuestos__formulario .simples1__formulario--input_grande,
+.compuestos .compuestos__1 .compuestos__formulario .compuestos1__formulario--input_grande {
+  width: 100%;
+  min-height: 8vh;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  position: relative;
+}
+.simples .simples__1 .simples1__formulario .simples1__formulario--input_grande label,
+.simples .simples__1 .simples1__formulario .compuestos1__formulario--input_grande label, .simples .simples__1 .compuestos__formulario .simples1__formulario--input_grande label,
+.simples .simples__1 .compuestos__formulario .compuestos1__formulario--input_grande label, .simples .compuestos__1 .simples1__formulario .simples1__formulario--input_grande label,
+.simples .compuestos__1 .simples1__formulario .compuestos1__formulario--input_grande label, .simples .compuestos__1 .compuestos__formulario .simples1__formulario--input_grande label,
+.simples .compuestos__1 .compuestos__formulario .compuestos1__formulario--input_grande label, .compuestos .simples__1 .simples1__formulario .simples1__formulario--input_grande label,
+.compuestos .simples__1 .simples1__formulario .compuestos1__formulario--input_grande label, .compuestos .simples__1 .compuestos__formulario .simples1__formulario--input_grande label,
+.compuestos .simples__1 .compuestos__formulario .compuestos1__formulario--input_grande label, .compuestos .compuestos__1 .simples1__formulario .simples1__formulario--input_grande label,
+.compuestos .compuestos__1 .simples1__formulario .compuestos1__formulario--input_grande label, .compuestos .compuestos__1 .compuestos__formulario .simples1__formulario--input_grande label,
+.compuestos .compuestos__1 .compuestos__formulario .compuestos1__formulario--input_grande label {
+  color: rgba(255, 255, 255, 0.747);
+  font-size: 0.9rem;
+}
+.simples .simples__1 .simples1__formulario .simples1__formulario--input_grande input,
+.simples .simples__1 .simples1__formulario .compuestos1__formulario--input_grande input, .simples .simples__1 .compuestos__formulario .simples1__formulario--input_grande input,
+.simples .simples__1 .compuestos__formulario .compuestos1__formulario--input_grande input, .simples .compuestos__1 .simples1__formulario .simples1__formulario--input_grande input,
+.simples .compuestos__1 .simples1__formulario .compuestos1__formulario--input_grande input, .simples .compuestos__1 .compuestos__formulario .simples1__formulario--input_grande input,
+.simples .compuestos__1 .compuestos__formulario .compuestos1__formulario--input_grande input, .compuestos .simples__1 .simples1__formulario .simples1__formulario--input_grande input,
+.compuestos .simples__1 .simples1__formulario .compuestos1__formulario--input_grande input, .compuestos .simples__1 .compuestos__formulario .simples1__formulario--input_grande input,
+.compuestos .simples__1 .compuestos__formulario .compuestos1__formulario--input_grande input, .compuestos .compuestos__1 .simples1__formulario .simples1__formulario--input_grande input,
+.compuestos .compuestos__1 .simples1__formulario .compuestos1__formulario--input_grande input, .compuestos .compuestos__1 .compuestos__formulario .simples1__formulario--input_grande input,
+.compuestos .compuestos__1 .compuestos__formulario .compuestos1__formulario--input_grande input {
+  background: rgb(56, 53, 53);
+  border: none;
+  height: 5vh;
+  outline: none;
+  color: white;
+  padding: 0 2.5rem;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+}
+.simples .simples__1 .simples1__formulario .simples1__formulario--input_grande i,
+.simples .simples__1 .simples1__formulario .compuestos1__formulario--input_grande i, .simples .simples__1 .compuestos__formulario .simples1__formulario--input_grande i,
+.simples .simples__1 .compuestos__formulario .compuestos1__formulario--input_grande i, .simples .compuestos__1 .simples1__formulario .simples1__formulario--input_grande i,
+.simples .compuestos__1 .simples1__formulario .compuestos1__formulario--input_grande i, .simples .compuestos__1 .compuestos__formulario .simples1__formulario--input_grande i,
+.simples .compuestos__1 .compuestos__formulario .compuestos1__formulario--input_grande i, .compuestos .simples__1 .simples1__formulario .simples1__formulario--input_grande i,
+.compuestos .simples__1 .simples1__formulario .compuestos1__formulario--input_grande i, .compuestos .simples__1 .compuestos__formulario .simples1__formulario--input_grande i,
+.compuestos .simples__1 .compuestos__formulario .compuestos1__formulario--input_grande i, .compuestos .compuestos__1 .simples1__formulario .simples1__formulario--input_grande i,
+.compuestos .compuestos__1 .simples1__formulario .compuestos1__formulario--input_grande i, .compuestos .compuestos__1 .compuestos__formulario .simples1__formulario--input_grande i,
+.compuestos .compuestos__1 .compuestos__formulario .compuestos1__formulario--input_grande i {
+  position: absolute;
+  top: 2rem;
+  font-size: 1.35rem;
+  left: 0.4rem;
+}
+.simples .simples__1 .simples1__formulario .simples1__formulario--input_grande p,
+.simples .simples__1 .simples1__formulario .compuestos1__formulario--input_grande p, .simples .simples__1 .compuestos__formulario .simples1__formulario--input_grande p,
+.simples .simples__1 .compuestos__formulario .compuestos1__formulario--input_grande p, .simples .compuestos__1 .simples1__formulario .simples1__formulario--input_grande p,
+.simples .compuestos__1 .simples1__formulario .compuestos1__formulario--input_grande p, .simples .compuestos__1 .compuestos__formulario .simples1__formulario--input_grande p,
+.simples .compuestos__1 .compuestos__formulario .compuestos1__formulario--input_grande p, .compuestos .simples__1 .simples1__formulario .simples1__formulario--input_grande p,
+.compuestos .simples__1 .simples1__formulario .compuestos1__formulario--input_grande p, .compuestos .simples__1 .compuestos__formulario .simples1__formulario--input_grande p,
+.compuestos .simples__1 .compuestos__formulario .compuestos1__formulario--input_grande p, .compuestos .compuestos__1 .simples1__formulario .simples1__formulario--input_grande p,
+.compuestos .compuestos__1 .simples1__formulario .compuestos1__formulario--input_grande p, .compuestos .compuestos__1 .compuestos__formulario .simples1__formulario--input_grande p,
+.compuestos .compuestos__1 .compuestos__formulario .compuestos1__formulario--input_grande p {
+  font-size: 0.7rem;
+  color: red;
+  margin: 0;
+  display: none;
+}
+.simples .simples__1 .simples1__formulario .simples1__formulario--input_grande p.active,
+.simples .simples__1 .simples1__formulario .compuestos1__formulario--input_grande p.active, .simples .simples__1 .compuestos__formulario .simples1__formulario--input_grande p.active,
+.simples .simples__1 .compuestos__formulario .compuestos1__formulario--input_grande p.active, .simples .compuestos__1 .simples1__formulario .simples1__formulario--input_grande p.active,
+.simples .compuestos__1 .simples1__formulario .compuestos1__formulario--input_grande p.active, .simples .compuestos__1 .compuestos__formulario .simples1__formulario--input_grande p.active,
+.simples .compuestos__1 .compuestos__formulario .compuestos1__formulario--input_grande p.active, .compuestos .simples__1 .simples1__formulario .simples1__formulario--input_grande p.active,
+.compuestos .simples__1 .simples1__formulario .compuestos1__formulario--input_grande p.active, .compuestos .simples__1 .compuestos__formulario .simples1__formulario--input_grande p.active,
+.compuestos .simples__1 .compuestos__formulario .compuestos1__formulario--input_grande p.active, .compuestos .compuestos__1 .simples1__formulario .simples1__formulario--input_grande p.active,
+.compuestos .compuestos__1 .simples1__formulario .compuestos1__formulario--input_grande p.active, .compuestos .compuestos__1 .compuestos__formulario .simples1__formulario--input_grande p.active,
+.compuestos .compuestos__1 .compuestos__formulario .compuestos1__formulario--input_grande p.active {
+  display: flex;
+}
+.simples .simples__1 .simples1__formulario .simples1__formulario--input_chico,
+.simples .simples__1 .simples1__formulario .compuestos1__formulario--input_chico, .simples .simples__1 .compuestos__formulario .simples1__formulario--input_chico,
+.simples .simples__1 .compuestos__formulario .compuestos1__formulario--input_chico, .simples .compuestos__1 .simples1__formulario .simples1__formulario--input_chico,
+.simples .compuestos__1 .simples1__formulario .compuestos1__formulario--input_chico, .simples .compuestos__1 .compuestos__formulario .simples1__formulario--input_chico,
+.simples .compuestos__1 .compuestos__formulario .compuestos1__formulario--input_chico, .compuestos .simples__1 .simples1__formulario .simples1__formulario--input_chico,
+.compuestos .simples__1 .simples1__formulario .compuestos1__formulario--input_chico, .compuestos .simples__1 .compuestos__formulario .simples1__formulario--input_chico,
+.compuestos .simples__1 .compuestos__formulario .compuestos1__formulario--input_chico, .compuestos .compuestos__1 .simples1__formulario .simples1__formulario--input_chico,
+.compuestos .compuestos__1 .simples1__formulario .compuestos1__formulario--input_chico, .compuestos .compuestos__1 .compuestos__formulario .simples1__formulario--input_chico,
+.compuestos .compuestos__1 .compuestos__formulario .compuestos1__formulario--input_chico {
+  width: 100%;
+  min-height: 8vh;
+  display: flex;
+  gap: 0.5rem;
+  display: flex;
+}
+.simples .simples__1 .simples1__formulario .simples1__formulario--input_chico .simples1__formulario--input_chico--1,
+.simples .simples__1 .simples1__formulario .simples1__formulario--input_chico .compuestos1__formulario--input_chico--1,
+.simples .simples__1 .simples1__formulario .compuestos1__formulario--input_chico .simples1__formulario--input_chico--1,
+.simples .simples__1 .simples1__formulario .compuestos1__formulario--input_chico .compuestos1__formulario--input_chico--1, .simples .simples__1 .compuestos__formulario .simples1__formulario--input_chico .simples1__formulario--input_chico--1,
+.simples .simples__1 .compuestos__formulario .simples1__formulario--input_chico .compuestos1__formulario--input_chico--1,
+.simples .simples__1 .compuestos__formulario .compuestos1__formulario--input_chico .simples1__formulario--input_chico--1,
+.simples .simples__1 .compuestos__formulario .compuestos1__formulario--input_chico .compuestos1__formulario--input_chico--1, .simples .compuestos__1 .simples1__formulario .simples1__formulario--input_chico .simples1__formulario--input_chico--1,
+.simples .compuestos__1 .simples1__formulario .simples1__formulario--input_chico .compuestos1__formulario--input_chico--1,
+.simples .compuestos__1 .simples1__formulario .compuestos1__formulario--input_chico .simples1__formulario--input_chico--1,
+.simples .compuestos__1 .simples1__formulario .compuestos1__formulario--input_chico .compuestos1__formulario--input_chico--1, .simples .compuestos__1 .compuestos__formulario .simples1__formulario--input_chico .simples1__formulario--input_chico--1,
+.simples .compuestos__1 .compuestos__formulario .simples1__formulario--input_chico .compuestos1__formulario--input_chico--1,
+.simples .compuestos__1 .compuestos__formulario .compuestos1__formulario--input_chico .simples1__formulario--input_chico--1,
+.simples .compuestos__1 .compuestos__formulario .compuestos1__formulario--input_chico .compuestos1__formulario--input_chico--1, .compuestos .simples__1 .simples1__formulario .simples1__formulario--input_chico .simples1__formulario--input_chico--1,
+.compuestos .simples__1 .simples1__formulario .simples1__formulario--input_chico .compuestos1__formulario--input_chico--1,
+.compuestos .simples__1 .simples1__formulario .compuestos1__formulario--input_chico .simples1__formulario--input_chico--1,
+.compuestos .simples__1 .simples1__formulario .compuestos1__formulario--input_chico .compuestos1__formulario--input_chico--1, .compuestos .simples__1 .compuestos__formulario .simples1__formulario--input_chico .simples1__formulario--input_chico--1,
+.compuestos .simples__1 .compuestos__formulario .simples1__formulario--input_chico .compuestos1__formulario--input_chico--1,
+.compuestos .simples__1 .compuestos__formulario .compuestos1__formulario--input_chico .simples1__formulario--input_chico--1,
+.compuestos .simples__1 .compuestos__formulario .compuestos1__formulario--input_chico .compuestos1__formulario--input_chico--1, .compuestos .compuestos__1 .simples1__formulario .simples1__formulario--input_chico .simples1__formulario--input_chico--1,
+.compuestos .compuestos__1 .simples1__formulario .simples1__formulario--input_chico .compuestos1__formulario--input_chico--1,
+.compuestos .compuestos__1 .simples1__formulario .compuestos1__formulario--input_chico .simples1__formulario--input_chico--1,
+.compuestos .compuestos__1 .simples1__formulario .compuestos1__formulario--input_chico .compuestos1__formulario--input_chico--1, .compuestos .compuestos__1 .compuestos__formulario .simples1__formulario--input_chico .simples1__formulario--input_chico--1,
+.compuestos .compuestos__1 .compuestos__formulario .simples1__formulario--input_chico .compuestos1__formulario--input_chico--1,
+.compuestos .compuestos__1 .compuestos__formulario .compuestos1__formulario--input_chico .simples1__formulario--input_chico--1,
+.compuestos .compuestos__1 .compuestos__formulario .compuestos1__formulario--input_chico .compuestos1__formulario--input_chico--1 {
+  width: 50%;
+  min-height: 8vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.simples .simples__1 .simples1__formulario .simples1__formulario--input_chico .simples1__formulario--input_chico--1 label,
+.simples .simples__1 .simples1__formulario .simples1__formulario--input_chico .compuestos1__formulario--input_chico--1 label,
+.simples .simples__1 .simples1__formulario .compuestos1__formulario--input_chico .simples1__formulario--input_chico--1 label,
+.simples .simples__1 .simples1__formulario .compuestos1__formulario--input_chico .compuestos1__formulario--input_chico--1 label, .simples .simples__1 .compuestos__formulario .simples1__formulario--input_chico .simples1__formulario--input_chico--1 label,
+.simples .simples__1 .compuestos__formulario .simples1__formulario--input_chico .compuestos1__formulario--input_chico--1 label,
+.simples .simples__1 .compuestos__formulario .compuestos1__formulario--input_chico .simples1__formulario--input_chico--1 label,
+.simples .simples__1 .compuestos__formulario .compuestos1__formulario--input_chico .compuestos1__formulario--input_chico--1 label, .simples .compuestos__1 .simples1__formulario .simples1__formulario--input_chico .simples1__formulario--input_chico--1 label,
+.simples .compuestos__1 .simples1__formulario .simples1__formulario--input_chico .compuestos1__formulario--input_chico--1 label,
+.simples .compuestos__1 .simples1__formulario .compuestos1__formulario--input_chico .simples1__formulario--input_chico--1 label,
+.simples .compuestos__1 .simples1__formulario .compuestos1__formulario--input_chico .compuestos1__formulario--input_chico--1 label, .simples .compuestos__1 .compuestos__formulario .simples1__formulario--input_chico .simples1__formulario--input_chico--1 label,
+.simples .compuestos__1 .compuestos__formulario .simples1__formulario--input_chico .compuestos1__formulario--input_chico--1 label,
+.simples .compuestos__1 .compuestos__formulario .compuestos1__formulario--input_chico .simples1__formulario--input_chico--1 label,
+.simples .compuestos__1 .compuestos__formulario .compuestos1__formulario--input_chico .compuestos1__formulario--input_chico--1 label, .compuestos .simples__1 .simples1__formulario .simples1__formulario--input_chico .simples1__formulario--input_chico--1 label,
+.compuestos .simples__1 .simples1__formulario .simples1__formulario--input_chico .compuestos1__formulario--input_chico--1 label,
+.compuestos .simples__1 .simples1__formulario .compuestos1__formulario--input_chico .simples1__formulario--input_chico--1 label,
+.compuestos .simples__1 .simples1__formulario .compuestos1__formulario--input_chico .compuestos1__formulario--input_chico--1 label, .compuestos .simples__1 .compuestos__formulario .simples1__formulario--input_chico .simples1__formulario--input_chico--1 label,
+.compuestos .simples__1 .compuestos__formulario .simples1__formulario--input_chico .compuestos1__formulario--input_chico--1 label,
+.compuestos .simples__1 .compuestos__formulario .compuestos1__formulario--input_chico .simples1__formulario--input_chico--1 label,
+.compuestos .simples__1 .compuestos__formulario .compuestos1__formulario--input_chico .compuestos1__formulario--input_chico--1 label, .compuestos .compuestos__1 .simples1__formulario .simples1__formulario--input_chico .simples1__formulario--input_chico--1 label,
+.compuestos .compuestos__1 .simples1__formulario .simples1__formulario--input_chico .compuestos1__formulario--input_chico--1 label,
+.compuestos .compuestos__1 .simples1__formulario .compuestos1__formulario--input_chico .simples1__formulario--input_chico--1 label,
+.compuestos .compuestos__1 .simples1__formulario .compuestos1__formulario--input_chico .compuestos1__formulario--input_chico--1 label, .compuestos .compuestos__1 .compuestos__formulario .simples1__formulario--input_chico .simples1__formulario--input_chico--1 label,
+.compuestos .compuestos__1 .compuestos__formulario .simples1__formulario--input_chico .compuestos1__formulario--input_chico--1 label,
+.compuestos .compuestos__1 .compuestos__formulario .compuestos1__formulario--input_chico .simples1__formulario--input_chico--1 label,
+.compuestos .compuestos__1 .compuestos__formulario .compuestos1__formulario--input_chico .compuestos1__formulario--input_chico--1 label {
+  color: rgba(255, 255, 255, 0.747);
+  font-size: 0.9rem;
+}
+.simples .simples__1 .simples1__formulario .simples1__formulario--input_chico .simples1__formulario--input_chico--1 input,
+.simples .simples__1 .simples1__formulario .simples1__formulario--input_chico .compuestos1__formulario--input_chico--1 input,
+.simples .simples__1 .simples1__formulario .compuestos1__formulario--input_chico .simples1__formulario--input_chico--1 input,
+.simples .simples__1 .simples1__formulario .compuestos1__formulario--input_chico .compuestos1__formulario--input_chico--1 input, .simples .simples__1 .compuestos__formulario .simples1__formulario--input_chico .simples1__formulario--input_chico--1 input,
+.simples .simples__1 .compuestos__formulario .simples1__formulario--input_chico .compuestos1__formulario--input_chico--1 input,
+.simples .simples__1 .compuestos__formulario .compuestos1__formulario--input_chico .simples1__formulario--input_chico--1 input,
+.simples .simples__1 .compuestos__formulario .compuestos1__formulario--input_chico .compuestos1__formulario--input_chico--1 input, .simples .compuestos__1 .simples1__formulario .simples1__formulario--input_chico .simples1__formulario--input_chico--1 input,
+.simples .compuestos__1 .simples1__formulario .simples1__formulario--input_chico .compuestos1__formulario--input_chico--1 input,
+.simples .compuestos__1 .simples1__formulario .compuestos1__formulario--input_chico .simples1__formulario--input_chico--1 input,
+.simples .compuestos__1 .simples1__formulario .compuestos1__formulario--input_chico .compuestos1__formulario--input_chico--1 input, .simples .compuestos__1 .compuestos__formulario .simples1__formulario--input_chico .simples1__formulario--input_chico--1 input,
+.simples .compuestos__1 .compuestos__formulario .simples1__formulario--input_chico .compuestos1__formulario--input_chico--1 input,
+.simples .compuestos__1 .compuestos__formulario .compuestos1__formulario--input_chico .simples1__formulario--input_chico--1 input,
+.simples .compuestos__1 .compuestos__formulario .compuestos1__formulario--input_chico .compuestos1__formulario--input_chico--1 input, .compuestos .simples__1 .simples1__formulario .simples1__formulario--input_chico .simples1__formulario--input_chico--1 input,
+.compuestos .simples__1 .simples1__formulario .simples1__formulario--input_chico .compuestos1__formulario--input_chico--1 input,
+.compuestos .simples__1 .simples1__formulario .compuestos1__formulario--input_chico .simples1__formulario--input_chico--1 input,
+.compuestos .simples__1 .simples1__formulario .compuestos1__formulario--input_chico .compuestos1__formulario--input_chico--1 input, .compuestos .simples__1 .compuestos__formulario .simples1__formulario--input_chico .simples1__formulario--input_chico--1 input,
+.compuestos .simples__1 .compuestos__formulario .simples1__formulario--input_chico .compuestos1__formulario--input_chico--1 input,
+.compuestos .simples__1 .compuestos__formulario .compuestos1__formulario--input_chico .simples1__formulario--input_chico--1 input,
+.compuestos .simples__1 .compuestos__formulario .compuestos1__formulario--input_chico .compuestos1__formulario--input_chico--1 input, .compuestos .compuestos__1 .simples1__formulario .simples1__formulario--input_chico .simples1__formulario--input_chico--1 input,
+.compuestos .compuestos__1 .simples1__formulario .simples1__formulario--input_chico .compuestos1__formulario--input_chico--1 input,
+.compuestos .compuestos__1 .simples1__formulario .compuestos1__formulario--input_chico .simples1__formulario--input_chico--1 input,
+.compuestos .compuestos__1 .simples1__formulario .compuestos1__formulario--input_chico .compuestos1__formulario--input_chico--1 input, .compuestos .compuestos__1 .compuestos__formulario .simples1__formulario--input_chico .simples1__formulario--input_chico--1 input,
+.compuestos .compuestos__1 .compuestos__formulario .simples1__formulario--input_chico .compuestos1__formulario--input_chico--1 input,
+.compuestos .compuestos__1 .compuestos__formulario .compuestos1__formulario--input_chico .simples1__formulario--input_chico--1 input,
+.compuestos .compuestos__1 .compuestos__formulario .compuestos1__formulario--input_chico .compuestos1__formulario--input_chico--1 input {
+  background: rgb(56, 53, 53);
+  border: none;
+  height: 5vh;
+  outline: none;
+  color: white;
+  padding: 0 2.5rem;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+}
+.simples .simples__1 .simples1__formulario .simples1__formulario--input_chico .simples1__formulario--input_chico--1 i,
+.simples .simples__1 .simples1__formulario .simples1__formulario--input_chico .compuestos1__formulario--input_chico--1 i,
+.simples .simples__1 .simples1__formulario .compuestos1__formulario--input_chico .simples1__formulario--input_chico--1 i,
+.simples .simples__1 .simples1__formulario .compuestos1__formulario--input_chico .compuestos1__formulario--input_chico--1 i, .simples .simples__1 .compuestos__formulario .simples1__formulario--input_chico .simples1__formulario--input_chico--1 i,
+.simples .simples__1 .compuestos__formulario .simples1__formulario--input_chico .compuestos1__formulario--input_chico--1 i,
+.simples .simples__1 .compuestos__formulario .compuestos1__formulario--input_chico .simples1__formulario--input_chico--1 i,
+.simples .simples__1 .compuestos__formulario .compuestos1__formulario--input_chico .compuestos1__formulario--input_chico--1 i, .simples .compuestos__1 .simples1__formulario .simples1__formulario--input_chico .simples1__formulario--input_chico--1 i,
+.simples .compuestos__1 .simples1__formulario .simples1__formulario--input_chico .compuestos1__formulario--input_chico--1 i,
+.simples .compuestos__1 .simples1__formulario .compuestos1__formulario--input_chico .simples1__formulario--input_chico--1 i,
+.simples .compuestos__1 .simples1__formulario .compuestos1__formulario--input_chico .compuestos1__formulario--input_chico--1 i, .simples .compuestos__1 .compuestos__formulario .simples1__formulario--input_chico .simples1__formulario--input_chico--1 i,
+.simples .compuestos__1 .compuestos__formulario .simples1__formulario--input_chico .compuestos1__formulario--input_chico--1 i,
+.simples .compuestos__1 .compuestos__formulario .compuestos1__formulario--input_chico .simples1__formulario--input_chico--1 i,
+.simples .compuestos__1 .compuestos__formulario .compuestos1__formulario--input_chico .compuestos1__formulario--input_chico--1 i, .compuestos .simples__1 .simples1__formulario .simples1__formulario--input_chico .simples1__formulario--input_chico--1 i,
+.compuestos .simples__1 .simples1__formulario .simples1__formulario--input_chico .compuestos1__formulario--input_chico--1 i,
+.compuestos .simples__1 .simples1__formulario .compuestos1__formulario--input_chico .simples1__formulario--input_chico--1 i,
+.compuestos .simples__1 .simples1__formulario .compuestos1__formulario--input_chico .compuestos1__formulario--input_chico--1 i, .compuestos .simples__1 .compuestos__formulario .simples1__formulario--input_chico .simples1__formulario--input_chico--1 i,
+.compuestos .simples__1 .compuestos__formulario .simples1__formulario--input_chico .compuestos1__formulario--input_chico--1 i,
+.compuestos .simples__1 .compuestos__formulario .compuestos1__formulario--input_chico .simples1__formulario--input_chico--1 i,
+.compuestos .simples__1 .compuestos__formulario .compuestos1__formulario--input_chico .compuestos1__formulario--input_chico--1 i, .compuestos .compuestos__1 .simples1__formulario .simples1__formulario--input_chico .simples1__formulario--input_chico--1 i,
+.compuestos .compuestos__1 .simples1__formulario .simples1__formulario--input_chico .compuestos1__formulario--input_chico--1 i,
+.compuestos .compuestos__1 .simples1__formulario .compuestos1__formulario--input_chico .simples1__formulario--input_chico--1 i,
+.compuestos .compuestos__1 .simples1__formulario .compuestos1__formulario--input_chico .compuestos1__formulario--input_chico--1 i, .compuestos .compuestos__1 .compuestos__formulario .simples1__formulario--input_chico .simples1__formulario--input_chico--1 i,
+.compuestos .compuestos__1 .compuestos__formulario .simples1__formulario--input_chico .compuestos1__formulario--input_chico--1 i,
+.compuestos .compuestos__1 .compuestos__formulario .compuestos1__formulario--input_chico .simples1__formulario--input_chico--1 i,
+.compuestos .compuestos__1 .compuestos__formulario .compuestos1__formulario--input_chico .compuestos1__formulario--input_chico--1 i {
+  position: absolute;
+  top: 1.5rem;
+  font-size: 1.35rem;
+  left: 0.4rem;
+}
+.simples .simples__1 .simples1__formulario .simples1__formulario--input_chico .simples1__formulario--input_chico--1 p,
+.simples .simples__1 .simples1__formulario .simples1__formulario--input_chico .compuestos1__formulario--input_chico--1 p,
+.simples .simples__1 .simples1__formulario .compuestos1__formulario--input_chico .simples1__formulario--input_chico--1 p,
+.simples .simples__1 .simples1__formulario .compuestos1__formulario--input_chico .compuestos1__formulario--input_chico--1 p, .simples .simples__1 .compuestos__formulario .simples1__formulario--input_chico .simples1__formulario--input_chico--1 p,
+.simples .simples__1 .compuestos__formulario .simples1__formulario--input_chico .compuestos1__formulario--input_chico--1 p,
+.simples .simples__1 .compuestos__formulario .compuestos1__formulario--input_chico .simples1__formulario--input_chico--1 p,
+.simples .simples__1 .compuestos__formulario .compuestos1__formulario--input_chico .compuestos1__formulario--input_chico--1 p, .simples .compuestos__1 .simples1__formulario .simples1__formulario--input_chico .simples1__formulario--input_chico--1 p,
+.simples .compuestos__1 .simples1__formulario .simples1__formulario--input_chico .compuestos1__formulario--input_chico--1 p,
+.simples .compuestos__1 .simples1__formulario .compuestos1__formulario--input_chico .simples1__formulario--input_chico--1 p,
+.simples .compuestos__1 .simples1__formulario .compuestos1__formulario--input_chico .compuestos1__formulario--input_chico--1 p, .simples .compuestos__1 .compuestos__formulario .simples1__formulario--input_chico .simples1__formulario--input_chico--1 p,
+.simples .compuestos__1 .compuestos__formulario .simples1__formulario--input_chico .compuestos1__formulario--input_chico--1 p,
+.simples .compuestos__1 .compuestos__formulario .compuestos1__formulario--input_chico .simples1__formulario--input_chico--1 p,
+.simples .compuestos__1 .compuestos__formulario .compuestos1__formulario--input_chico .compuestos1__formulario--input_chico--1 p, .compuestos .simples__1 .simples1__formulario .simples1__formulario--input_chico .simples1__formulario--input_chico--1 p,
+.compuestos .simples__1 .simples1__formulario .simples1__formulario--input_chico .compuestos1__formulario--input_chico--1 p,
+.compuestos .simples__1 .simples1__formulario .compuestos1__formulario--input_chico .simples1__formulario--input_chico--1 p,
+.compuestos .simples__1 .simples1__formulario .compuestos1__formulario--input_chico .compuestos1__formulario--input_chico--1 p, .compuestos .simples__1 .compuestos__formulario .simples1__formulario--input_chico .simples1__formulario--input_chico--1 p,
+.compuestos .simples__1 .compuestos__formulario .simples1__formulario--input_chico .compuestos1__formulario--input_chico--1 p,
+.compuestos .simples__1 .compuestos__formulario .compuestos1__formulario--input_chico .simples1__formulario--input_chico--1 p,
+.compuestos .simples__1 .compuestos__formulario .compuestos1__formulario--input_chico .compuestos1__formulario--input_chico--1 p, .compuestos .compuestos__1 .simples1__formulario .simples1__formulario--input_chico .simples1__formulario--input_chico--1 p,
+.compuestos .compuestos__1 .simples1__formulario .simples1__formulario--input_chico .compuestos1__formulario--input_chico--1 p,
+.compuestos .compuestos__1 .simples1__formulario .compuestos1__formulario--input_chico .simples1__formulario--input_chico--1 p,
+.compuestos .compuestos__1 .simples1__formulario .compuestos1__formulario--input_chico .compuestos1__formulario--input_chico--1 p, .compuestos .compuestos__1 .compuestos__formulario .simples1__formulario--input_chico .simples1__formulario--input_chico--1 p,
+.compuestos .compuestos__1 .compuestos__formulario .simples1__formulario--input_chico .compuestos1__formulario--input_chico--1 p,
+.compuestos .compuestos__1 .compuestos__formulario .compuestos1__formulario--input_chico .simples1__formulario--input_chico--1 p,
+.compuestos .compuestos__1 .compuestos__formulario .compuestos1__formulario--input_chico .compuestos1__formulario--input_chico--1 p {
+  font-size: 0.7rem;
+  color: red;
+  margin: 0;
+  display: none;
+}
+.simples .simples__1 .simples1__formulario .simples1__formulario--input_chico .simples1__formulario--input_chico--1 p.active,
+.simples .simples__1 .simples1__formulario .simples1__formulario--input_chico .compuestos1__formulario--input_chico--1 p.active,
+.simples .simples__1 .simples1__formulario .compuestos1__formulario--input_chico .simples1__formulario--input_chico--1 p.active,
+.simples .simples__1 .simples1__formulario .compuestos1__formulario--input_chico .compuestos1__formulario--input_chico--1 p.active, .simples .simples__1 .compuestos__formulario .simples1__formulario--input_chico .simples1__formulario--input_chico--1 p.active,
+.simples .simples__1 .compuestos__formulario .simples1__formulario--input_chico .compuestos1__formulario--input_chico--1 p.active,
+.simples .simples__1 .compuestos__formulario .compuestos1__formulario--input_chico .simples1__formulario--input_chico--1 p.active,
+.simples .simples__1 .compuestos__formulario .compuestos1__formulario--input_chico .compuestos1__formulario--input_chico--1 p.active, .simples .compuestos__1 .simples1__formulario .simples1__formulario--input_chico .simples1__formulario--input_chico--1 p.active,
+.simples .compuestos__1 .simples1__formulario .simples1__formulario--input_chico .compuestos1__formulario--input_chico--1 p.active,
+.simples .compuestos__1 .simples1__formulario .compuestos1__formulario--input_chico .simples1__formulario--input_chico--1 p.active,
+.simples .compuestos__1 .simples1__formulario .compuestos1__formulario--input_chico .compuestos1__formulario--input_chico--1 p.active, .simples .compuestos__1 .compuestos__formulario .simples1__formulario--input_chico .simples1__formulario--input_chico--1 p.active,
+.simples .compuestos__1 .compuestos__formulario .simples1__formulario--input_chico .compuestos1__formulario--input_chico--1 p.active,
+.simples .compuestos__1 .compuestos__formulario .compuestos1__formulario--input_chico .simples1__formulario--input_chico--1 p.active,
+.simples .compuestos__1 .compuestos__formulario .compuestos1__formulario--input_chico .compuestos1__formulario--input_chico--1 p.active, .compuestos .simples__1 .simples1__formulario .simples1__formulario--input_chico .simples1__formulario--input_chico--1 p.active,
+.compuestos .simples__1 .simples1__formulario .simples1__formulario--input_chico .compuestos1__formulario--input_chico--1 p.active,
+.compuestos .simples__1 .simples1__formulario .compuestos1__formulario--input_chico .simples1__formulario--input_chico--1 p.active,
+.compuestos .simples__1 .simples1__formulario .compuestos1__formulario--input_chico .compuestos1__formulario--input_chico--1 p.active, .compuestos .simples__1 .compuestos__formulario .simples1__formulario--input_chico .simples1__formulario--input_chico--1 p.active,
+.compuestos .simples__1 .compuestos__formulario .simples1__formulario--input_chico .compuestos1__formulario--input_chico--1 p.active,
+.compuestos .simples__1 .compuestos__formulario .compuestos1__formulario--input_chico .simples1__formulario--input_chico--1 p.active,
+.compuestos .simples__1 .compuestos__formulario .compuestos1__formulario--input_chico .compuestos1__formulario--input_chico--1 p.active, .compuestos .compuestos__1 .simples1__formulario .simples1__formulario--input_chico .simples1__formulario--input_chico--1 p.active,
+.compuestos .compuestos__1 .simples1__formulario .simples1__formulario--input_chico .compuestos1__formulario--input_chico--1 p.active,
+.compuestos .compuestos__1 .simples1__formulario .compuestos1__formulario--input_chico .simples1__formulario--input_chico--1 p.active,
+.compuestos .compuestos__1 .simples1__formulario .compuestos1__formulario--input_chico .compuestos1__formulario--input_chico--1 p.active, .compuestos .compuestos__1 .compuestos__formulario .simples1__formulario--input_chico .simples1__formulario--input_chico--1 p.active,
+.compuestos .compuestos__1 .compuestos__formulario .simples1__formulario--input_chico .compuestos1__formulario--input_chico--1 p.active,
+.compuestos .compuestos__1 .compuestos__formulario .compuestos1__formulario--input_chico .simples1__formulario--input_chico--1 p.active,
+.compuestos .compuestos__1 .compuestos__formulario .compuestos1__formulario--input_chico .compuestos1__formulario--input_chico--1 p.active {
+  display: flex;
+}
+.simples .simples__1 .simples1__formulario .simples1__formulario--input_chico .simples1__formulario--input_chico--2,
+.simples .simples__1 .simples1__formulario .simples1__formulario--input_chico .compuestos1__formulario--input_chico--2,
+.simples .simples__1 .simples1__formulario .compuestos1__formulario--input_chico .simples1__formulario--input_chico--2,
+.simples .simples__1 .simples1__formulario .compuestos1__formulario--input_chico .compuestos1__formulario--input_chico--2, .simples .simples__1 .compuestos__formulario .simples1__formulario--input_chico .simples1__formulario--input_chico--2,
+.simples .simples__1 .compuestos__formulario .simples1__formulario--input_chico .compuestos1__formulario--input_chico--2,
+.simples .simples__1 .compuestos__formulario .compuestos1__formulario--input_chico .simples1__formulario--input_chico--2,
+.simples .simples__1 .compuestos__formulario .compuestos1__formulario--input_chico .compuestos1__formulario--input_chico--2, .simples .compuestos__1 .simples1__formulario .simples1__formulario--input_chico .simples1__formulario--input_chico--2,
+.simples .compuestos__1 .simples1__formulario .simples1__formulario--input_chico .compuestos1__formulario--input_chico--2,
+.simples .compuestos__1 .simples1__formulario .compuestos1__formulario--input_chico .simples1__formulario--input_chico--2,
+.simples .compuestos__1 .simples1__formulario .compuestos1__formulario--input_chico .compuestos1__formulario--input_chico--2, .simples .compuestos__1 .compuestos__formulario .simples1__formulario--input_chico .simples1__formulario--input_chico--2,
+.simples .compuestos__1 .compuestos__formulario .simples1__formulario--input_chico .compuestos1__formulario--input_chico--2,
+.simples .compuestos__1 .compuestos__formulario .compuestos1__formulario--input_chico .simples1__formulario--input_chico--2,
+.simples .compuestos__1 .compuestos__formulario .compuestos1__formulario--input_chico .compuestos1__formulario--input_chico--2, .compuestos .simples__1 .simples1__formulario .simples1__formulario--input_chico .simples1__formulario--input_chico--2,
+.compuestos .simples__1 .simples1__formulario .simples1__formulario--input_chico .compuestos1__formulario--input_chico--2,
+.compuestos .simples__1 .simples1__formulario .compuestos1__formulario--input_chico .simples1__formulario--input_chico--2,
+.compuestos .simples__1 .simples1__formulario .compuestos1__formulario--input_chico .compuestos1__formulario--input_chico--2, .compuestos .simples__1 .compuestos__formulario .simples1__formulario--input_chico .simples1__formulario--input_chico--2,
+.compuestos .simples__1 .compuestos__formulario .simples1__formulario--input_chico .compuestos1__formulario--input_chico--2,
+.compuestos .simples__1 .compuestos__formulario .compuestos1__formulario--input_chico .simples1__formulario--input_chico--2,
+.compuestos .simples__1 .compuestos__formulario .compuestos1__formulario--input_chico .compuestos1__formulario--input_chico--2, .compuestos .compuestos__1 .simples1__formulario .simples1__formulario--input_chico .simples1__formulario--input_chico--2,
+.compuestos .compuestos__1 .simples1__formulario .simples1__formulario--input_chico .compuestos1__formulario--input_chico--2,
+.compuestos .compuestos__1 .simples1__formulario .compuestos1__formulario--input_chico .simples1__formulario--input_chico--2,
+.compuestos .compuestos__1 .simples1__formulario .compuestos1__formulario--input_chico .compuestos1__formulario--input_chico--2, .compuestos .compuestos__1 .compuestos__formulario .simples1__formulario--input_chico .simples1__formulario--input_chico--2,
+.compuestos .compuestos__1 .compuestos__formulario .simples1__formulario--input_chico .compuestos1__formulario--input_chico--2,
+.compuestos .compuestos__1 .compuestos__formulario .compuestos1__formulario--input_chico .simples1__formulario--input_chico--2,
+.compuestos .compuestos__1 .compuestos__formulario .compuestos1__formulario--input_chico .compuestos1__formulario--input_chico--2 {
+  width: 48%;
+  min-height: 8vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.simples .simples__1 .simples1__formulario .simples1__formulario--input_chico .simples1__formulario--input_chico--2 label,
+.simples .simples__1 .simples1__formulario .simples1__formulario--input_chico .compuestos1__formulario--input_chico--2 label,
+.simples .simples__1 .simples1__formulario .compuestos1__formulario--input_chico .simples1__formulario--input_chico--2 label,
+.simples .simples__1 .simples1__formulario .compuestos1__formulario--input_chico .compuestos1__formulario--input_chico--2 label, .simples .simples__1 .compuestos__formulario .simples1__formulario--input_chico .simples1__formulario--input_chico--2 label,
+.simples .simples__1 .compuestos__formulario .simples1__formulario--input_chico .compuestos1__formulario--input_chico--2 label,
+.simples .simples__1 .compuestos__formulario .compuestos1__formulario--input_chico .simples1__formulario--input_chico--2 label,
+.simples .simples__1 .compuestos__formulario .compuestos1__formulario--input_chico .compuestos1__formulario--input_chico--2 label, .simples .compuestos__1 .simples1__formulario .simples1__formulario--input_chico .simples1__formulario--input_chico--2 label,
+.simples .compuestos__1 .simples1__formulario .simples1__formulario--input_chico .compuestos1__formulario--input_chico--2 label,
+.simples .compuestos__1 .simples1__formulario .compuestos1__formulario--input_chico .simples1__formulario--input_chico--2 label,
+.simples .compuestos__1 .simples1__formulario .compuestos1__formulario--input_chico .compuestos1__formulario--input_chico--2 label, .simples .compuestos__1 .compuestos__formulario .simples1__formulario--input_chico .simples1__formulario--input_chico--2 label,
+.simples .compuestos__1 .compuestos__formulario .simples1__formulario--input_chico .compuestos1__formulario--input_chico--2 label,
+.simples .compuestos__1 .compuestos__formulario .compuestos1__formulario--input_chico .simples1__formulario--input_chico--2 label,
+.simples .compuestos__1 .compuestos__formulario .compuestos1__formulario--input_chico .compuestos1__formulario--input_chico--2 label, .compuestos .simples__1 .simples1__formulario .simples1__formulario--input_chico .simples1__formulario--input_chico--2 label,
+.compuestos .simples__1 .simples1__formulario .simples1__formulario--input_chico .compuestos1__formulario--input_chico--2 label,
+.compuestos .simples__1 .simples1__formulario .compuestos1__formulario--input_chico .simples1__formulario--input_chico--2 label,
+.compuestos .simples__1 .simples1__formulario .compuestos1__formulario--input_chico .compuestos1__formulario--input_chico--2 label, .compuestos .simples__1 .compuestos__formulario .simples1__formulario--input_chico .simples1__formulario--input_chico--2 label,
+.compuestos .simples__1 .compuestos__formulario .simples1__formulario--input_chico .compuestos1__formulario--input_chico--2 label,
+.compuestos .simples__1 .compuestos__formulario .compuestos1__formulario--input_chico .simples1__formulario--input_chico--2 label,
+.compuestos .simples__1 .compuestos__formulario .compuestos1__formulario--input_chico .compuestos1__formulario--input_chico--2 label, .compuestos .compuestos__1 .simples1__formulario .simples1__formulario--input_chico .simples1__formulario--input_chico--2 label,
+.compuestos .compuestos__1 .simples1__formulario .simples1__formulario--input_chico .compuestos1__formulario--input_chico--2 label,
+.compuestos .compuestos__1 .simples1__formulario .compuestos1__formulario--input_chico .simples1__formulario--input_chico--2 label,
+.compuestos .compuestos__1 .simples1__formulario .compuestos1__formulario--input_chico .compuestos1__formulario--input_chico--2 label, .compuestos .compuestos__1 .compuestos__formulario .simples1__formulario--input_chico .simples1__formulario--input_chico--2 label,
+.compuestos .compuestos__1 .compuestos__formulario .simples1__formulario--input_chico .compuestos1__formulario--input_chico--2 label,
+.compuestos .compuestos__1 .compuestos__formulario .compuestos1__formulario--input_chico .simples1__formulario--input_chico--2 label,
+.compuestos .compuestos__1 .compuestos__formulario .compuestos1__formulario--input_chico .compuestos1__formulario--input_chico--2 label {
+  color: rgba(255, 255, 255, 0.747);
+  font-size: 0.9rem;
+}
+.simples .simples__1 .simples1__formulario .simples1__formulario--input_chico .simples1__formulario--input_chico--2 input,
+.simples .simples__1 .simples1__formulario .simples1__formulario--input_chico .compuestos1__formulario--input_chico--2 input,
+.simples .simples__1 .simples1__formulario .compuestos1__formulario--input_chico .simples1__formulario--input_chico--2 input,
+.simples .simples__1 .simples1__formulario .compuestos1__formulario--input_chico .compuestos1__formulario--input_chico--2 input, .simples .simples__1 .compuestos__formulario .simples1__formulario--input_chico .simples1__formulario--input_chico--2 input,
+.simples .simples__1 .compuestos__formulario .simples1__formulario--input_chico .compuestos1__formulario--input_chico--2 input,
+.simples .simples__1 .compuestos__formulario .compuestos1__formulario--input_chico .simples1__formulario--input_chico--2 input,
+.simples .simples__1 .compuestos__formulario .compuestos1__formulario--input_chico .compuestos1__formulario--input_chico--2 input, .simples .compuestos__1 .simples1__formulario .simples1__formulario--input_chico .simples1__formulario--input_chico--2 input,
+.simples .compuestos__1 .simples1__formulario .simples1__formulario--input_chico .compuestos1__formulario--input_chico--2 input,
+.simples .compuestos__1 .simples1__formulario .compuestos1__formulario--input_chico .simples1__formulario--input_chico--2 input,
+.simples .compuestos__1 .simples1__formulario .compuestos1__formulario--input_chico .compuestos1__formulario--input_chico--2 input, .simples .compuestos__1 .compuestos__formulario .simples1__formulario--input_chico .simples1__formulario--input_chico--2 input,
+.simples .compuestos__1 .compuestos__formulario .simples1__formulario--input_chico .compuestos1__formulario--input_chico--2 input,
+.simples .compuestos__1 .compuestos__formulario .compuestos1__formulario--input_chico .simples1__formulario--input_chico--2 input,
+.simples .compuestos__1 .compuestos__formulario .compuestos1__formulario--input_chico .compuestos1__formulario--input_chico--2 input, .compuestos .simples__1 .simples1__formulario .simples1__formulario--input_chico .simples1__formulario--input_chico--2 input,
+.compuestos .simples__1 .simples1__formulario .simples1__formulario--input_chico .compuestos1__formulario--input_chico--2 input,
+.compuestos .simples__1 .simples1__formulario .compuestos1__formulario--input_chico .simples1__formulario--input_chico--2 input,
+.compuestos .simples__1 .simples1__formulario .compuestos1__formulario--input_chico .compuestos1__formulario--input_chico--2 input, .compuestos .simples__1 .compuestos__formulario .simples1__formulario--input_chico .simples1__formulario--input_chico--2 input,
+.compuestos .simples__1 .compuestos__formulario .simples1__formulario--input_chico .compuestos1__formulario--input_chico--2 input,
+.compuestos .simples__1 .compuestos__formulario .compuestos1__formulario--input_chico .simples1__formulario--input_chico--2 input,
+.compuestos .simples__1 .compuestos__formulario .compuestos1__formulario--input_chico .compuestos1__formulario--input_chico--2 input, .compuestos .compuestos__1 .simples1__formulario .simples1__formulario--input_chico .simples1__formulario--input_chico--2 input,
+.compuestos .compuestos__1 .simples1__formulario .simples1__formulario--input_chico .compuestos1__formulario--input_chico--2 input,
+.compuestos .compuestos__1 .simples1__formulario .compuestos1__formulario--input_chico .simples1__formulario--input_chico--2 input,
+.compuestos .compuestos__1 .simples1__formulario .compuestos1__formulario--input_chico .compuestos1__formulario--input_chico--2 input, .compuestos .compuestos__1 .compuestos__formulario .simples1__formulario--input_chico .simples1__formulario--input_chico--2 input,
+.compuestos .compuestos__1 .compuestos__formulario .simples1__formulario--input_chico .compuestos1__formulario--input_chico--2 input,
+.compuestos .compuestos__1 .compuestos__formulario .compuestos1__formulario--input_chico .simples1__formulario--input_chico--2 input,
+.compuestos .compuestos__1 .compuestos__formulario .compuestos1__formulario--input_chico .compuestos1__formulario--input_chico--2 input {
+  background: rgb(56, 53, 53);
+  border: none;
+  height: 5vh;
+  outline: none;
+  color: white;
+  padding: 0 2.5rem;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+}
+.simples .simples__1 .simples1__formulario .simples1__formulario--input_chico .simples1__formulario--input_chico--2 i,
+.simples .simples__1 .simples1__formulario .simples1__formulario--input_chico .compuestos1__formulario--input_chico--2 i,
+.simples .simples__1 .simples1__formulario .compuestos1__formulario--input_chico .simples1__formulario--input_chico--2 i,
+.simples .simples__1 .simples1__formulario .compuestos1__formulario--input_chico .compuestos1__formulario--input_chico--2 i, .simples .simples__1 .compuestos__formulario .simples1__formulario--input_chico .simples1__formulario--input_chico--2 i,
+.simples .simples__1 .compuestos__formulario .simples1__formulario--input_chico .compuestos1__formulario--input_chico--2 i,
+.simples .simples__1 .compuestos__formulario .compuestos1__formulario--input_chico .simples1__formulario--input_chico--2 i,
+.simples .simples__1 .compuestos__formulario .compuestos1__formulario--input_chico .compuestos1__formulario--input_chico--2 i, .simples .compuestos__1 .simples1__formulario .simples1__formulario--input_chico .simples1__formulario--input_chico--2 i,
+.simples .compuestos__1 .simples1__formulario .simples1__formulario--input_chico .compuestos1__formulario--input_chico--2 i,
+.simples .compuestos__1 .simples1__formulario .compuestos1__formulario--input_chico .simples1__formulario--input_chico--2 i,
+.simples .compuestos__1 .simples1__formulario .compuestos1__formulario--input_chico .compuestos1__formulario--input_chico--2 i, .simples .compuestos__1 .compuestos__formulario .simples1__formulario--input_chico .simples1__formulario--input_chico--2 i,
+.simples .compuestos__1 .compuestos__formulario .simples1__formulario--input_chico .compuestos1__formulario--input_chico--2 i,
+.simples .compuestos__1 .compuestos__formulario .compuestos1__formulario--input_chico .simples1__formulario--input_chico--2 i,
+.simples .compuestos__1 .compuestos__formulario .compuestos1__formulario--input_chico .compuestos1__formulario--input_chico--2 i, .compuestos .simples__1 .simples1__formulario .simples1__formulario--input_chico .simples1__formulario--input_chico--2 i,
+.compuestos .simples__1 .simples1__formulario .simples1__formulario--input_chico .compuestos1__formulario--input_chico--2 i,
+.compuestos .simples__1 .simples1__formulario .compuestos1__formulario--input_chico .simples1__formulario--input_chico--2 i,
+.compuestos .simples__1 .simples1__formulario .compuestos1__formulario--input_chico .compuestos1__formulario--input_chico--2 i, .compuestos .simples__1 .compuestos__formulario .simples1__formulario--input_chico .simples1__formulario--input_chico--2 i,
+.compuestos .simples__1 .compuestos__formulario .simples1__formulario--input_chico .compuestos1__formulario--input_chico--2 i,
+.compuestos .simples__1 .compuestos__formulario .compuestos1__formulario--input_chico .simples1__formulario--input_chico--2 i,
+.compuestos .simples__1 .compuestos__formulario .compuestos1__formulario--input_chico .compuestos1__formulario--input_chico--2 i, .compuestos .compuestos__1 .simples1__formulario .simples1__formulario--input_chico .simples1__formulario--input_chico--2 i,
+.compuestos .compuestos__1 .simples1__formulario .simples1__formulario--input_chico .compuestos1__formulario--input_chico--2 i,
+.compuestos .compuestos__1 .simples1__formulario .compuestos1__formulario--input_chico .simples1__formulario--input_chico--2 i,
+.compuestos .compuestos__1 .simples1__formulario .compuestos1__formulario--input_chico .compuestos1__formulario--input_chico--2 i, .compuestos .compuestos__1 .compuestos__formulario .simples1__formulario--input_chico .simples1__formulario--input_chico--2 i,
+.compuestos .compuestos__1 .compuestos__formulario .simples1__formulario--input_chico .compuestos1__formulario--input_chico--2 i,
+.compuestos .compuestos__1 .compuestos__formulario .compuestos1__formulario--input_chico .simples1__formulario--input_chico--2 i,
+.compuestos .compuestos__1 .compuestos__formulario .compuestos1__formulario--input_chico .compuestos1__formulario--input_chico--2 i {
+  position: absolute;
+  top: 1.5rem;
+  font-size: 1.35rem;
+  left: 0.4rem;
+}
+.simples .simples__1 .simples1__formulario .simples1__formulario--input_chico .simples1__formulario--input_chico--2 p,
+.simples .simples__1 .simples1__formulario .simples1__formulario--input_chico .compuestos1__formulario--input_chico--2 p,
+.simples .simples__1 .simples1__formulario .compuestos1__formulario--input_chico .simples1__formulario--input_chico--2 p,
+.simples .simples__1 .simples1__formulario .compuestos1__formulario--input_chico .compuestos1__formulario--input_chico--2 p, .simples .simples__1 .compuestos__formulario .simples1__formulario--input_chico .simples1__formulario--input_chico--2 p,
+.simples .simples__1 .compuestos__formulario .simples1__formulario--input_chico .compuestos1__formulario--input_chico--2 p,
+.simples .simples__1 .compuestos__formulario .compuestos1__formulario--input_chico .simples1__formulario--input_chico--2 p,
+.simples .simples__1 .compuestos__formulario .compuestos1__formulario--input_chico .compuestos1__formulario--input_chico--2 p, .simples .compuestos__1 .simples1__formulario .simples1__formulario--input_chico .simples1__formulario--input_chico--2 p,
+.simples .compuestos__1 .simples1__formulario .simples1__formulario--input_chico .compuestos1__formulario--input_chico--2 p,
+.simples .compuestos__1 .simples1__formulario .compuestos1__formulario--input_chico .simples1__formulario--input_chico--2 p,
+.simples .compuestos__1 .simples1__formulario .compuestos1__formulario--input_chico .compuestos1__formulario--input_chico--2 p, .simples .compuestos__1 .compuestos__formulario .simples1__formulario--input_chico .simples1__formulario--input_chico--2 p,
+.simples .compuestos__1 .compuestos__formulario .simples1__formulario--input_chico .compuestos1__formulario--input_chico--2 p,
+.simples .compuestos__1 .compuestos__formulario .compuestos1__formulario--input_chico .simples1__formulario--input_chico--2 p,
+.simples .compuestos__1 .compuestos__formulario .compuestos1__formulario--input_chico .compuestos1__formulario--input_chico--2 p, .compuestos .simples__1 .simples1__formulario .simples1__formulario--input_chico .simples1__formulario--input_chico--2 p,
+.compuestos .simples__1 .simples1__formulario .simples1__formulario--input_chico .compuestos1__formulario--input_chico--2 p,
+.compuestos .simples__1 .simples1__formulario .compuestos1__formulario--input_chico .simples1__formulario--input_chico--2 p,
+.compuestos .simples__1 .simples1__formulario .compuestos1__formulario--input_chico .compuestos1__formulario--input_chico--2 p, .compuestos .simples__1 .compuestos__formulario .simples1__formulario--input_chico .simples1__formulario--input_chico--2 p,
+.compuestos .simples__1 .compuestos__formulario .simples1__formulario--input_chico .compuestos1__formulario--input_chico--2 p,
+.compuestos .simples__1 .compuestos__formulario .compuestos1__formulario--input_chico .simples1__formulario--input_chico--2 p,
+.compuestos .simples__1 .compuestos__formulario .compuestos1__formulario--input_chico .compuestos1__formulario--input_chico--2 p, .compuestos .compuestos__1 .simples1__formulario .simples1__formulario--input_chico .simples1__formulario--input_chico--2 p,
+.compuestos .compuestos__1 .simples1__formulario .simples1__formulario--input_chico .compuestos1__formulario--input_chico--2 p,
+.compuestos .compuestos__1 .simples1__formulario .compuestos1__formulario--input_chico .simples1__formulario--input_chico--2 p,
+.compuestos .compuestos__1 .simples1__formulario .compuestos1__formulario--input_chico .compuestos1__formulario--input_chico--2 p, .compuestos .compuestos__1 .compuestos__formulario .simples1__formulario--input_chico .simples1__formulario--input_chico--2 p,
+.compuestos .compuestos__1 .compuestos__formulario .simples1__formulario--input_chico .compuestos1__formulario--input_chico--2 p,
+.compuestos .compuestos__1 .compuestos__formulario .compuestos1__formulario--input_chico .simples1__formulario--input_chico--2 p,
+.compuestos .compuestos__1 .compuestos__formulario .compuestos1__formulario--input_chico .compuestos1__formulario--input_chico--2 p {
+  font-size: 0.7rem;
+  color: red;
+  margin: 0;
+  display: none;
+}
+.simples .simples__1 .simples1__formulario .simples1__formulario--input_chico .simples1__formulario--input_chico--2 p.active,
+.simples .simples__1 .simples1__formulario .simples1__formulario--input_chico .compuestos1__formulario--input_chico--2 p.active,
+.simples .simples__1 .simples1__formulario .compuestos1__formulario--input_chico .simples1__formulario--input_chico--2 p.active,
+.simples .simples__1 .simples1__formulario .compuestos1__formulario--input_chico .compuestos1__formulario--input_chico--2 p.active, .simples .simples__1 .compuestos__formulario .simples1__formulario--input_chico .simples1__formulario--input_chico--2 p.active,
+.simples .simples__1 .compuestos__formulario .simples1__formulario--input_chico .compuestos1__formulario--input_chico--2 p.active,
+.simples .simples__1 .compuestos__formulario .compuestos1__formulario--input_chico .simples1__formulario--input_chico--2 p.active,
+.simples .simples__1 .compuestos__formulario .compuestos1__formulario--input_chico .compuestos1__formulario--input_chico--2 p.active, .simples .compuestos__1 .simples1__formulario .simples1__formulario--input_chico .simples1__formulario--input_chico--2 p.active,
+.simples .compuestos__1 .simples1__formulario .simples1__formulario--input_chico .compuestos1__formulario--input_chico--2 p.active,
+.simples .compuestos__1 .simples1__formulario .compuestos1__formulario--input_chico .simples1__formulario--input_chico--2 p.active,
+.simples .compuestos__1 .simples1__formulario .compuestos1__formulario--input_chico .compuestos1__formulario--input_chico--2 p.active, .simples .compuestos__1 .compuestos__formulario .simples1__formulario--input_chico .simples1__formulario--input_chico--2 p.active,
+.simples .compuestos__1 .compuestos__formulario .simples1__formulario--input_chico .compuestos1__formulario--input_chico--2 p.active,
+.simples .compuestos__1 .compuestos__formulario .compuestos1__formulario--input_chico .simples1__formulario--input_chico--2 p.active,
+.simples .compuestos__1 .compuestos__formulario .compuestos1__formulario--input_chico .compuestos1__formulario--input_chico--2 p.active, .compuestos .simples__1 .simples1__formulario .simples1__formulario--input_chico .simples1__formulario--input_chico--2 p.active,
+.compuestos .simples__1 .simples1__formulario .simples1__formulario--input_chico .compuestos1__formulario--input_chico--2 p.active,
+.compuestos .simples__1 .simples1__formulario .compuestos1__formulario--input_chico .simples1__formulario--input_chico--2 p.active,
+.compuestos .simples__1 .simples1__formulario .compuestos1__formulario--input_chico .compuestos1__formulario--input_chico--2 p.active, .compuestos .simples__1 .compuestos__formulario .simples1__formulario--input_chico .simples1__formulario--input_chico--2 p.active,
+.compuestos .simples__1 .compuestos__formulario .simples1__formulario--input_chico .compuestos1__formulario--input_chico--2 p.active,
+.compuestos .simples__1 .compuestos__formulario .compuestos1__formulario--input_chico .simples1__formulario--input_chico--2 p.active,
+.compuestos .simples__1 .compuestos__formulario .compuestos1__formulario--input_chico .compuestos1__formulario--input_chico--2 p.active, .compuestos .compuestos__1 .simples1__formulario .simples1__formulario--input_chico .simples1__formulario--input_chico--2 p.active,
+.compuestos .compuestos__1 .simples1__formulario .simples1__formulario--input_chico .compuestos1__formulario--input_chico--2 p.active,
+.compuestos .compuestos__1 .simples1__formulario .compuestos1__formulario--input_chico .simples1__formulario--input_chico--2 p.active,
+.compuestos .compuestos__1 .simples1__formulario .compuestos1__formulario--input_chico .compuestos1__formulario--input_chico--2 p.active, .compuestos .compuestos__1 .compuestos__formulario .simples1__formulario--input_chico .simples1__formulario--input_chico--2 p.active,
+.compuestos .compuestos__1 .compuestos__formulario .simples1__formulario--input_chico .compuestos1__formulario--input_chico--2 p.active,
+.compuestos .compuestos__1 .compuestos__formulario .compuestos1__formulario--input_chico .simples1__formulario--input_chico--2 p.active,
+.compuestos .compuestos__1 .compuestos__formulario .compuestos1__formulario--input_chico .compuestos1__formulario--input_chico--2 p.active {
+  display: flex;
+}
+.simples .simples__1 .simples1__formulario .compuestos1__formulario--input-frecuencia, .simples .simples__1 .compuestos__formulario .compuestos1__formulario--input-frecuencia, .simples .compuestos__1 .simples1__formulario .compuestos1__formulario--input-frecuencia, .simples .compuestos__1 .compuestos__formulario .compuestos1__formulario--input-frecuencia, .compuestos .simples__1 .simples1__formulario .compuestos1__formulario--input-frecuencia, .compuestos .simples__1 .compuestos__formulario .compuestos1__formulario--input-frecuencia, .compuestos .compuestos__1 .simples1__formulario .compuestos1__formulario--input-frecuencia, .compuestos .compuestos__1 .compuestos__formulario .compuestos1__formulario--input-frecuencia {
+  min-height: 7vh;
+}
+.simples .simples__1 .simples1__formulario .compuestos1__formulario--input-frecuencia select, .simples .simples__1 .compuestos__formulario .compuestos1__formulario--input-frecuencia select, .simples .compuestos__1 .simples1__formulario .compuestos1__formulario--input-frecuencia select, .simples .compuestos__1 .compuestos__formulario .compuestos1__formulario--input-frecuencia select, .compuestos .simples__1 .simples1__formulario .compuestos1__formulario--input-frecuencia select, .compuestos .simples__1 .compuestos__formulario .compuestos1__formulario--input-frecuencia select, .compuestos .compuestos__1 .simples1__formulario .compuestos1__formulario--input-frecuencia select, .compuestos .compuestos__1 .compuestos__formulario .compuestos1__formulario--input-frecuencia select {
+  width: 100%;
+  min-height: 7vh;
+  background: rgb(56, 53, 53);
+  color: white;
+  border: none;
+  font-size: 1.1rem;
+  padding: 0.5rem;
+  outline: none;
+}
+.simples .simples__1 .simples1__formulario .compuestos1__formulario--input-frecuencia select option, .simples .simples__1 .compuestos__formulario .compuestos1__formulario--input-frecuencia select option, .simples .compuestos__1 .simples1__formulario .compuestos1__formulario--input-frecuencia select option, .simples .compuestos__1 .compuestos__formulario .compuestos1__formulario--input-frecuencia select option, .compuestos .simples__1 .simples1__formulario .compuestos1__formulario--input-frecuencia select option, .compuestos .simples__1 .compuestos__formulario .compuestos1__formulario--input-frecuencia select option, .compuestos .compuestos__1 .simples1__formulario .compuestos1__formulario--input-frecuencia select option, .compuestos .compuestos__1 .compuestos__formulario .compuestos1__formulario--input-frecuencia select option {
+  font-weight: 600;
+}
+.simples .simples__1 .simples1__formulario button, .simples .simples__1 .compuestos__formulario button, .simples .compuestos__1 .simples1__formulario button, .simples .compuestos__1 .compuestos__formulario button, .compuestos .simples__1 .simples1__formulario button, .compuestos .simples__1 .compuestos__formulario button, .compuestos .compuestos__1 .simples1__formulario button, .compuestos .compuestos__1 .compuestos__formulario button {
+  min-height: 8vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  background: rgb(41, 39, 39);
+  border: none;
+  color: white;
+  font-weight: 800;
+  border-radius: 8px;
+}
+.simples .simples__1 .simples1__graficas,
+.simples .simples__1 .compuestos1__graficas, .simples .compuestos__1 .simples1__graficas,
+.simples .compuestos__1 .compuestos1__graficas, .compuestos .simples__1 .simples1__graficas,
+.compuestos .simples__1 .compuestos1__graficas, .compuestos .compuestos__1 .simples1__graficas,
+.compuestos .compuestos__1 .compuestos1__graficas {
+  width: 65%;
+  min-height: 50vh;
+}
+@media (max-width: 980px) {
+  .simples .simples__1 .simples1__graficas,
+  .simples .simples__1 .compuestos1__graficas, .simples .compuestos__1 .simples1__graficas,
+  .simples .compuestos__1 .compuestos1__graficas, .compuestos .simples__1 .simples1__graficas,
+  .compuestos .simples__1 .compuestos1__graficas, .compuestos .compuestos__1 .simples1__graficas,
+  .compuestos .compuestos__1 .compuestos1__graficas {
+    width: 100%;
+  }
+}
+.simples .simples__1 .simples1__graficas #miGrafica_compuestos,
+.simples .simples__1 .compuestos1__graficas #miGrafica_compuestos, .simples .compuestos__1 .simples1__graficas #miGrafica_compuestos,
+.simples .compuestos__1 .compuestos1__graficas #miGrafica_compuestos, .compuestos .simples__1 .simples1__graficas #miGrafica_compuestos,
+.compuestos .simples__1 .compuestos1__graficas #miGrafica_compuestos, .compuestos .compuestos__1 .simples1__graficas #miGrafica_compuestos,
+.compuestos .compuestos__1 .compuestos1__graficas #miGrafica_compuestos {
+  max-width: 100%;
+  max-height: 50vh;
+}
+.simples .simples__2,
+.simples .compuestos__2, .compuestos .simples__2,
+.compuestos .compuestos__2 {
+  width: 100%;
+  min-height: 50vh;
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+}
+@media (max-width: 980px) {
+  .simples .simples__2,
+  .simples .compuestos__2, .compuestos .simples__2,
+  .compuestos .compuestos__2 {
+    flex-direction: column;
+  }
+}
+.simples .simples__2 .simples__2--tabla,
+.simples .simples__2 .compuestos__2--tabla,
+.simples .compuestos__2 .simples__2--tabla,
+.simples .compuestos__2 .compuestos__2--tabla, .compuestos .simples__2 .simples__2--tabla,
+.compuestos .simples__2 .compuestos__2--tabla,
+.compuestos .compuestos__2 .simples__2--tabla,
+.compuestos .compuestos__2 .compuestos__2--tabla {
+  width: 60%;
+  min-height: 40vh;
+}
+@media (max-width: 980px) {
+  .simples .simples__2 .simples__2--tabla,
+  .simples .simples__2 .compuestos__2--tabla,
+  .simples .compuestos__2 .simples__2--tabla,
+  .simples .compuestos__2 .compuestos__2--tabla, .compuestos .simples__2 .simples__2--tabla,
+  .compuestos .simples__2 .compuestos__2--tabla,
+  .compuestos .compuestos__2 .simples__2--tabla,
+  .compuestos .compuestos__2 .compuestos__2--tabla {
+    width: 100%;
+  }
+}
+.simples .simples__2 .simples__2--tabla .simples__2--tabla__datos,
+.simples .simples__2 .simples__2--tabla .compuestos__2--tabla__datos,
+.simples .simples__2 .compuestos__2--tabla .simples__2--tabla__datos,
+.simples .simples__2 .compuestos__2--tabla .compuestos__2--tabla__datos,
+.simples .compuestos__2 .simples__2--tabla .simples__2--tabla__datos,
+.simples .compuestos__2 .simples__2--tabla .compuestos__2--tabla__datos,
+.simples .compuestos__2 .compuestos__2--tabla .simples__2--tabla__datos,
+.simples .compuestos__2 .compuestos__2--tabla .compuestos__2--tabla__datos, .compuestos .simples__2 .simples__2--tabla .simples__2--tabla__datos,
+.compuestos .simples__2 .simples__2--tabla .compuestos__2--tabla__datos,
+.compuestos .simples__2 .compuestos__2--tabla .simples__2--tabla__datos,
+.compuestos .simples__2 .compuestos__2--tabla .compuestos__2--tabla__datos,
+.compuestos .compuestos__2 .simples__2--tabla .simples__2--tabla__datos,
+.compuestos .compuestos__2 .simples__2--tabla .compuestos__2--tabla__datos,
+.compuestos .compuestos__2 .compuestos__2--tabla .simples__2--tabla__datos,
+.compuestos .compuestos__2 .compuestos__2--tabla .compuestos__2--tabla__datos {
+  min-height: 40vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+.simples .simples__2 .simples__2--tabla .simples__2--tabla__datos .simples__2--tabla__datos--contenedor,
+.simples .simples__2 .simples__2--tabla .simples__2--tabla__datos .compuestos__2--tabla__datos--contenedor,
+.simples .simples__2 .simples__2--tabla .compuestos__2--tabla__datos .simples__2--tabla__datos--contenedor,
+.simples .simples__2 .simples__2--tabla .compuestos__2--tabla__datos .compuestos__2--tabla__datos--contenedor,
+.simples .simples__2 .compuestos__2--tabla .simples__2--tabla__datos .simples__2--tabla__datos--contenedor,
+.simples .simples__2 .compuestos__2--tabla .simples__2--tabla__datos .compuestos__2--tabla__datos--contenedor,
+.simples .simples__2 .compuestos__2--tabla .compuestos__2--tabla__datos .simples__2--tabla__datos--contenedor,
+.simples .simples__2 .compuestos__2--tabla .compuestos__2--tabla__datos .compuestos__2--tabla__datos--contenedor,
+.simples .compuestos__2 .simples__2--tabla .simples__2--tabla__datos .simples__2--tabla__datos--contenedor,
+.simples .compuestos__2 .simples__2--tabla .simples__2--tabla__datos .compuestos__2--tabla__datos--contenedor,
+.simples .compuestos__2 .simples__2--tabla .compuestos__2--tabla__datos .simples__2--tabla__datos--contenedor,
+.simples .compuestos__2 .simples__2--tabla .compuestos__2--tabla__datos .compuestos__2--tabla__datos--contenedor,
+.simples .compuestos__2 .compuestos__2--tabla .simples__2--tabla__datos .simples__2--tabla__datos--contenedor,
+.simples .compuestos__2 .compuestos__2--tabla .simples__2--tabla__datos .compuestos__2--tabla__datos--contenedor,
+.simples .compuestos__2 .compuestos__2--tabla .compuestos__2--tabla__datos .simples__2--tabla__datos--contenedor,
+.simples .compuestos__2 .compuestos__2--tabla .compuestos__2--tabla__datos .compuestos__2--tabla__datos--contenedor, .compuestos .simples__2 .simples__2--tabla .simples__2--tabla__datos .simples__2--tabla__datos--contenedor,
+.compuestos .simples__2 .simples__2--tabla .simples__2--tabla__datos .compuestos__2--tabla__datos--contenedor,
+.compuestos .simples__2 .simples__2--tabla .compuestos__2--tabla__datos .simples__2--tabla__datos--contenedor,
+.compuestos .simples__2 .simples__2--tabla .compuestos__2--tabla__datos .compuestos__2--tabla__datos--contenedor,
+.compuestos .simples__2 .compuestos__2--tabla .simples__2--tabla__datos .simples__2--tabla__datos--contenedor,
+.compuestos .simples__2 .compuestos__2--tabla .simples__2--tabla__datos .compuestos__2--tabla__datos--contenedor,
+.compuestos .simples__2 .compuestos__2--tabla .compuestos__2--tabla__datos .simples__2--tabla__datos--contenedor,
+.compuestos .simples__2 .compuestos__2--tabla .compuestos__2--tabla__datos .compuestos__2--tabla__datos--contenedor,
+.compuestos .compuestos__2 .simples__2--tabla .simples__2--tabla__datos .simples__2--tabla__datos--contenedor,
+.compuestos .compuestos__2 .simples__2--tabla .simples__2--tabla__datos .compuestos__2--tabla__datos--contenedor,
+.compuestos .compuestos__2 .simples__2--tabla .compuestos__2--tabla__datos .simples__2--tabla__datos--contenedor,
+.compuestos .compuestos__2 .simples__2--tabla .compuestos__2--tabla__datos .compuestos__2--tabla__datos--contenedor,
+.compuestos .compuestos__2 .compuestos__2--tabla .simples__2--tabla__datos .simples__2--tabla__datos--contenedor,
+.compuestos .compuestos__2 .compuestos__2--tabla .simples__2--tabla__datos .compuestos__2--tabla__datos--contenedor,
+.compuestos .compuestos__2 .compuestos__2--tabla .compuestos__2--tabla__datos .simples__2--tabla__datos--contenedor,
+.compuestos .compuestos__2 .compuestos__2--tabla .compuestos__2--tabla__datos .compuestos__2--tabla__datos--contenedor {
+  width: 100%;
+  min-height: 7vh;
+  background: rgb(51, 48, 48);
+  border-radius: 5px;
+  display: flex;
+}
+.simples .simples__2 .simples__2--tabla .simples__2--tabla__datos .simples__2--tabla__datos--contenedor p,
+.simples .simples__2 .simples__2--tabla .simples__2--tabla__datos .compuestos__2--tabla__datos--contenedor p,
+.simples .simples__2 .simples__2--tabla .compuestos__2--tabla__datos .simples__2--tabla__datos--contenedor p,
+.simples .simples__2 .simples__2--tabla .compuestos__2--tabla__datos .compuestos__2--tabla__datos--contenedor p,
+.simples .simples__2 .compuestos__2--tabla .simples__2--tabla__datos .simples__2--tabla__datos--contenedor p,
+.simples .simples__2 .compuestos__2--tabla .simples__2--tabla__datos .compuestos__2--tabla__datos--contenedor p,
+.simples .simples__2 .compuestos__2--tabla .compuestos__2--tabla__datos .simples__2--tabla__datos--contenedor p,
+.simples .simples__2 .compuestos__2--tabla .compuestos__2--tabla__datos .compuestos__2--tabla__datos--contenedor p,
+.simples .compuestos__2 .simples__2--tabla .simples__2--tabla__datos .simples__2--tabla__datos--contenedor p,
+.simples .compuestos__2 .simples__2--tabla .simples__2--tabla__datos .compuestos__2--tabla__datos--contenedor p,
+.simples .compuestos__2 .simples__2--tabla .compuestos__2--tabla__datos .simples__2--tabla__datos--contenedor p,
+.simples .compuestos__2 .simples__2--tabla .compuestos__2--tabla__datos .compuestos__2--tabla__datos--contenedor p,
+.simples .compuestos__2 .compuestos__2--tabla .simples__2--tabla__datos .simples__2--tabla__datos--contenedor p,
+.simples .compuestos__2 .compuestos__2--tabla .simples__2--tabla__datos .compuestos__2--tabla__datos--contenedor p,
+.simples .compuestos__2 .compuestos__2--tabla .compuestos__2--tabla__datos .simples__2--tabla__datos--contenedor p,
+.simples .compuestos__2 .compuestos__2--tabla .compuestos__2--tabla__datos .compuestos__2--tabla__datos--contenedor p, .compuestos .simples__2 .simples__2--tabla .simples__2--tabla__datos .simples__2--tabla__datos--contenedor p,
+.compuestos .simples__2 .simples__2--tabla .simples__2--tabla__datos .compuestos__2--tabla__datos--contenedor p,
+.compuestos .simples__2 .simples__2--tabla .compuestos__2--tabla__datos .simples__2--tabla__datos--contenedor p,
+.compuestos .simples__2 .simples__2--tabla .compuestos__2--tabla__datos .compuestos__2--tabla__datos--contenedor p,
+.compuestos .simples__2 .compuestos__2--tabla .simples__2--tabla__datos .simples__2--tabla__datos--contenedor p,
+.compuestos .simples__2 .compuestos__2--tabla .simples__2--tabla__datos .compuestos__2--tabla__datos--contenedor p,
+.compuestos .simples__2 .compuestos__2--tabla .compuestos__2--tabla__datos .simples__2--tabla__datos--contenedor p,
+.compuestos .simples__2 .compuestos__2--tabla .compuestos__2--tabla__datos .compuestos__2--tabla__datos--contenedor p,
+.compuestos .compuestos__2 .simples__2--tabla .simples__2--tabla__datos .simples__2--tabla__datos--contenedor p,
+.compuestos .compuestos__2 .simples__2--tabla .simples__2--tabla__datos .compuestos__2--tabla__datos--contenedor p,
+.compuestos .compuestos__2 .simples__2--tabla .compuestos__2--tabla__datos .simples__2--tabla__datos--contenedor p,
+.compuestos .compuestos__2 .simples__2--tabla .compuestos__2--tabla__datos .compuestos__2--tabla__datos--contenedor p,
+.compuestos .compuestos__2 .compuestos__2--tabla .simples__2--tabla__datos .simples__2--tabla__datos--contenedor p,
+.compuestos .compuestos__2 .compuestos__2--tabla .simples__2--tabla__datos .compuestos__2--tabla__datos--contenedor p,
+.compuestos .compuestos__2 .compuestos__2--tabla .compuestos__2--tabla__datos .simples__2--tabla__datos--contenedor p,
+.compuestos .compuestos__2 .compuestos__2--tabla .compuestos__2--tabla__datos .compuestos__2--tabla__datos--contenedor p {
+  width: 25%;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  font-weight: 700;
+  padding-left: 1rem;
+}
+@media (max-width: 1050px) {
+  .simples .simples__2 .simples__2--tabla .simples__2--tabla__datos .simples__2--tabla__datos--contenedor p,
+  .simples .simples__2 .simples__2--tabla .simples__2--tabla__datos .compuestos__2--tabla__datos--contenedor p,
+  .simples .simples__2 .simples__2--tabla .compuestos__2--tabla__datos .simples__2--tabla__datos--contenedor p,
+  .simples .simples__2 .simples__2--tabla .compuestos__2--tabla__datos .compuestos__2--tabla__datos--contenedor p,
+  .simples .simples__2 .compuestos__2--tabla .simples__2--tabla__datos .simples__2--tabla__datos--contenedor p,
+  .simples .simples__2 .compuestos__2--tabla .simples__2--tabla__datos .compuestos__2--tabla__datos--contenedor p,
+  .simples .simples__2 .compuestos__2--tabla .compuestos__2--tabla__datos .simples__2--tabla__datos--contenedor p,
+  .simples .simples__2 .compuestos__2--tabla .compuestos__2--tabla__datos .compuestos__2--tabla__datos--contenedor p,
+  .simples .compuestos__2 .simples__2--tabla .simples__2--tabla__datos .simples__2--tabla__datos--contenedor p,
+  .simples .compuestos__2 .simples__2--tabla .simples__2--tabla__datos .compuestos__2--tabla__datos--contenedor p,
+  .simples .compuestos__2 .simples__2--tabla .compuestos__2--tabla__datos .simples__2--tabla__datos--contenedor p,
+  .simples .compuestos__2 .simples__2--tabla .compuestos__2--tabla__datos .compuestos__2--tabla__datos--contenedor p,
+  .simples .compuestos__2 .compuestos__2--tabla .simples__2--tabla__datos .simples__2--tabla__datos--contenedor p,
+  .simples .compuestos__2 .compuestos__2--tabla .simples__2--tabla__datos .compuestos__2--tabla__datos--contenedor p,
+  .simples .compuestos__2 .compuestos__2--tabla .compuestos__2--tabla__datos .simples__2--tabla__datos--contenedor p,
+  .simples .compuestos__2 .compuestos__2--tabla .compuestos__2--tabla__datos .compuestos__2--tabla__datos--contenedor p, .compuestos .simples__2 .simples__2--tabla .simples__2--tabla__datos .simples__2--tabla__datos--contenedor p,
+  .compuestos .simples__2 .simples__2--tabla .simples__2--tabla__datos .compuestos__2--tabla__datos--contenedor p,
+  .compuestos .simples__2 .simples__2--tabla .compuestos__2--tabla__datos .simples__2--tabla__datos--contenedor p,
+  .compuestos .simples__2 .simples__2--tabla .compuestos__2--tabla__datos .compuestos__2--tabla__datos--contenedor p,
+  .compuestos .simples__2 .compuestos__2--tabla .simples__2--tabla__datos .simples__2--tabla__datos--contenedor p,
+  .compuestos .simples__2 .compuestos__2--tabla .simples__2--tabla__datos .compuestos__2--tabla__datos--contenedor p,
+  .compuestos .simples__2 .compuestos__2--tabla .compuestos__2--tabla__datos .simples__2--tabla__datos--contenedor p,
+  .compuestos .simples__2 .compuestos__2--tabla .compuestos__2--tabla__datos .compuestos__2--tabla__datos--contenedor p,
+  .compuestos .compuestos__2 .simples__2--tabla .simples__2--tabla__datos .simples__2--tabla__datos--contenedor p,
+  .compuestos .compuestos__2 .simples__2--tabla .simples__2--tabla__datos .compuestos__2--tabla__datos--contenedor p,
+  .compuestos .compuestos__2 .simples__2--tabla .compuestos__2--tabla__datos .simples__2--tabla__datos--contenedor p,
+  .compuestos .compuestos__2 .simples__2--tabla .compuestos__2--tabla__datos .compuestos__2--tabla__datos--contenedor p,
+  .compuestos .compuestos__2 .compuestos__2--tabla .simples__2--tabla__datos .simples__2--tabla__datos--contenedor p,
+  .compuestos .compuestos__2 .compuestos__2--tabla .simples__2--tabla__datos .compuestos__2--tabla__datos--contenedor p,
+  .compuestos .compuestos__2 .compuestos__2--tabla .compuestos__2--tabla__datos .simples__2--tabla__datos--contenedor p,
+  .compuestos .compuestos__2 .compuestos__2--tabla .compuestos__2--tabla__datos .compuestos__2--tabla__datos--contenedor p {
+    font-size: 0.8rem;
+  }
+}
+@media (max-width: 680px) {
+  .simples .simples__2 .simples__2--tabla .simples__2--tabla__datos .simples__2--tabla__datos--contenedor p,
+  .simples .simples__2 .simples__2--tabla .simples__2--tabla__datos .compuestos__2--tabla__datos--contenedor p,
+  .simples .simples__2 .simples__2--tabla .compuestos__2--tabla__datos .simples__2--tabla__datos--contenedor p,
+  .simples .simples__2 .simples__2--tabla .compuestos__2--tabla__datos .compuestos__2--tabla__datos--contenedor p,
+  .simples .simples__2 .compuestos__2--tabla .simples__2--tabla__datos .simples__2--tabla__datos--contenedor p,
+  .simples .simples__2 .compuestos__2--tabla .simples__2--tabla__datos .compuestos__2--tabla__datos--contenedor p,
+  .simples .simples__2 .compuestos__2--tabla .compuestos__2--tabla__datos .simples__2--tabla__datos--contenedor p,
+  .simples .simples__2 .compuestos__2--tabla .compuestos__2--tabla__datos .compuestos__2--tabla__datos--contenedor p,
+  .simples .compuestos__2 .simples__2--tabla .simples__2--tabla__datos .simples__2--tabla__datos--contenedor p,
+  .simples .compuestos__2 .simples__2--tabla .simples__2--tabla__datos .compuestos__2--tabla__datos--contenedor p,
+  .simples .compuestos__2 .simples__2--tabla .compuestos__2--tabla__datos .simples__2--tabla__datos--contenedor p,
+  .simples .compuestos__2 .simples__2--tabla .compuestos__2--tabla__datos .compuestos__2--tabla__datos--contenedor p,
+  .simples .compuestos__2 .compuestos__2--tabla .simples__2--tabla__datos .simples__2--tabla__datos--contenedor p,
+  .simples .compuestos__2 .compuestos__2--tabla .simples__2--tabla__datos .compuestos__2--tabla__datos--contenedor p,
+  .simples .compuestos__2 .compuestos__2--tabla .compuestos__2--tabla__datos .simples__2--tabla__datos--contenedor p,
+  .simples .compuestos__2 .compuestos__2--tabla .compuestos__2--tabla__datos .compuestos__2--tabla__datos--contenedor p, .compuestos .simples__2 .simples__2--tabla .simples__2--tabla__datos .simples__2--tabla__datos--contenedor p,
+  .compuestos .simples__2 .simples__2--tabla .simples__2--tabla__datos .compuestos__2--tabla__datos--contenedor p,
+  .compuestos .simples__2 .simples__2--tabla .compuestos__2--tabla__datos .simples__2--tabla__datos--contenedor p,
+  .compuestos .simples__2 .simples__2--tabla .compuestos__2--tabla__datos .compuestos__2--tabla__datos--contenedor p,
+  .compuestos .simples__2 .compuestos__2--tabla .simples__2--tabla__datos .simples__2--tabla__datos--contenedor p,
+  .compuestos .simples__2 .compuestos__2--tabla .simples__2--tabla__datos .compuestos__2--tabla__datos--contenedor p,
+  .compuestos .simples__2 .compuestos__2--tabla .compuestos__2--tabla__datos .simples__2--tabla__datos--contenedor p,
+  .compuestos .simples__2 .compuestos__2--tabla .compuestos__2--tabla__datos .compuestos__2--tabla__datos--contenedor p,
+  .compuestos .compuestos__2 .simples__2--tabla .simples__2--tabla__datos .simples__2--tabla__datos--contenedor p,
+  .compuestos .compuestos__2 .simples__2--tabla .simples__2--tabla__datos .compuestos__2--tabla__datos--contenedor p,
+  .compuestos .compuestos__2 .simples__2--tabla .compuestos__2--tabla__datos .simples__2--tabla__datos--contenedor p,
+  .compuestos .compuestos__2 .simples__2--tabla .compuestos__2--tabla__datos .compuestos__2--tabla__datos--contenedor p,
+  .compuestos .compuestos__2 .compuestos__2--tabla .simples__2--tabla__datos .simples__2--tabla__datos--contenedor p,
+  .compuestos .compuestos__2 .compuestos__2--tabla .simples__2--tabla__datos .compuestos__2--tabla__datos--contenedor p,
+  .compuestos .compuestos__2 .compuestos__2--tabla .compuestos__2--tabla__datos .simples__2--tabla__datos--contenedor p,
+  .compuestos .compuestos__2 .compuestos__2--tabla .compuestos__2--tabla__datos .compuestos__2--tabla__datos--contenedor p {
+    font-size: 0.5rem;
+  }
+}
+.simples .simples__2 .simples__2--tabla .simples__2--tabla__titulo,
+.simples .simples__2 .simples__2--tabla .compuestos__2--tabla__titulo,
+.simples .simples__2 .compuestos__2--tabla .simples__2--tabla__titulo,
+.simples .simples__2 .compuestos__2--tabla .compuestos__2--tabla__titulo,
+.simples .compuestos__2 .simples__2--tabla .simples__2--tabla__titulo,
+.simples .compuestos__2 .simples__2--tabla .compuestos__2--tabla__titulo,
+.simples .compuestos__2 .compuestos__2--tabla .simples__2--tabla__titulo,
+.simples .compuestos__2 .compuestos__2--tabla .compuestos__2--tabla__titulo, .compuestos .simples__2 .simples__2--tabla .simples__2--tabla__titulo,
+.compuestos .simples__2 .simples__2--tabla .compuestos__2--tabla__titulo,
+.compuestos .simples__2 .compuestos__2--tabla .simples__2--tabla__titulo,
+.compuestos .simples__2 .compuestos__2--tabla .compuestos__2--tabla__titulo,
+.compuestos .compuestos__2 .simples__2--tabla .simples__2--tabla__titulo,
+.compuestos .compuestos__2 .simples__2--tabla .compuestos__2--tabla__titulo,
+.compuestos .compuestos__2 .compuestos__2--tabla .simples__2--tabla__titulo,
+.compuestos .compuestos__2 .compuestos__2--tabla .compuestos__2--tabla__titulo {
+  min-height: 5vh;
+  display: flex;
+  gap: 0.5rem;
+}
+.simples .simples__2 .simples__2--tabla .simples__2--tabla__titulo p,
+.simples .simples__2 .simples__2--tabla .compuestos__2--tabla__titulo p,
+.simples .simples__2 .compuestos__2--tabla .simples__2--tabla__titulo p,
+.simples .simples__2 .compuestos__2--tabla .compuestos__2--tabla__titulo p,
+.simples .compuestos__2 .simples__2--tabla .simples__2--tabla__titulo p,
+.simples .compuestos__2 .simples__2--tabla .compuestos__2--tabla__titulo p,
+.simples .compuestos__2 .compuestos__2--tabla .simples__2--tabla__titulo p,
+.simples .compuestos__2 .compuestos__2--tabla .compuestos__2--tabla__titulo p, .compuestos .simples__2 .simples__2--tabla .simples__2--tabla__titulo p,
+.compuestos .simples__2 .simples__2--tabla .compuestos__2--tabla__titulo p,
+.compuestos .simples__2 .compuestos__2--tabla .simples__2--tabla__titulo p,
+.compuestos .simples__2 .compuestos__2--tabla .compuestos__2--tabla__titulo p,
+.compuestos .compuestos__2 .simples__2--tabla .simples__2--tabla__titulo p,
+.compuestos .compuestos__2 .simples__2--tabla .compuestos__2--tabla__titulo p,
+.compuestos .compuestos__2 .compuestos__2--tabla .simples__2--tabla__titulo p,
+.compuestos .compuestos__2 .compuestos__2--tabla .compuestos__2--tabla__titulo p {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.493);
+  width: 25%;
+  font-size: 0.8rem;
+  display: flex;
+}
+@media (max-width: 1050px) {
+  .simples .simples__2 .simples__2--tabla .simples__2--tabla__titulo p,
+  .simples .simples__2 .simples__2--tabla .compuestos__2--tabla__titulo p,
+  .simples .simples__2 .compuestos__2--tabla .simples__2--tabla__titulo p,
+  .simples .simples__2 .compuestos__2--tabla .compuestos__2--tabla__titulo p,
+  .simples .compuestos__2 .simples__2--tabla .simples__2--tabla__titulo p,
+  .simples .compuestos__2 .simples__2--tabla .compuestos__2--tabla__titulo p,
+  .simples .compuestos__2 .compuestos__2--tabla .simples__2--tabla__titulo p,
+  .simples .compuestos__2 .compuestos__2--tabla .compuestos__2--tabla__titulo p, .compuestos .simples__2 .simples__2--tabla .simples__2--tabla__titulo p,
+  .compuestos .simples__2 .simples__2--tabla .compuestos__2--tabla__titulo p,
+  .compuestos .simples__2 .compuestos__2--tabla .simples__2--tabla__titulo p,
+  .compuestos .simples__2 .compuestos__2--tabla .compuestos__2--tabla__titulo p,
+  .compuestos .compuestos__2 .simples__2--tabla .simples__2--tabla__titulo p,
+  .compuestos .compuestos__2 .simples__2--tabla .compuestos__2--tabla__titulo p,
+  .compuestos .compuestos__2 .compuestos__2--tabla .simples__2--tabla__titulo p,
+  .compuestos .compuestos__2 .compuestos__2--tabla .compuestos__2--tabla__titulo p {
+    font-size: 0.8rem;
+  }
+}
+@media (max-width: 680px) {
+  .simples .simples__2 .simples__2--tabla .simples__2--tabla__titulo p,
+  .simples .simples__2 .simples__2--tabla .compuestos__2--tabla__titulo p,
+  .simples .simples__2 .compuestos__2--tabla .simples__2--tabla__titulo p,
+  .simples .simples__2 .compuestos__2--tabla .compuestos__2--tabla__titulo p,
+  .simples .compuestos__2 .simples__2--tabla .simples__2--tabla__titulo p,
+  .simples .compuestos__2 .simples__2--tabla .compuestos__2--tabla__titulo p,
+  .simples .compuestos__2 .compuestos__2--tabla .simples__2--tabla__titulo p,
+  .simples .compuestos__2 .compuestos__2--tabla .compuestos__2--tabla__titulo p, .compuestos .simples__2 .simples__2--tabla .simples__2--tabla__titulo p,
+  .compuestos .simples__2 .simples__2--tabla .compuestos__2--tabla__titulo p,
+  .compuestos .simples__2 .compuestos__2--tabla .simples__2--tabla__titulo p,
+  .compuestos .simples__2 .compuestos__2--tabla .compuestos__2--tabla__titulo p,
+  .compuestos .compuestos__2 .simples__2--tabla .simples__2--tabla__titulo p,
+  .compuestos .compuestos__2 .simples__2--tabla .compuestos__2--tabla__titulo p,
+  .compuestos .compuestos__2 .compuestos__2--tabla .simples__2--tabla__titulo p,
+  .compuestos .compuestos__2 .compuestos__2--tabla .compuestos__2--tabla__titulo p {
+    font-size: 0.5rem;
+  }
+}
+.simples .simples__2 .simples__2--mensaje,
+.simples .simples__2 .compuestos__2--mensaje,
+.simples .compuestos__2 .simples__2--mensaje,
+.simples .compuestos__2 .compuestos__2--mensaje, .compuestos .simples__2 .simples__2--mensaje,
+.compuestos .simples__2 .compuestos__2--mensaje,
+.compuestos .compuestos__2 .simples__2--mensaje,
+.compuestos .compuestos__2 .compuestos__2--mensaje {
+  width: 40%;
+  min-height: 40vh;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+@media (max-width: 980px) {
+  .simples .simples__2 .simples__2--mensaje,
+  .simples .simples__2 .compuestos__2--mensaje,
+  .simples .compuestos__2 .simples__2--mensaje,
+  .simples .compuestos__2 .compuestos__2--mensaje, .compuestos .simples__2 .simples__2--mensaje,
+  .compuestos .simples__2 .compuestos__2--mensaje,
+  .compuestos .compuestos__2 .simples__2--mensaje,
+  .compuestos .compuestos__2 .compuestos__2--mensaje {
+    width: 100%;
+  }
+}
+.simples .simples__2 .simples__2--mensaje .simples__2--mensaje__1, .simples .simples__2 .simples__2--mensaje .simples__2--mensaje__2,
+.simples .simples__2 .simples__2--mensaje .compuestos__2--mensaje__1, .simples .simples__2 .simples__2--mensaje .compuestos__2--mensaje__2,
+.simples .simples__2 .compuestos__2--mensaje .simples__2--mensaje__1,
+.simples .simples__2 .compuestos__2--mensaje .simples__2--mensaje__2,
+.simples .simples__2 .compuestos__2--mensaje .compuestos__2--mensaje__1,
+.simples .simples__2 .compuestos__2--mensaje .compuestos__2--mensaje__2,
+.simples .compuestos__2 .simples__2--mensaje .simples__2--mensaje__1,
+.simples .compuestos__2 .simples__2--mensaje .simples__2--mensaje__2,
+.simples .compuestos__2 .simples__2--mensaje .compuestos__2--mensaje__1,
+.simples .compuestos__2 .simples__2--mensaje .compuestos__2--mensaje__2,
+.simples .compuestos__2 .compuestos__2--mensaje .simples__2--mensaje__1,
+.simples .compuestos__2 .compuestos__2--mensaje .simples__2--mensaje__2,
+.simples .compuestos__2 .compuestos__2--mensaje .compuestos__2--mensaje__1,
+.simples .compuestos__2 .compuestos__2--mensaje .compuestos__2--mensaje__2, .compuestos .simples__2 .simples__2--mensaje .simples__2--mensaje__1, .compuestos .simples__2 .simples__2--mensaje .simples__2--mensaje__2,
+.compuestos .simples__2 .simples__2--mensaje .compuestos__2--mensaje__1, .compuestos .simples__2 .simples__2--mensaje .compuestos__2--mensaje__2,
+.compuestos .simples__2 .compuestos__2--mensaje .simples__2--mensaje__1,
+.compuestos .simples__2 .compuestos__2--mensaje .simples__2--mensaje__2,
+.compuestos .simples__2 .compuestos__2--mensaje .compuestos__2--mensaje__1,
+.compuestos .simples__2 .compuestos__2--mensaje .compuestos__2--mensaje__2,
+.compuestos .compuestos__2 .simples__2--mensaje .simples__2--mensaje__1,
+.compuestos .compuestos__2 .simples__2--mensaje .simples__2--mensaje__2,
+.compuestos .compuestos__2 .simples__2--mensaje .compuestos__2--mensaje__1,
+.compuestos .compuestos__2 .simples__2--mensaje .compuestos__2--mensaje__2,
+.compuestos .compuestos__2 .compuestos__2--mensaje .simples__2--mensaje__1,
+.compuestos .compuestos__2 .compuestos__2--mensaje .simples__2--mensaje__2,
+.compuestos .compuestos__2 .compuestos__2--mensaje .compuestos__2--mensaje__1,
+.compuestos .compuestos__2 .compuestos__2--mensaje .compuestos__2--mensaje__2 {
+  width: 100%;
+  min-height: 20vh;
+  background: rgb(39, 37, 37);
+  border-radius: 7px;
+  padding: 1rem;
+}
+.simples .simples__2 .simples__2--mensaje .simples__2--mensaje__1 h2, .simples .simples__2 .simples__2--mensaje .simples__2--mensaje__2 h2,
+.simples .simples__2 .simples__2--mensaje .compuestos__2--mensaje__1 h2, .simples .simples__2 .simples__2--mensaje .compuestos__2--mensaje__2 h2,
+.simples .simples__2 .compuestos__2--mensaje .simples__2--mensaje__1 h2,
+.simples .simples__2 .compuestos__2--mensaje .simples__2--mensaje__2 h2,
+.simples .simples__2 .compuestos__2--mensaje .compuestos__2--mensaje__1 h2,
+.simples .simples__2 .compuestos__2--mensaje .compuestos__2--mensaje__2 h2,
+.simples .compuestos__2 .simples__2--mensaje .simples__2--mensaje__1 h2,
+.simples .compuestos__2 .simples__2--mensaje .simples__2--mensaje__2 h2,
+.simples .compuestos__2 .simples__2--mensaje .compuestos__2--mensaje__1 h2,
+.simples .compuestos__2 .simples__2--mensaje .compuestos__2--mensaje__2 h2,
+.simples .compuestos__2 .compuestos__2--mensaje .simples__2--mensaje__1 h2,
+.simples .compuestos__2 .compuestos__2--mensaje .simples__2--mensaje__2 h2,
+.simples .compuestos__2 .compuestos__2--mensaje .compuestos__2--mensaje__1 h2,
+.simples .compuestos__2 .compuestos__2--mensaje .compuestos__2--mensaje__2 h2, .compuestos .simples__2 .simples__2--mensaje .simples__2--mensaje__1 h2, .compuestos .simples__2 .simples__2--mensaje .simples__2--mensaje__2 h2,
+.compuestos .simples__2 .simples__2--mensaje .compuestos__2--mensaje__1 h2, .compuestos .simples__2 .simples__2--mensaje .compuestos__2--mensaje__2 h2,
+.compuestos .simples__2 .compuestos__2--mensaje .simples__2--mensaje__1 h2,
+.compuestos .simples__2 .compuestos__2--mensaje .simples__2--mensaje__2 h2,
+.compuestos .simples__2 .compuestos__2--mensaje .compuestos__2--mensaje__1 h2,
+.compuestos .simples__2 .compuestos__2--mensaje .compuestos__2--mensaje__2 h2,
+.compuestos .compuestos__2 .simples__2--mensaje .simples__2--mensaje__1 h2,
+.compuestos .compuestos__2 .simples__2--mensaje .simples__2--mensaje__2 h2,
+.compuestos .compuestos__2 .simples__2--mensaje .compuestos__2--mensaje__1 h2,
+.compuestos .compuestos__2 .simples__2--mensaje .compuestos__2--mensaje__2 h2,
+.compuestos .compuestos__2 .compuestos__2--mensaje .simples__2--mensaje__1 h2,
+.compuestos .compuestos__2 .compuestos__2--mensaje .simples__2--mensaje__2 h2,
+.compuestos .compuestos__2 .compuestos__2--mensaje .compuestos__2--mensaje__1 h2,
+.compuestos .compuestos__2 .compuestos__2--mensaje .compuestos__2--mensaje__2 h2 {
+  font-size: 1.1rem;
+}
+.simples .simples__2 .simples__2--mensaje .simples__2--mensaje__1 p, .simples .simples__2 .simples__2--mensaje .simples__2--mensaje__2 p,
+.simples .simples__2 .simples__2--mensaje .compuestos__2--mensaje__1 p, .simples .simples__2 .simples__2--mensaje .compuestos__2--mensaje__2 p,
+.simples .simples__2 .compuestos__2--mensaje .simples__2--mensaje__1 p,
+.simples .simples__2 .compuestos__2--mensaje .simples__2--mensaje__2 p,
+.simples .simples__2 .compuestos__2--mensaje .compuestos__2--mensaje__1 p,
+.simples .simples__2 .compuestos__2--mensaje .compuestos__2--mensaje__2 p,
+.simples .compuestos__2 .simples__2--mensaje .simples__2--mensaje__1 p,
+.simples .compuestos__2 .simples__2--mensaje .simples__2--mensaje__2 p,
+.simples .compuestos__2 .simples__2--mensaje .compuestos__2--mensaje__1 p,
+.simples .compuestos__2 .simples__2--mensaje .compuestos__2--mensaje__2 p,
+.simples .compuestos__2 .compuestos__2--mensaje .simples__2--mensaje__1 p,
+.simples .compuestos__2 .compuestos__2--mensaje .simples__2--mensaje__2 p,
+.simples .compuestos__2 .compuestos__2--mensaje .compuestos__2--mensaje__1 p,
+.simples .compuestos__2 .compuestos__2--mensaje .compuestos__2--mensaje__2 p, .compuestos .simples__2 .simples__2--mensaje .simples__2--mensaje__1 p, .compuestos .simples__2 .simples__2--mensaje .simples__2--mensaje__2 p,
+.compuestos .simples__2 .simples__2--mensaje .compuestos__2--mensaje__1 p, .compuestos .simples__2 .simples__2--mensaje .compuestos__2--mensaje__2 p,
+.compuestos .simples__2 .compuestos__2--mensaje .simples__2--mensaje__1 p,
+.compuestos .simples__2 .compuestos__2--mensaje .simples__2--mensaje__2 p,
+.compuestos .simples__2 .compuestos__2--mensaje .compuestos__2--mensaje__1 p,
+.compuestos .simples__2 .compuestos__2--mensaje .compuestos__2--mensaje__2 p,
+.compuestos .compuestos__2 .simples__2--mensaje .simples__2--mensaje__1 p,
+.compuestos .compuestos__2 .simples__2--mensaje .simples__2--mensaje__2 p,
+.compuestos .compuestos__2 .simples__2--mensaje .compuestos__2--mensaje__1 p,
+.compuestos .compuestos__2 .simples__2--mensaje .compuestos__2--mensaje__2 p,
+.compuestos .compuestos__2 .compuestos__2--mensaje .simples__2--mensaje__1 p,
+.compuestos .compuestos__2 .compuestos__2--mensaje .simples__2--mensaje__2 p,
+.compuestos .compuestos__2 .compuestos__2--mensaje .compuestos__2--mensaje__1 p,
+.compuestos .compuestos__2 .compuestos__2--mensaje .compuestos__2--mensaje__2 p {
+  font-size: 0.9rem;
+}
+
+.ppngi {
+  min-height: 70vh;
+  width: 100%;
+  background: rgb(27, 26, 26);
+  border-radius: 7px;
+  padding: 1rem;
+  display: none;
+  gap: 2rem;
+}
+.ppngi.active {
+  display: flex;
+  flex-direction: column;
+}
+.ppngi .ppngi__titulo {
+  color: white;
+}
+.ppngi .ppngi__titulo h2 {
+  font-size: 1.5rem;
+}
+.ppngi .ppngi__formulario {
+  display: none;
+  gap: 1.5rem;
+}
+.ppngi .ppngi__formulario.active {
+  display: flex;
+  flex-direction: column;
+}
+.ppngi .ppngi__fechas .fechas__titulo p {
+  color: #ccc;
+}
+.ppngi .ppngi__fechas .fechas__inputs {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+.ppngi .ppngi__fechas .fechas__inputs .input-group {
+  flex: 1;
+  min-width: 180px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  position: relative;
+}
+.ppngi .ppngi__fechas .fechas__inputs .input-group label {
+  color: #aaa;
+  font-size: 0.85rem;
+}
+.ppngi .ppngi__fechas .fechas__inputs .input-group input {
+  padding: 0.7rem;
+  border-radius: 8px;
+  border: 1px solid #444;
+  background: #1f1f1f;
+  color: white;
+  outline: none;
+}
+.ppngi .ppngi__fechas .fechas__inputs .input-group input[type=number] {
+  -moz-appearance: textfield;
+}
+.ppngi .ppngi__fechas .fechas__inputs .input-group input::-webkit-outer-spin-button,
+.ppngi .ppngi__fechas .fechas__inputs .input-group input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.ppngi .ppngi__fechas .fechas__inputs .input-group .error {
+  display: none;
+  font-size: 0.75rem;
+  color: #ef4444;
+}
+.ppngi .ppngi__fechas .fechas__inputs .input-group.active-error input {
+  border-color: #ef4444;
+}
+.ppngi .ppngi__fechas .fechas__inputs .input-group.active-error .error {
+  display: block;
+}
+.ppngi .ppngi__boton,
+.ppngi .ppngi__boton-secundario {
+  width: 100%;
+  padding: 1rem;
+  border: none;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.ppngi .ppngi__boton {
+  background: #3b82f6;
+}
+.ppngi .ppngi__boton-secundario {
+  background: #22c55e;
+}
+.ppngi .ppngi__movimientos {
+  display: none;
+}
+.ppngi .ppngi__movimientos.active {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.ppngi .ppngi__movimientos .movimientos__inputs {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.ppngi .ppngi__movimientos .movimientos__inputs .input-group {
+  flex: 1;
+  min-width: 180px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  position: relative;
+}
+.ppngi .ppngi__movimientos .movimientos__inputs .input-group label {
+  color: #aaa;
+  font-size: 0.85rem;
+}
+.ppngi .ppngi__movimientos .movimientos__inputs .input-group input {
+  padding: 0.7rem;
+  border-radius: 8px;
+  border: 1px solid #444;
+  background: #1f1f1f;
+  color: white;
+  outline: none;
+}
+.ppngi .ppngi__movimientos .movimientos__inputs .input-group .error {
+  display: none;
+  font-size: 0.75rem;
+  color: #ef4444;
+}
+.ppngi .ppngi__movimientos .movimientos__inputs .input-group.active-error input {
+  border-color: #ef4444;
+}
+.ppngi .ppngi__movimientos .movimientos__inputs .input-group.active-error .error {
+  display: block;
+}
+.ppngi .ppngi__lista {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+.ppngi .ppngi__lista .lista__titulo p {
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+.ppngi .ppngi__lista .lista__header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.8rem 1rem;
+  background: #111;
+  border-radius: 8px;
+  color: #999;
+  font-size: 0.85rem;
+}
+.ppngi .ppngi__lista .lista__body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.ppngi .ppngi__lista .item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.9rem 1rem;
+  border-radius: 8px;
+  background: #1f1f1f;
+  color: white;
+  transition: 0.2s ease;
+}
+.ppngi .ppngi__lista .item:hover {
+  background: #262626;
+}
+.ppngi .ppngi__lista .item span {
+  flex: 1;
+  font-size: 0.9rem;
+}
+.ppngi .ppngi__lista .item span:nth-child(2) {
+  text-align: center;
+  color: #d1d5db;
+}
+.ppngi .ppngi__lista .item span:nth-child(3) {
+  text-align: right;
+  font-weight: 600;
+}
+.ppngi .ppngi__lista .item span:nth-child(3).rojo {
+  color: #ef4444;
+}
+.ppngi .ppngi__lista .item span:nth-child(3).verde {
+  color: #22c55e;
+}
+.ppngi .ppngi_calculoBtn {
+  width: 100%;
+  display: none;
+}
+.ppngi .ppngi_calculoBtn button {
+  width: 100%;
+  height: 7vh;
+  border-radius: 5px;
+  background: #1ca2b9;
+  border: none;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+.ppngi .ppngi_calculoBtn.active {
+  display: flex;
+}
+.ppngi {
+  /* RESULTADOS */
+}
+.ppngi .ppngi__resultados {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+.ppngi .ppngi__resultados .resultado__card {
+  background: #1f1f1f;
+  border-radius: 10px;
+  padding: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  border: 1px solid #2d2d2d;
+}
+.ppngi .ppngi__resultados .resultado__card .resultado__label {
+  color: #9ca3af;
+  font-size: 0.85rem;
+}
+.ppngi .ppngi__resultados .resultado__card h3 {
+  color: white;
+  font-size: 1.6rem;
+}
+.ppngi .ppngi__resultados .resultado__card.total {
+  border: 1px solid #22c55e;
+}
+.ppngi .ppngi__resultados .resultado__card.total h3 {
+  color: #22c55e;
+}
+.ppngi {
+  /* GRAFICA */
+}
+.ppngi .ppngi__grafica {
+  width: 100%;
+  min-height: 55vh;
+  background: #1f1f1f;
+  border-radius: 10px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.ppngi .ppngi__grafica .grafica__titulo p {
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+.ppngi .ppngi__grafica .grafica__contenedor {
+  width: 100%;
+  height: 45vh;
+  position: relative;
+}
+.ppngi .ppngi__grafica canvas {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/* RESPONSIVE */
+@media (max-width: 980px) {
+  .ppngi .fechas__inputs,
+  .ppngi .movimientos__inputs {
+    flex-direction: column;
+  }
+  .ppngi .ppngi__resultados {
+    grid-template-columns: 1fr;
+  }
+  .ppngi .ppngi__lista .lista__header {
+    display: none;
+  }
+  .ppngi .ppngi__lista .item {
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+  .ppngi .ppngi__lista .item span {
+    text-align: left !important;
+  }
+}
+.prestamos {
+  min-height: 70vh;
+  width: 100%;
+  background: rgb(27, 26, 26);
+  border-radius: 7px;
+  display: none;
+  color: white;
+}
+.prestamos.active {
+  display: flex;
+  flex-direction: column;
+}
+.prestamos .prestamos__contenedor1 {
+  width: 100%;
+  min-height: 50vh;
+  display: flex;
+}
+@media (max-width: 980px) {
+  .prestamos .prestamos__contenedor1 {
+    flex-direction: column;
+  }
+}
+.prestamos .prestamos__contenedor1 .prestamos__contenedor1--formulario {
+  width: 40%;
+  min-height: 50vh;
+  padding: 1rem;
+}
+.prestamos .prestamos__contenedor1 .prestamos__contenedor1--formulario .prestamos__contenedor1--formulario__contenedor_grande {
+  width: 100%;
+  min-height: 8vh;
+  margin: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.prestamos .prestamos__contenedor1 .prestamos__contenedor1--formulario .prestamos__contenedor1--formulario__contenedor_grande label {
+  color: rgba(255, 255, 255, 0.747);
+  font-size: 0.9rem;
+}
+.prestamos .prestamos__contenedor1 .prestamos__contenedor1--formulario .prestamos__contenedor1--formulario__contenedor_grande input {
+  background: rgb(56, 53, 53);
+  border: none;
+  height: 6vh;
+  outline: none;
+  color: white;
+  padding: 0 2.5rem;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+}
+.prestamos .prestamos__contenedor1 .prestamos__contenedor1--formulario .prestamos__contenedor1--formulario__contenedor_grande i {
+  position: absolute;
+  top: 1.5rem;
+  font-size: 1.35rem;
+  left: 0.4rem;
+}
+.prestamos .prestamos__contenedor1 .prestamos__contenedor1--formulario .prestamos__contenedor1--formulario__contenedor_grande p {
+  font-size: 0.7rem;
+  color: red;
+  margin: 0;
+  display: none;
+}
+.prestamos .prestamos__contenedor1 .prestamos__contenedor1--formulario .prestamos__contenedor1--formulario__contenedor_grande p.active {
+  display: flex;
+}
+.prestamos .prestamos__contenedor1 .prestamos__contenedor1--formulario .prestamos__contenedor1--formulario__contenedor_chico {
+  width: 100%;
+  min-height: 8vh;
+  display: flex;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+.prestamos .prestamos__contenedor1 .prestamos__contenedor1--formulario .prestamos__contenedor1--formulario__contenedor_chico .prestamos__formulario--input_chico--1 {
+  width: 50%;
+  min-height: 8vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.prestamos .prestamos__contenedor1 .prestamos__contenedor1--formulario .prestamos__contenedor1--formulario__contenedor_chico .prestamos__formulario--input_chico--1 label {
+  color: rgba(255, 255, 255, 0.747);
+  font-size: 0.9rem;
+}
+.prestamos .prestamos__contenedor1 .prestamos__contenedor1--formulario .prestamos__contenedor1--formulario__contenedor_chico .prestamos__formulario--input_chico--1 input {
+  background: rgb(56, 53, 53);
+  border: none;
+  height: 5vh;
+  outline: none;
+  color: white;
+  padding: 0 2.5rem;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+}
+.prestamos .prestamos__contenedor1 .prestamos__contenedor1--formulario .prestamos__contenedor1--formulario__contenedor_chico .prestamos__formulario--input_chico--1 i {
+  position: absolute;
+  top: 1.5rem;
+  font-size: 1.35rem;
+  left: 0.4rem;
+}
+.prestamos .prestamos__contenedor1 .prestamos__contenedor1--formulario .prestamos__contenedor1--formulario__contenedor_chico .prestamos__formulario--input_chico--1 p {
+  font-size: 0.7rem;
+  color: red;
+  margin: 0;
+  display: none;
+}
+.prestamos .prestamos__contenedor1 .prestamos__contenedor1--formulario .prestamos__contenedor1--formulario__contenedor_chico .prestamos__formulario--input_chico--1 p.active {
+  display: flex;
+}
+.prestamos .prestamos__contenedor1 .prestamos__contenedor1--formulario .prestamos__contenedor1--formulario__contenedor_chico .prestamos__formulario--input_chico--2 {
+  width: 48%;
+  min-height: 8vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.prestamos .prestamos__contenedor1 .prestamos__contenedor1--formulario .prestamos__contenedor1--formulario__contenedor_chico .prestamos__formulario--input_chico--2 label {
+  color: rgba(255, 255, 255, 0.747);
+  font-size: 0.9rem;
+}
+.prestamos .prestamos__contenedor1 .prestamos__contenedor1--formulario .prestamos__contenedor1--formulario__contenedor_chico .prestamos__formulario--input_chico--2 select {
+  background: rgb(56, 53, 53);
+  border: none;
+  height: 5vh;
+  outline: none;
+  color: white;
+  padding: 0 2.5rem;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+}
+.prestamos .prestamos__contenedor1 .prestamos__contenedor1--formulario .prestamos__contenedor1--formulario__contenedor_chico .prestamos__formulario--input_chico--2 i {
+  position: absolute;
+  top: 1.5rem;
+  font-size: 1.35rem;
+  left: 0.4rem;
+}
+.prestamos .prestamos__contenedor1 .prestamos__contenedor1--formulario .prestamos__contenedor1--formulario__contenedor_chico .prestamos__formulario--input_chico--2 p {
+  font-size: 0.7rem;
+  color: red;
+  margin: 0;
+  display: none;
+}
+.prestamos .prestamos__contenedor1 .prestamos__contenedor1--formulario .prestamos__contenedor1--formulario__contenedor_chico .prestamos__formulario--input_chico--2 p.active {
+  display: flex;
+}
+.prestamos .prestamos__contenedor1 .prestamos__contenedor1--formulario button {
+  width: 100%;
+  min-height: 8vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  background: rgb(41, 39, 39);
+  border: none;
+  color: white;
+  font-weight: 800;
+  border-radius: 8px;
+}
+@media (max-width: 980px) {
+  .prestamos .prestamos__contenedor1 .prestamos__contenedor1--formulario {
+    width: 100%;
+  }
+}
+.prestamos .prestamos__contenedor1 .prestamos__contenedor1--grafica {
+  width: 65%;
+  min-height: 50vh;
+}
+@media (max-width: 980px) {
+  .prestamos .prestamos__contenedor1 .prestamos__contenedor1--grafica {
+    width: 100%;
+  }
+}
+.prestamos .prestamos__contenedor1 .prestamos__contenedor1--grafica #miGrafica_prestamos {
+  max-width: 100%;
+  max-height: 50vh;
+}
+.prestamos .prestamos__contenedor2 {
+  width: 100%;
+  min-height: 50vh;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+.prestamos .prestamos__contenedor2 .prestamos__contenedor2--titulo {
+  width: 100%;
+  min-height: 8vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.prestamos .prestamos__contenedor2 .prestamos__contenedor2--titulo p {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 0;
+}
+.prestamos .prestamos__contenedor2 .prestamos_tablas {
+  min-height: 20vh;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+.prestamos .prestamos__contenedor2 .prestamos_tablas .prestamos__contenedor2--tabla {
+  width: 100%;
+  min-height: 8vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background: rgb(56, 53, 53);
+}
+.prestamos .prestamos__contenedor2 .prestamos_tablas .prestamos__contenedor2--tabla p {
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 0;
+}
+.prestamos .prestamos__contenedor3 {
+  width: 100%;
+  min-height: 50vh;
+  border: solid 1px red;
+}
+
+.encabezado {
+  width: 100%;
+  min-height: 15vh;
+  background: rgb(22, 22, 22);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.encabezado .encabezado__contenido {
+  width: 50%;
+  min-height: 15vh;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+}
+.encabezado .encabezado__contenido p {
+  font-size: 0.7rem;
+  margin: 0;
+  font-family: sans-serif;
+}
+.encabezado .encabezado__contenido p:nth-child(2) {
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+.encabezado .encabezado__redes {
+  width: 40%;
+  min-height: 15vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.encabezado .encabezado__redes .redes__titulo {
+  width: 100%;
+  min-height: 5vh;
+  color: white;
+  display: flex;
+  align-items: flex-end;
+}
+.encabezado .encabezado__redes .redes__titulo h3 {
+  font-size: 1rem;
+  margin: 0;
+  font-family: sans-serif;
+}
+.encabezado .encabezado__redes .redes__iconos {
+  width: 100%;
+  min-height: 8vh;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  align-items: center;
+}
+.encabezado .encabezado__redes .redes__iconos a {
+  background: #1877F2;
+  width: 2.2vw;
+  height: 5vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+}
+.encabezado .encabezado__redes .redes__iconos a:nth-child(2) {
+  background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af, #515bd4);
+}
+.encabezado .encabezado__redes .redes__iconos a:nth-child(3) {
+  background: #FF0000;
+}
+.encabezado .encabezado__redes .redes__iconos a:nth-child(4) {
+  background: #2d333b;
+}
+.encabezado .encabezado__redes .redes__iconos a:nth-child(5) {
+  background: #EA4335;
+}
+.encabezado .encabezado__redes .redes__iconos a:nth-child(6) {
+  background: #000000;
+}
+.encabezado .encabezado__redes .redes__iconos a {
+  transition: all ease 0.4s;
+}
+.encabezado .encabezado__redes .redes__iconos a:hover {
+  transform: rotateY(360deg);
+}
+.encabezado .encabezado__redes .redes__iconos i {
+  color: white;
+}
+
+/*# sourceMappingURL=styles.css.map */
