@@ -279,6 +279,15 @@
                 <p class="error">Escribe un concepto válido</p>
             </div>
 
+             <div class="input-group" id="ppngi-abono">
+                <label>Cargo o abono</label>
+                <select name="" id="movAbono">
+                    <option value="1">Cargo</option>
+                    <option value="2">Abono</option>
+                </select>
+                <p class="error">Ingresa un monto válido</p>
+            </div>
+
             <div class="input-group" id="ppngi-monto">
                 <label>Monto</label>
                 <input type="number" id="movMonto" step="0.01">
@@ -401,28 +410,54 @@
 
             </div>
 
-            <div class="prestamos__contenedor2">
-                <div class="prestamos__contenedor2--titulo">
-                    <p>Mes</p>
-                    <p>Intereses</p>
-                    <p>Capital</p>
-                    <p>Pago requerido</p>
-                    <p>IVA</p>
-                    <p>Pago + IVA</p>
-                    <p>Remanente</p>
+            <div class="tabla_contenedor">
+
+    <table class="tabla_financiera">
+        <thead>
+            <tr>
+                <th>Mes</th>
+                <th>Interés</th>
+                <th>Capital</th>
+                <th>Pago requerido</th>
+                <th>IVA</th>
+                <th>Pago + IVA</th>
+                <th>Remanente</th>
+            </tr>
+        </thead>
+
+        <tbody class="tbody" id="tbody">
+            
+
+        </tbody>
+    </table>
+
+</div>
+            <div class="prestamos__contenedor3">
+                <div class="contenedor3__botones">
+                    <button id="excelExport" type="button">Descargar en Excel</button>
+                    <button id="pdfExport" type="button">Descargar en PDF</button>
                 </div>
 
-               <div class="prestamos_tablas">
-                 
-               
-               </div>
-            </div>
+                <div class="mensajes">
+                    <div class="mensajes_mensaje1">
+                        <h2><i class="bi bi-info-circle-fill"></i> Sobre los préstamos</h2>
+                        <p>Los préstamos están sujetos a los días que factures por ciclo, es decir, el cobro de los intereses puede variar, dependiendo cuántos días hayan pasado entre 2 cortes. Esto puede cambiar por días festivos, fines de semana o cambios de fecha de corte.
+                        En la tabla tu podrás verificar cómo va decrementando tu saldo pendiente, también, cómo tu interés va disminiyendo con el tiempo y el capital amortizado va incrementando. En tu estado de cuenta podrás ver otros datos, pero se toman en cuanta los mismos días al año. Esta calculadora está realizada para contabilizar 30 días por corte.
+                        </p>
+                    </div>
+                    <div class="mensajes_mensaje2">
+                        <h2><i class="bi bi-info-circle-fill"></i> Sobre la calculadora</h2>
+                        <p>Es necesario ingresar todos los datos que se piden en el pequeño formulario de manera correcta, es decir, el monto completo, la tasa de interés que se te está proporcionando según el banco y el plazo.
+                        Si es requerible ingresar otra tabla y otros datos, lo recomendable es, por el momento reiniciar la página.
+                        </p>
+                    </div>
 
-            <div class="prestamos__contenedor3">
-
+                </div>
             </div>
 
         </div>
+
+
     </div>
 
     <!--footer-->

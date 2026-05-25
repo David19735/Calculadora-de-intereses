@@ -38,7 +38,7 @@ formulario.addEventListener('submit',(e)=>{
         })
 
           //Limpiamos el contenido de las tablas
-        document.querySelector('.prestamos_tablas').innerHTML="";
+        document.querySelector('.tbody').innerHTML="";
 
         //Sacamos los valores y los transformamos a numeros
         let montoInicial=parseFloat(inputMonto.value)
@@ -70,18 +70,18 @@ formulario.addEventListener('submit',(e)=>{
         let pagoTotal=(pagoMensual+iva);
         let saldoPendiente=(montoInicial-capital);
 
-        const plantilla=`
-        <div class="prestamos__contenedor2--tabla">
-            <p>${mes}</p>
-            <p>${formatoMoneda.format(interesMensual)}</p>        
-            <p>${formatoMoneda.format(capital)}</p>
-            <p>${formatoMoneda.format(pagoMensual)}</p>
-            <p>${formatoMoneda.format(iva)}</p>
-            <p>${formatoMoneda.format(pagoTotal)}</p>
-            <p>${formatoMoneda.format(saldoPendiente)}</p>
-            </div>
-        `;
 
+        const plantilla=`
+           <tr>
+                <td>${mes}</td>
+                <td>${formatoMoneda.format(interesMensual)}</td>
+                <td>${formatoMoneda.format(capital)}</td>
+                <td>${formatoMoneda.format(pagoMensual)}</td>
+                <td>${formatoMoneda.format(iva)}</td>
+                <td>${formatoMoneda.format(pagoTotal)}</td>
+                <td>${formatoMoneda.format(saldoPendiente)}</td>
+            </tr>
+        `;
         montoInicial-=capital;
 
         interesGrafica+=interesMensual;
@@ -90,7 +90,9 @@ formulario.addEventListener('submit',(e)=>{
         totalGrafica+=pagoTotal;
 
 
-        document.querySelector('.prestamos_tablas').innerHTML+=plantilla;
+        document.querySelector('.tbody').innerHTML+=plantilla;
+
+        document.querySelector('.contenedor3__botones').classList.add('active')
        })
 
  const ctx = document.getElementById('miGrafica_prestamos').getContext('2d');

@@ -147,6 +147,15 @@
           outline: none;
         }
 
+        select{
+          padding: 0.7rem;
+          border-radius: 8px;
+          border: 1px solid #444;
+          background: #1f1f1f;
+          color: white;
+          outline: none;
+        }
+
         .error {
           display: none;
           font-size: 0.75rem;

@@ -9,7 +9,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "rollup --watch --config",
-    "build":"sass scss/index.scss public/styles.css && rollup --config",
+    "build": "sass scss/index.scss public/styles.css && rollup --config",
     "sass:watch": "sass --watch scss/index.scss public/styles.css",
     "sass:build": "sass scss/index.scss public/styles.css"
   },
@@ -21,6 +21,8 @@
     "aos": "^2.3.4",
     "bootstrap": "^5.3.8",
     "bootstrap-icons": "^1.13.1",
-    "chart.js": "^4.5.1"
+    "chart.js": "^4.5.1",
+    "html2pdf.js": "^0.14.0",
+    "xlsx": "^0.18.5"
   }
 }
