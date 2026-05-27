@@ -1732,6 +1732,7 @@
 @media (max-width: 980px) {
   .prestamos .prestamos__contenedor3 .contenedor3__botones button {
     width: 100%;
+    height: 20vh;
   }
 }
 .prestamos .prestamos__contenedor3 .contenedor3__botones button:nth-child(1) {
