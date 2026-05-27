@@ -77,20 +77,20 @@
                     <div class="simples1__formulario--input_grande">
                         <i class="bi bi-currency-dollar"></i>
                         <label for="">Capital inicial (Principal)</label>
-                        <input type="text" id="simples_input-monto">
+                        <input type="tel" id="simples_input-monto">
                         <p class="simples__error1">Ingreso no correcto</p>
                     </div>
                     <div class="simples1__formulario--input_chico">
                         <div class="simples1__formulario--input_chico--1">
                             <i class="bi bi-percent"></i>
                             <label for="">Tasa de interés (%)</label>
-                            <input type="text" id="simples_input-tasa">
+                            <input type="tel" id="simples_input-tasa">
                             <p class="simples__error2">Tasa incorrecta</p>
                         </div>    
                         <div class="simples1__formulario--input_chico--2">
                             <i class="bi bi-calendar-date"></i>
                             <label for="">Periodo (Años)</label>
-                            <input type="text" id="simples_input-periodo">
+                            <input type="tel" id="simples_input-periodo">
                             <p class="simples__error3">Periodo incorrecto</p>
                         </div>
                     </div>
@@ -146,20 +146,20 @@
                     <div class="compuestos1__formulario--input_grande">
                         <i class="bi bi-currency-dollar"></i>
                         <label for="">Capital inicial (Principal)</label>
-                        <input type="text" id="compuestos_input-monto">
+                        <input type="tel" id="compuestos_input-monto">
                         <p class="compuestos__error1">Ingreso no correcto</p>
                     </div>
                     <div class="compuestos1__formulario--input_chico">
                         <div class="compuestos1__formulario--input_chico--1">
                             <i class="bi bi-percent"></i>
                             <label for="">Tasa de interés (%)</label>
-                            <input type="text" id="compuestos_input-tasa">
+                            <input type="tel" id="compuestos_input-tasa">
                             <p class="compuestos__error2">Tasa incorrecta</p>
                         </div>    
                         <div class="compuestos1__formulario--input_chico--2">
                             <i class="bi bi-calendar-date"></i>
                             <label for="">Periodo (Años)</label>
-                            <input type="text" id="compuestos_input-periodo">
+                            <input type="tel" id="compuestos_input-periodo">
                             <p class="compuestos__error3">Periodo incorrecto</p>
                         </div>
                     </div>
@@ -246,13 +246,13 @@
 
                 <div class="input-group" id="tasa__inputs">
                     <label>Tasa de interés anual (%)</label>
-                    <input type="number" id="tasaInteres" step="0.01" placeholder="Ej: 12.50">
+                    <input type="tel" id="tasaInteres" step="0.01" placeholder="Ej: 12.50">
                     <p class="error">Ingresa máximo 2 decimales</p>
                 </div>
 
                 <div class="input-group" id="ppngi__inputs">
                     <label>Último PPNG (%)</label>
-                    <input type="number" id="ultimoPpng" step="0.01" placeholder="Ej: 3.25">
+                    <input type="tel" id="ultimoPpng" step="0.01" placeholder="Ej: 3.25">
                     <p class="error">Ingresa un valor válido (máx 2 decimales)</p>
                 </div>
 
@@ -293,7 +293,7 @@
 
             <div class="input-group" id="ppngi-monto">
                 <label>Monto</label>
-                <input type="number" id="movMonto" step="0.01">
+                <input type="tel" id="movMonto" step="0.01">
                 <p class="error">Ingresa un monto válido</p>
             </div>
 
@@ -347,6 +347,11 @@
             <h3 id="totalNeto">$0.00</h3>
         </div>
 
+         <div class="resultado__card promedio">
+            <p class="resultado__label">Saldo Promedio</p>
+            <h3 id="saldoPromedio">$0.00</h3>
+        </div>
+
     </div>
 
     <!-- GRAFICA -->
@@ -379,7 +384,7 @@
                     <div class="prestamos__contenedor1--formulario__contenedor_grande">
                         <i class="bi bi-currency-dollar"></i>
                         <label for="">Capital inicial (Principal)</label>
-                        <input type="text" id="prestamos_input-monto">
+                        <input type="tel" id="prestamos_input-monto">
                         <p class="prestamos__error1">Ingreso no correcto</p>
                     </div>
 
@@ -387,7 +392,7 @@
                         <div class="prestamos__formulario--input_chico--1">
                             <i class="bi bi-percent"></i>
                             <label for="">Tasa de interés (%)</label>
-                            <input type="text" id="prestamos_input-tasa">
+                            <input type="tel" id="prestamos_input-tasa">
                             <p class="prestamos__error2">Tasa incorrecta</p>
                         </div>    
                         <div class="prestamos__formulario--input_chico--2">

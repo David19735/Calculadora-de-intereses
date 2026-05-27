@@ -229,7 +229,8 @@ document.getElementById('ppngi_calculo').addEventListener('click',(e)=>{
 
     document.getElementById('interesGenerado').innerHTML=formatoMoneda.format(interesFinal);
     document.getElementById('ivaGenerado').innerHTML=formatoMoneda.format(ivaInt);
-    document.getElementById('totalNeto').innerHTML=formatoMoneda.format(totalMasIva);    
+    document.getElementById('totalNeto').innerHTML=formatoMoneda.format(totalMasIva);  
+    document.getElementById('saldoPromedio').innerHTML=formatoMoneda.format(saldoPromedio/dias);  
 
     document.getElementById('ppngi_calculo').classList.remove('active');
 
