@@ -1,8 +1,7 @@
 import renderGasto from "./renderGasto";
 
 //Expresiones regulares
-const expresionTasa=/^(?:150(?:\.0{1,2})?|(?:[1-9]?\d)(?:\.\d{1,2})?)$/;
-const expresionPago=/^\d+(\.\d{1,2})?$/;
+const expresionTasa = /^(?:150(?:\.0{1,2})?|1[0-4]\d(?:\.\d{1,2})?|[1-9]?\d(?:\.\d{1,2})?)$/;const expresionPago=/^\d+(\.\d{1,2})?$/;
 const expresionConcepto=/^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]{3,50}$/;
 const expresionMonto = /^-?\d+(\.\d{1,2})?$/; 
 //Primer formulario
