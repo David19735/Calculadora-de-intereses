@@ -1759,6 +1759,10 @@
   font-size: 1rem;
   font-weight: 400;
 }
+.prestamos .prestamos__contenedor3 .mensajes div h3 {
+  font-size: 0.7rem;
+  font-weight: 400;
+}
 .prestamos .prestamos__contenedor3 .mensajes div p {
   font-size: 0.9rem;
   font-weight: 300;
@@ -1925,6 +1929,43 @@
   .encabezado .encabezado__redes .redes__iconos a i {
     font-size: 1.1rem;
   }
+}
+.tabla_inf_excpdf {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  background-color: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  font-family: Arial, sans-serif;
+  display: none;
+}
+.tabla_inf_excpdf thead {
+  background-color: #243244;
+  color: #ffffff;
+}
+.tabla_inf_excpdf thead th {
+  padding: 1rem 1.5rem;
+  text-align: left;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-bottom: 2px solid #2563eb;
+}
+.tabla_inf_excpdf tbody tr {
+  border-bottom: 1px solid #e5e7eb;
+  transition: background-color 0.2s ease;
+}
+.tabla_inf_excpdf tbody tr:hover {
+  background-color: #eff6ff;
+}
+.tabla_inf_excpdf tbody tr:last-child {
+  border-bottom: none;
+}
+.tabla_inf_excpdf tbody td {
+  padding: 1rem 1.5rem;
+  color: #374151;
+  font-size: 0.95rem;
 }
 
 /*# sourceMappingURL=styles.css.map */

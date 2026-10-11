@@ -53,10 +53,10 @@
   <!--Enlaces para cambio de pantalla-->
   
     <div class="enlaces">
-        <a href="" class="enlace active" id="simples">Intereses Simples</a>
+        <a href="" class="enlace" id="simples">Intereses Simples</a>
         <a href="" class="enlace" id="compuestos">Intereses compuestos</a>
         <a href="" class="enlace" id="ppngi">PPNGI con intereses</a>
-        <a href="" class="enlace" id="prestamos">Préstamos con intereses</a>
+        <a href="" class="enlace active" id="prestamos">Préstamos con intereses</a>
     </div>
 
   <!--Contenedor de los formularios-->
@@ -67,7 +67,7 @@
 
     <!--Contenedor formularios simples-->
 
-        <div class="simples contenedor_form active">
+        <div class="simples contenedor_form">
             
             <div class="simples__1">
                
@@ -375,7 +375,7 @@
 
         <!--Contenedor préstamos-->
 
-        <div class="prestamos contenedor_form">
+        <div class="prestamos contenedor_form active">
             
             <div class="prestamos__contenedor1">
                 <form action="" class="prestamos__contenedor1--formulario">
@@ -477,9 +477,25 @@
                 </div>
             </div>
 
+            <table class="tabla_inf_excpdf">
+            <thead>
+                <tr>
+                    <th>Capital</th>
+                    <th>Tasa de interés</th>
+                    <th>Periodo</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td id="inf_excpdf_capital"></td>
+                    <td id="inf_excpdf_interes"></td>
+                    <td id="inf_excpdf_periodo"></td>
+                </tr>
+            </tbody>
+        </table>
         </div>
 
-
+        
     </div>
 
     <!--footer-->

@@ -8,7 +8,7 @@ const formulario=document.querySelector('.prestamos__contenedor1--formulario');
 formulario.addEventListener('submit',(e)=>{
 
     e.preventDefault();
-
+    
     //Valores del formulario
     const inputMonto=document.getElementById('prestamos_input-monto')
     const inputInteres=document.getElementById('prestamos_input-tasa')
@@ -39,6 +39,9 @@ formulario.addEventListener('submit',(e)=>{
 
           //Limpiamos el contenido de las tablas
         document.querySelector('.tbody').innerHTML="";
+
+        //Copia para el dato de la tabla informativa
+        const inf_excpdf_montoInicial=parseFloat(inputMonto.value)
 
         //Sacamos los valores y los transformamos a numeros
         let montoInicial=parseFloat(inputMonto.value)
@@ -161,4 +164,12 @@ const miGrafica = new Chart(ctx, {
   },
   plugins: [textoCentro]
 });
+
+//Inyección de datos informativos
+
+console.log(montoInicial)
+
+  document.getElementById('inf_excpdf_capital').innerHTML=`${formatoMoneda.format(inf_excpdf_montoInicial)}`;
+  document.getElementById('inf_excpdf_interes').innerHTML=`${interes}%`;
+  document.getElementById('inf_excpdf_periodo').innerHTML=`${periodos} meses`;
 })
